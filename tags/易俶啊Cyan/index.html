@@ -11,12 +11,12 @@
 <link rel="mask-icon" href="/images/logo.svg" color="#222">
 <meta http-equiv="Cache-Control" content="no-transform">
 <meta http-equiv="Cache-Control" content="no-siteapp">
-<link rel="stylesheet" href="//cdn.jsdelivr.net/gh/ljcbaby/ljcbaby.github.io@v2.0.1.54672aa/css/main.css">
+<link rel="stylesheet" href="//cdn.jsdelivr.net/gh/ljcbaby/ljcbaby.github.io@v2.1.2.9e27711/css/main.css">
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14.0/css/all.min.css">
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/pace-js@1.0.2/themes/blue/pace-theme-minimal.css">
 <script src="//cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
-<script class="hexo-configurations">var NexT=window.NexT||{},CONFIG={hostname:"www.ljcbaby.top",root:"/",scheme:"Pisces",version:"8.0.0-rc.5",exturl:!1,sidebar:{position:"left",display:"post",padding:18,offset:12},copycode:!0,bookmark:{enable:!1,color:"#222",save:"auto"},fancybox:!1,mediumzoom:!1,lazyload:!0,pangu:!0,comments:{style:"tabs",active:"gitalk",storage:!0,lazyload:!0,nav:null,activeClass:"gitalk"},motion:{enable:!0,async:!0,transition:{post_block:"fadeIn",post_header:"fadeInDown",post_body:"fadeInDown",coll_header:"fadeInLeft",sidebar:"fadeInUp"}},prism:!1,path:"search.json",localsearch:{enable:!0,trigger:"auto",top_n_per_article:1,unescape:!1,preload:!1}}</script>
+<script class="hexo-configurations">var NexT=window.NexT||{},CONFIG={hostname:"www.ljcbaby.top",root:"/",scheme:"Pisces",version:"8.0.0-rc.5",exturl:!1,sidebar:{position:"left",display:"post",padding:18,offset:12},copycode:!0,bookmark:{enable:!1,color:"#222",save:"auto"},fancybox:!1,mediumzoom:!1,lazyload:!0,pangu:!1,comments:{style:"tabs",active:"gitalk",storage:!0,lazyload:!0,nav:null,activeClass:"gitalk"},motion:{enable:!0,async:!0,transition:{post_block:"fadeIn",post_header:"fadeInDown",post_body:"fadeInDown",coll_header:"fadeInLeft",sidebar:"fadeInUp"}},prism:!1,path:"search.json",localsearch:{enable:!0,trigger:"auto",top_n_per_article:1,unescape:!1,preload:!1}}</script>
 <meta name="description" content="记录自己的成长足迹">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Ljcbaby 的 网络小屋">
@@ -137,7 +137,7 @@
 <nav class="site-state">
 <div class="site-state-item site-state-posts">
 <a href="/archives/">
-<span class="site-state-item-count">26</span>
+<span class="site-state-item-count">27</span>
 <span class="site-state-item-name">日志</span>
 </a>
 </div>
@@ -160,7 +160,7 @@
 </span>
 </div>
 <div class="cc-license animated" itemprop="license">
-<a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh" class="cc-opacity" rel="noopener" target="_blank"><img src="//cdn.jsdelivr.net/gh/ljcbaby/ljcbaby.github.io@v2.0.1.54672aa/images/cc-by-nc-nd.svg" alt="Creative Commons"></a>
+<a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh" class="cc-opacity" rel="noopener" target="_blank"><img src="//cdn.jsdelivr.net/gh/ljcbaby/ljcbaby.github.io@v2.1.2.9e27711/images/cc-by-nc-nd.svg" alt="Creative Commons"></a>
 </div>
 </section>
 <div class="back-to-top animated">
@@ -251,7 +251,7 @@ window.addEventListener('tabs:register', () => {
       activeClass = localStorage.getItem('comments_active') || activeClass;
     }
     if (activeClass) {
-      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      const activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
       if (activeTab) {
         activeTab.click();
       }
@@ -260,7 +260,7 @@ window.addEventListener('tabs:register', () => {
   if (CONFIG.comments.storage) {
     window.addEventListener('tabs:click', event => {
       if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
-      let commentClass = event.target.classList[1];
+      const commentClass = event.target.classList[1];
       localStorage.setItem('comments_active', commentClass);
     });
   }
@@ -348,7 +348,7 @@ window.addEventListener('tabs:register', () => {
         .then(response => response.json())
         .then(({ results }) => {
           for (let url of entries) {
-            let target = results.find(item => item.url === url);
+            const target = results.find(item => item.url === url);
             leancloudSelector(url).innerText = target ? target.time : 0;
           }
         })
@@ -357,7 +357,7 @@ window.addEventListener('tabs:register', () => {
         });
     }
 
-    let { app_id, app_key, server_url } = {"enable":true,"app_id":"P1rhnFrl9zDue22GoKsbC1gQ-gzGzoHsz","app_key":"FxCJN5tuJfGiskSL0hitvy1h","server_url":"https://leancloud.cn","security":false};
+    const { app_id, app_key, server_url } = {"enable":true,"app_id":"P1rhnFrl9zDue22GoKsbC1gQ-gzGzoHsz","app_key":"FxCJN5tuJfGiskSL0hitvy1h","server_url":"https://leancloud.cn","security":false};
     function fetchData(api_server) {
       const Counter = (method, url, data) => {
         return fetch(`${api_server}/1.1${url}`, {
@@ -396,8 +396,7 @@ window.addEventListener('tabs:register', () => {
 <script src="//cdn.jsdelivr.net/npm/animejs@3.2.0/lib/anime.min.js"></script>
 <script src="//cdn.jsdelivr.net/npm/@next-theme/pjax@0.4.0/pjax.min.js"></script>
 <script src="//cdn.jsdelivr.net/npm/lozad@1.15.0/dist/lozad.min.js"></script>
-<script src="//cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js"></script>
-<script src="//cdn.jsdelivr.net/gh/ljcbaby/ljcbaby.github.io@v2.0.1.54672aa/js/utils.js"></script><script src="//cdn.jsdelivr.net/gh/ljcbaby/ljcbaby.github.io@v2.0.1.54672aa/js/motion.js"></script><script src="//cdn.jsdelivr.net/gh/ljcbaby/ljcbaby.github.io@v2.0.1.54672aa/js/next-boot.js"></script>
+<script src="//cdn.jsdelivr.net/gh/ljcbaby/ljcbaby.github.io@v2.1.2.9e27711/js/utils.js"></script><script src="//cdn.jsdelivr.net/gh/ljcbaby/ljcbaby.github.io@v2.1.2.9e27711/js/motion.js"></script><script src="//cdn.jsdelivr.net/gh/ljcbaby/ljcbaby.github.io@v2.1.2.9e27711/js/next-boot.js"></script>
 <script>
 var pjax = new Pjax({
   selectors: [
@@ -432,7 +431,7 @@ document.addEventListener('pjax:success', () => {
 });
 </script>
 <script data-pjax>!function(){var t=document.createElement("script"),e=window.location.protocol.split(":")[0];t.src="https"===e?"https://zz.bdstatic.com/linksubmit/push.js":"http://push.zhanzhang.baidu.com/push.js";var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(t,s)}()</script>
-<script src="//cdn.jsdelivr.net/gh/ljcbaby/ljcbaby.github.io@v2.0.1.54672aa/js/local-search.js"></script>
+<script src="//cdn.jsdelivr.net/gh/ljcbaby/ljcbaby.github.io@v2.1.2.9e27711/js/local-search.js"></script>
 <div class="pjax">
 </div>
 </body>
