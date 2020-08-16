@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.ljcbaby.top/article/Office-tips/</loc>
+    
+    <lastmod>2020-08-16</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.ljcbaby.top/tags/</loc>
     
     <lastmod>2020-08-16</lastmod>
@@ -10,6 +17,13 @@
   
   <url>
     <loc>https://www.ljcbaby.top/404</loc>
+    
+    <lastmod>2020-08-16</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.ljcbaby.top/article/legal-things/</loc>
     
     <lastmod>2020-08-16</lastmod>
     
@@ -75,13 +89,6 @@
     <loc>https://www.ljcbaby.top/article/never-leave/</loc>
     
     <lastmod>2020-08-06</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.ljcbaby.top/article/legal-things/</loc>
-    
-    <lastmod>2020-08-05</lastmod>
     
   </url>
   
@@ -299,6 +306,13 @@
   
   <url>
     <loc>https://www.ljcbaby.top/tags/%E6%83%85%E6%84%9F/</loc>
+    <lastmod>2020-08-16</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.ljcbaby.top/tags/%E6%8A%80%E5%B7%A7/</loc>
     <lastmod>2020-08-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
