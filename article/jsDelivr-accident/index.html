@@ -4,14 +4,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 5.0.0">
+<meta name="generator" content="Hexo 5.0.2">
 <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
 <link rel="mask-icon" href="/images/logo.svg" color="#222">
 <meta http-equiv="Cache-Control" content="no-transform">
 <meta http-equiv="Cache-Control" content="no-siteapp">
-<link rel="stylesheet" href="//cdn.jsdelivr.net/gh/ljcbaby/ljcbaby.github.io@v2.1.2.9e27711/css/main.css">
+<link rel="stylesheet" href="//cdn.jsdelivr.net/gh/ljcbaby/ljcbaby.github.io@v2.1.3.c59a2b9/css/main.css">
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14.0/css/all.min.css">
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/pace-js@1.0.2/themes/blue/pace-theme-minimal.css">
@@ -71,7 +71,7 @@
 </div>
 </div>
 <nav class="site-nav">
-<ul id="menu" class="main-menu menu">
+<ul class="main-menu menu">
 <li class="menu-item menu-item-home">
 <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
 </li>
@@ -112,8 +112,8 @@
 <i class="fa fa-times-circle"></i>
 </span>
 </div>
-<div id="search-result">
-<div id="no-result">
+<div class="search-result-container">
+<div class="no-result">
 <i class="fa fa-spinner fa-pulse fa-5x"></i>
 </div>
 </div>
@@ -148,13 +148,13 @@
 <nav class="site-state">
 <div class="site-state-item site-state-posts">
 <a href="/archives/">
-<span class="site-state-item-count">27</span>
+<span class="site-state-item-count">28</span>
 <span class="site-state-item-name">日志</span>
 </a>
 </div>
 <div class="site-state-item site-state-tags">
 <a href="/tags/">
-<span class="site-state-item-count">20</span>
+<span class="site-state-item-count">24</span>
 <span class="site-state-item-name">标签</span></a>
 </div>
 </nav>
@@ -171,7 +171,7 @@
 </span>
 </div>
 <div class="cc-license animated" itemprop="license">
-<a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh" class="cc-opacity" rel="noopener" target="_blank"><img src="//cdn.jsdelivr.net/gh/ljcbaby/ljcbaby.github.io@v2.1.2.9e27711/images/cc-by-nc-nd.svg" alt="Creative Commons"></a>
+<a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh" class="cc-opacity" rel="noopener" target="_blank"><img src="//cdn.jsdelivr.net/gh/ljcbaby/ljcbaby.github.io@v2.1.3.c59a2b9/images/cc-by-nc-nd.svg" alt="Creative Commons"></a>
 </div>
 </section>
 <div class="back-to-top animated">
@@ -180,11 +180,11 @@
 </div>
 </div>
 </aside>
-<div id="sidebar-dimmer"></div>
+<div class="sidebar-dimmer"></div>
 </header>
 <div class="reading-progress-bar"></div>
 <noscript>
-<div id="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+<div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
 </noscript>
 <div class="main-inner post posts-expand">
 <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
@@ -211,7 +211,7 @@
 </span>
 <span id="/article/jsDelivr-accident/" class="post-meta-item leancloud_visitors" data-flag-title="[记录] jsDelivr 访问出错" title="阅读次数">
 <span class="post-meta-item-icon">
-<i class="fa fa-eye"></i>
+<i class="far fa-eye"></i>
 </span>
 <span class="post-meta-item-text">阅读次数：</span>
 <span class="leancloud-visitors-count"></span>
@@ -220,20 +220,14 @@
 </div>
 </header>
 <div class="post-body" itemprop="articleBody">
-<h2 id="2020-07-30"><a href="#2020-07-30" class="headerlink" title="2020-07-30"></a>2020-07-30</h2><h3 id="现象"><a href="#现象" class="headerlink" title="现象"></a>现象</h3><p>最早开始于上午 10 点左右，直接访问（即空请求头访问）返回 403，仅出现于中国大陆节点</p>
-<p><img data-src="https://cdn.jsdelivr.net/gh/ljcbaby/image@master/20200806194838.png" alt="报错"></p>
-<h3 id="发展"><a href="#发展" class="headerlink" title="发展"></a>发展</h3><p>向官方反馈，官方回应是 issue，未披露具体细节。</p>
-<p><img data-src="https://cdn.jsdelivr.net/gh/ljcbaby/image@master/20200806195658.png" alt="官方回复"></p>
-<p>猜测又是服务中国大陆的 <a target="_blank" rel="noopener" href="https://www.quantil.com/">Quantil</a> 配置错误导致。</p>
-<h3 id="后遗症？"><a href="#后遗症？" class="headerlink" title="后遗症？"></a>后遗症？</h3><p>在这次故障之后，来自 Github 的包的统计记录有时加载不正常</p>
-<p>以及大众的信任度下降了不少。（从主要仓库的访问量变化就可以看出）</p>
-<p><img data-src="https://cdn.jsdelivr.net/gh/ljcbaby/image@master/20200806203048.png" alt="访问量"></p>
+<h2 id="2020-07-30"><a href="#2020-07-30" class="headerlink" title="2020-07-30"></a>2020-07-30</h2><h3 id="现象"><a href="#现象" class="headerlink" title="现象"></a>现象</h3><p>最早开始于上午 10 点左右，直接访问（即空请求头访问）返回 403，仅出现于中国大陆节点<br><img data-src="https://cdn.jsdelivr.net/gh/ljcbaby/image@master/20200806194838.png" alt="报错"></p>
+<h3 id="发展"><a href="#发展" class="headerlink" title="发展"></a>发展</h3><p>向官方反馈，官方回应是 issue，未披露具体细节。<br><img data-src="https://cdn.jsdelivr.net/gh/ljcbaby/image@master/20200806195658.png" alt="官方回复">猜测又是服务中国大陆的 <a target="_blank" rel="noopener" href="https://www.quantil.com/">Quantil</a> 配置错误导致。</p>
+<h3 id="后遗症？"><a href="#后遗症？" class="headerlink" title="后遗症？"></a>后遗症？</h3><p>在这次故障之后，来自 Github 的包的统计记录有时加载不正常<br>以及大众的信任度下降了不少。（从主要仓库的访问量变化就可以看出）<br><img data-src="https://cdn.jsdelivr.net/gh/ljcbaby/image@master/20200806203048.png" alt="访问量"></p>
 <h3 id="题外话"><a href="#题外话" class="headerlink" title="题外话"></a>题外话</h3><p>在故障刚开始之时，便有人说 jsDelivr 要停止对中国大陆停止服务，全然不顾事实！这种行为应该被谴责！！</p>
 <blockquote>
 <p><img data-src="https://cdn.jsdelivr.net/gh/ljcbaby/image@master/20200806200918.png" alt="聊天记录"></p>
 </blockquote>
-<p><img data-src="https://cdn.jsdelivr.net/gh/ljcbaby/image@master/afdian.bmp" alt="二维码"></p>
-<center>打赏</center>
+<p><img data-src="https://cdn.jsdelivr.net/gh/ljcbaby/image@master/afdian.bmp" alt="二维码"></p><center>打赏</center><p></p>
 </div>
 <div>
 <ul class="post-copyright">
@@ -305,9 +299,8 @@ window.addEventListener('tabs:register', () => {
 <i class="fa fa-heart"></i>
 </span>
 <span class="author" itemprop="copyrightHolder">Ljcbaby</span>
-</div><script src="https://jspassport.ssl.qhimg.com/11.0.1.js?d182b3f28525f2db83acfaaf6e696dba" id="sozz"></script>
+</div>
 <div class="busuanzi-count">
-<script data-pjax async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 <span class="post-meta-item" id="busuanzi_container_site_uv" style="display:none">
 <span class="post-meta-item-icon">
 <i class="fa fa-user"></i>
@@ -316,7 +309,6 @@ window.addEventListener('tabs:register', () => {
 <span id="busuanzi_value_site_uv"></span>
 </span>
 </span>
-<span class="post-meta-divider">|</span>
 <span class="post-meta-item" id="busuanzi_container_site_pv" style="display:none">
 <span class="post-meta-item-icon">
 <i class="fa fa-eye"></i>
@@ -325,7 +317,49 @@ window.addEventListener('tabs:register', () => {
 <span id="busuanzi_value_site_pv"></span>
 </span>
 </span>
+</div><script src="https://jspassport.ssl.qhimg.com/11.0.1.js?d182b3f28525f2db83acfaaf6e696dba" id="sozz"></script>
 </div>
+</footer>
+<script src="//cdn.jsdelivr.net/npm/animejs@3.2.0/lib/anime.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/@next-theme/pjax@0.4.0/pjax.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/lozad@1.15.0/dist/lozad.min.js"></script>
+<script src="//cdn.jsdelivr.net/gh/ljcbaby/ljcbaby.github.io@v2.1.3.c59a2b9/js/utils.js"></script><script src="//cdn.jsdelivr.net/gh/ljcbaby/ljcbaby.github.io@v2.1.3.c59a2b9/js/motion.js"></script><script src="//cdn.jsdelivr.net/gh/ljcbaby/ljcbaby.github.io@v2.1.3.c59a2b9/js/next-boot.js"></script>
+<script>
+var pjax = new Pjax({
+  selectors: [
+    'head title',
+    '.page-configurations',
+    '.main-inner',
+    '.post-toc-wrap',
+    '.languages',
+    '.pjax'
+  ],
+  analytics: false,
+  cacheBust: false,
+  scrollRestoration: false,
+  scrollTo: !CONFIG.bookmark.enable
+});
+
+document.addEventListener('pjax:success', () => {
+  pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'));
+  NexT.boot.refresh();
+  // Define Motion Sequence & Bootstrap Motion.
+  if (CONFIG.motion.enable) {
+    NexT.motion.integrator
+      .init()
+      .add(NexT.motion.middleWares.subMenu)
+      .add(NexT.motion.middleWares.postList)
+      .bootstrap();
+  }
+  const hasTOC = document.querySelector('.post-toc');
+  document.querySelector('.sidebar-inner').classList.toggle('sidebar-nav-active', hasTOC);
+  document.querySelector(hasTOC ? '.sidebar-nav-toc' : '.sidebar-nav-overview').click();
+  NexT.utils.updateSidebarPosition();
+});
+</script>
+<script data-pjax>!function(){var t=document.createElement("script"),e=window.location.protocol.split(":")[0];t.src="https"===e?"https://zz.bdstatic.com/linksubmit/push.js":"http://push.zhanzhang.baidu.com/push.js";var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(t,s)}()</script>
+<script src="//cdn.jsdelivr.net/gh/ljcbaby/ljcbaby.github.io@v2.1.3.c59a2b9/js/local-search.js"></script>
+<script data-pjax async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 <script data-pjax>
 (function() {
     function leancloudSelector(url) {
@@ -417,47 +451,6 @@ window.addEventListener('tabs:register', () => {
     }
   })();
 </script>
-</div>
-</footer>
-<script src="//cdn.jsdelivr.net/npm/animejs@3.2.0/lib/anime.min.js"></script>
-<script src="//cdn.jsdelivr.net/npm/@next-theme/pjax@0.4.0/pjax.min.js"></script>
-<script src="//cdn.jsdelivr.net/npm/lozad@1.15.0/dist/lozad.min.js"></script>
-<script src="//cdn.jsdelivr.net/gh/ljcbaby/ljcbaby.github.io@v2.1.2.9e27711/js/utils.js"></script><script src="//cdn.jsdelivr.net/gh/ljcbaby/ljcbaby.github.io@v2.1.2.9e27711/js/motion.js"></script><script src="//cdn.jsdelivr.net/gh/ljcbaby/ljcbaby.github.io@v2.1.2.9e27711/js/next-boot.js"></script>
-<script>
-var pjax = new Pjax({
-  selectors: [
-    'head title',
-    '.page-configurations',
-    '.main-inner',
-    '.post-toc-wrap',
-    '.languages',
-    '.pjax'
-  ],
-  analytics: false,
-  cacheBust: false,
-  scrollRestoration: false,
-  scrollTo: !CONFIG.bookmark.enable
-});
-
-document.addEventListener('pjax:success', () => {
-  pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'));
-  NexT.boot.refresh();
-  // Define Motion Sequence & Bootstrap Motion.
-  if (CONFIG.motion.enable) {
-    NexT.motion.integrator
-      .init()
-      .add(NexT.motion.middleWares.subMenu)
-      .add(NexT.motion.middleWares.postList)
-      .bootstrap();
-  }
-  const hasTOC = document.querySelector('.post-toc');
-  document.querySelector('.sidebar-inner').classList.toggle('sidebar-nav-active', hasTOC);
-  document.querySelector(hasTOC ? '.sidebar-nav-toc' : '.sidebar-nav-overview').click();
-  NexT.utils.updateSidebarPosition();
-});
-</script>
-<script data-pjax>!function(){var t=document.createElement("script"),e=window.location.protocol.split(":")[0];t.src="https"===e?"https://zz.bdstatic.com/linksubmit/push.js":"http://push.zhanzhang.baidu.com/push.js";var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(t,s)}()</script>
-<script src="//cdn.jsdelivr.net/gh/ljcbaby/ljcbaby.github.io@v2.1.2.9e27711/js/local-search.js"></script>
 <div class="pjax">
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1.6.2/dist/gitalk.css">
 <script>
