@@ -4,19 +4,19 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 5.0.2">
+<meta name="generator" content="Hexo 5.1.0">
 <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
 <link rel="mask-icon" href="/images/logo.svg" color="#222">
 <meta http-equiv="Cache-Control" content="no-transform">
 <meta http-equiv="Cache-Control" content="no-siteapp">
-<link rel="stylesheet" href="//cdn.jsdelivr.net/gh/ljcbaby/ljcbaby.github.io@v2.1.6.4cc2f38/css/main.css">
+<link rel="stylesheet" href="//cdn.jsdelivr.net/gh/ljcbaby/ljcbaby.github.io@v2.1.7.07a00b2/css/main.css">
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14.0/css/all.min.css">
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/pace-js@1.0.2/themes/blue/pace-theme-minimal.css">
 <script src="//cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
-<script class="hexo-configurations">var NexT=window.NexT||{},CONFIG={hostname:"www.ljcbaby.top",root:"/",scheme:"Pisces",version:"8.0.0-rc.5",exturl:!1,sidebar:{position:"left",display:"post",padding:18,offset:12},copycode:!0,bookmark:{enable:!1,color:"#222",save:"auto"},fancybox:!1,mediumzoom:!1,lazyload:!0,pangu:!1,comments:{style:"tabs",active:"gitalk",storage:!0,lazyload:!0,nav:null,activeClass:"gitalk"},motion:{enable:!0,async:!0,transition:{post_block:"fadeIn",post_header:"fadeInDown",post_body:"fadeInDown",coll_header:"fadeInLeft",sidebar:"fadeInUp"}},prism:!1,path:"search.json",localsearch:{enable:!0,trigger:"auto",top_n_per_article:1,unescape:!1,preload:!1}}</script>
+<script class="hexo-configurations">var NexT=window.NexT||{},CONFIG={hostname:"www.ljcbaby.top",root:"/",scheme:"Pisces",version:"8.0.0-rc.5",exturl:!1,sidebar:{position:"left",display:"post",padding:18,offset:12},copycode:!0,bookmark:{enable:!1,color:"#222",save:"auto"},fancybox:!1,mediumzoom:!1,lazyload:!0,pangu:!1,comments:{style:"tabs",active:"gitalk",storage:!0,lazyload:!0,nav:null,activeClass:"gitalk"},motion:{enable:!0,async:!0,transition:{post_block:"fadeIn",post_header:"fadeInDown",post_body:"fadeInDown",coll_header:"fadeInLeft",sidebar:"fadeInUp"}},prism:!1,i18n:{placeholder:"搜索...",empty:"We didn't find any results for the search: ${query}",hits_time:"${hits} results found in ${time} ms",hits:"${hits} results found"},path:"search.json",localsearch:{enable:!0,trigger:"auto",top_n_per_article:1,unescape:!1,preload:!1}}</script>
 <meta name="description" content="作为一种静态博客，Hexo 的每一次更新都要在本地执行 hexo clean、hexo d -g 等命令。那么，有什么办法可以简化这些过程呢？把命令合成一个脚本或许是一个选择，但更好的方案是使用服务于 DevOps 的公共 CI&#x2F;CD 服务。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo 的自动部署">
@@ -114,7 +114,7 @@
 </span>
 </div>
 <div class="search-result-container">
-<div class="no-result">
+<div class="search-result-icon">
 <i class="fa fa-spinner fa-pulse fa-5x"></i>
 </div>
 </div>
@@ -137,7 +137,7 @@
 </li>
 </ul>
 <section class="post-toc-wrap sidebar-panel">
-<div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#GitHub-Actions"><span class="nav-number">1.</span> <span class="nav-text">GitHub Actions</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Travis-CI"><span class="nav-number">2.</span> <span class="nav-text">Travis CI</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Gitee-Pages-%E6%9C%8D%E5%8A%A1-%E4%B8%80%E4%B8%AA%E6%94%AF%E6%8C%81Jekyll%E3%80%81Hugo%E3%80%81Hexo%E9%9D%99%E6%80%81%E7%BD%91%E7%AB%99%E7%9A%84%E6%9C%8D%E5%8A%A1"><span class="nav-number">3.</span> <span class="nav-text">Gitee Pages 服务 一个支持 Jekyll、Hugo、Hexo 静态网站的服务</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Jenkins"><span class="nav-number">4.</span> <span class="nav-text">Jenkins</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Netlify"><span class="nav-number">5.</span> <span class="nav-text">Netlify</span></a></li></ol></div>
+<div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#GitHub-Actions"><span class="nav-number">1.</span> <span class="nav-text">GitHub Actions</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Travis-CI"><span class="nav-number">2.</span> <span class="nav-text">Travis CI</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Gitee-Pages-%E6%9C%8D%E5%8A%A1"><span class="nav-number">3.</span> <span class="nav-text">Gitee Pages 服务</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Jenkins"><span class="nav-number">4.</span> <span class="nav-text">Jenkins</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Netlify"><span class="nav-number">5.</span> <span class="nav-text">Netlify</span></a></li></ol></div>
 </section>
 <section class="site-overview-wrap sidebar-panel">
 <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -172,7 +172,7 @@
 </span>
 </div>
 <div class="cc-license animated" itemprop="license">
-<a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh" class="cc-opacity" rel="noopener" target="_blank"><img src="//cdn.jsdelivr.net/gh/ljcbaby/ljcbaby.github.io@v2.1.6.4cc2f38/images/cc-by-nc-nd.svg" alt="Creative Commons"></a>
+<a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh" class="cc-opacity" rel="noopener" target="_blank"><img src="//cdn.jsdelivr.net/gh/ljcbaby/ljcbaby.github.io@v2.1.7.07a00b2/images/cc-by-nc-nd.svg" alt="Creative Commons"></a>
 </div>
 </section>
 <div class="back-to-top animated">
@@ -230,12 +230,26 @@ Hexo 的自动部署
 </ol>
 <p>对于不同的需求，配置文件也不完全相同。我的需求是通过 Hexo 本身的 deploy 部署到 GitHub 仓库，在通过手动追加 tag 实现 jsDelivr 的全站加速。<br>我使用的是 NexT 主题，配置文件中关于静态资源的设定如下，会在生成过程中通过 <code>sed</code> 替换为具体的版本（<code>XX_TAG</code> 变量）。</p>
 <figure class="highlight yaml"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Assets</span></span><br><span class="line"><span class="attr">css:</span> <span class="string">//cdn.jsdelivr.net/gh/ljcbaby/ljcbaby.github.io@master/css</span></span><br><span class="line"><span class="attr">js:</span> <span class="string">//cdn.jsdelivr.net/gh/ljcbaby/ljcbaby.github.io@master/js</span></span><br><span class="line"><span class="attr">images:</span> <span class="string">//cdn.jsdelivr.net/gh/ljcbaby/ljcbaby.github.io@master/images</span></span><br></pre></td></tr></tbody></table></figure>
-<h2 id="GitHub-Actions"><a href="#GitHub-Actions" class="headerlink" title="GitHub Actions"></a><a target="_blank" rel="noopener" href="https://github.com/features/actions">GitHub Actions</a></h2><p>由 GitHub 提供的服务，仅支持 GitHub 内的仓库，将 YAML 格式的配置文件放在 <code>git_root/.github/workflows/</code> 下，当仓库被 <code>push</code> 的时候便会自动匹配执行。</p>
+<h2 id="GitHub-Actions"><a href="#GitHub-Actions" class="headerlink" title="GitHub Actions"></a>GitHub Actions</h2><div class="link-grid"><div class="link-grid-container">
+<div class="link-grid-image" style="background-image:url(https://cdn.jsdelivr.net/gh/ljcbaby/image@master/44036562.png)"></div>
+<p>GitHub Actions</p><p>自动化您的工作流程，从构思到生产</p>
+<a target="_blank" rel="noopener" href="https://github.com/features/actions"></a>
+</div></div>
+<p>由 GitHub 提供的服务，仅支持 GitHub 内的仓库，将 YAML 格式的配置文件放在 <code>git_root/.github/workflows/</code> 下，当仓库被 <code>push</code> 的时候便会自动匹配执行。</p>
 <details class="note primary no-icon"><summary><p>参考配置文件</p>
 </summary>
 <figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line">name: deploy # Actions 名字</span><br><span class="line"></span><br><span class="line">on: # 触发条件</span><br><span class="line">  push:</span><br><span class="line">    branches: [ master ] # 仅向 master 分支 push 时触发，该分支存放博客源文件</span><br><span class="line"></span><br><span class="line">jobs:</span><br><span class="line">  build: # job id</span><br><span class="line">    name: Build and publish # job 名，不写默认使用 job id</span><br><span class="line">    runs-on: ubuntu-latest # 运行环境，可选 ubuntu-latest, ubuntu-18.04, ubuntu-16.04, windows-latest, windows-2019, windows-2016, macOS-latest, macOS-10.14</span><br><span class="line"></span><br><span class="line">    steps:</span><br><span class="line">      - uses: actions/checkout@v1  # 拉取博客最新源文件</span><br><span class="line">        with:</span><br><span class="line">          submodules: true </span><br><span class="line"></span><br><span class="line">      - name: Install Node.js # 指定 Node.js 版本</span><br><span class="line">        uses: actions/setup-node@v1</span><br><span class="line">        with:</span><br><span class="line">          node-version: '12'</span><br><span class="line"></span><br><span class="line">      - name: Setup Hexo env # 初始化 Hexo 环境</span><br><span class="line">        run: |</span><br><span class="line">          npm install hexo-cli -g</span><br><span class="line">          npm install</span><br><span class="line"></span><br><span class="line">      - name: Pre-Generate # 初始化 其他 环境</span><br><span class="line">        env:</span><br><span class="line">          GH_TOKEN: $</span><br><span class="line">        run: |</span><br><span class="line">          export TZ='Asia/Shanghai'</span><br><span class="line">          export ACTION_TAG=v2.1.$.$(git log --format=%h -1)</span><br><span class="line">          git config --global push.default matching</span><br><span class="line">          git config --global user.name "github-actions[bot]"</span><br><span class="line">          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"</span><br><span class="line">          sed -i "s~git@github.com:ljcbaby/ljcbaby.github.io.git~https://${GH_TOKEN}@github.com/ljcbaby/ljcbaby.github.io.git~" _config.yml</span><br><span class="line">          sed -i "s/ljcbaby.github.io@master/ljcbaby.github.io@${ACTION_TAG}/g" _config.next.yml</span><br><span class="line"></span><br><span class="line">      - name: Generate public files # 生成博客预发布文件</span><br><span class="line">        run: |</span><br><span class="line">          hexo clean</span><br><span class="line">          hexo g  </span><br><span class="line"></span><br><span class="line">      - name: Deploy # 发布</span><br><span class="line">        env:</span><br><span class="line">          GH_REF: github.com/ljcbaby/ljcbaby.github.io.git # GitHub 仓库 SSH 地址</span><br><span class="line">        run: |</span><br><span class="line">          export TZ='Asia/Shanghai'</span><br><span class="line">          export ACTION_TAG=v2.1.$.$(git log --format=%h -1)</span><br><span class="line">          git clone https://${GH_REF} .deploy_git</span><br><span class="line">          hexo d</span><br><span class="line">          cd .deploy_git</span><br><span class="line">          git tag $ACTION_TAG</span><br><span class="line">          git push --tags</span><br></pre></td></tr></tbody></table></figure>
 </details>
-<h2 id="Travis-CI"><a href="#Travis-CI" class="headerlink" title="Travis CI"></a>Travis CI</h2><p>这家比较特别，有 <a target="_blank" rel="noopener" href="https://travis-ci.org/">Travis CI.org</a> 和 <a target="_blank" rel="noopener" href="https://travis-ci.com/">Travis CI.com</a> 之分。前者免费但不支持 GitHub 的私有库，后者收费（GitHub 的学生包可以白嫖）。配置文件为 <code>git_root</code> 下的<code>.travis.yml</code>。</p>
+<h2 id="Travis-CI"><a href="#Travis-CI" class="headerlink" title="Travis CI"></a>Travis CI</h2><div class="link-grid"><div class="link-grid-container">
+<div class="link-grid-image" style="background-image:url(https://cdn.jsdelivr.net/gh/ljcbaby/image@master/TravisCI-Mascot-1.jpg)"></div>
+<p>Travis CI.org</p><p>放心地测试和部署代码</p>
+<a target="_blank" rel="noopener" href="https://travis-ci.org/"></a>
+</div><div class="link-grid-container">
+<div class="link-grid-image" style="background-image:url(https://cdn.jsdelivr.net/gh/ljcbaby/image@master/TravisCI-Mascot-1.jpg)"></div>
+<p>Travis CI.com</p><p>放心地测试和部署代码</p>
+<a target="_blank" rel="noopener" href="https://travis-ci.com/"></a>
+</div></div>
+<p>这家比较特别，有 <a target="_blank" rel="noopener" href="https://travis-ci.org/">Travis CI.org</a> 和 <a target="_blank" rel="noopener" href="https://travis-ci.com/">Travis CI.com</a> 之分。前者免费但不支持 GitHub 的私有库，后者收费（GitHub 的学生包可以白嫖）。配置文件为 <code>git_root</code> 下的<code>.travis.yml</code>。</p>
 <details class="note primary no-icon"><summary><p>参考配置文件</p>
 </summary>
 <figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line">os: linux</span><br><span class="line"></span><br><span class="line">dist: bionic</span><br><span class="line"></span><br><span class="line">language: node_js</span><br><span class="line"></span><br><span class="line">node_js:</span><br><span class="line">  - 'lts/*'</span><br><span class="line">  # - 'stable'</span><br><span class="line"></span><br><span class="line">script: "true"</span><br><span class="line"></span><br><span class="line">branches:</span><br><span class="line">  only:</span><br><span class="line">    - master</span><br><span class="line"></span><br><span class="line">addons: # Travis CI建议加的，自动更新api</span><br><span class="line">  apt:</span><br><span class="line">    update: true</span><br><span class="line"></span><br><span class="line">cache:</span><br><span class="line">  directories:</span><br><span class="line">    - node_modules</span><br><span class="line"></span><br><span class="line">before_install:</span><br><span class="line">  - export TZ='Asia/Shanghai'</span><br><span class="line">  - export TRAVIS_TAG=v1.0.$TRAVIS_BUILD_NUMBER.$(git log --format=%h -1)</span><br><span class="line">  - git config --global push.default matching</span><br><span class="line">  - git config --global user.name "Travis CI"</span><br><span class="line">  - git config --global user.email "bot@travis-ci.org"</span><br><span class="line">  - sed -i'' "s~git@github.com:ljcbaby/ljcbaby.github.io.git~https://${Travis_Token}:x-oauth-basic@github.com/ljcbaby/ljcbaby.github.io.git~" _config.yml</span><br><span class="line">  - sed -i "s/ljcbaby.github.io@master/ljcbaby.github.io@${TRAVIS_TAG}/g" _config.next.yml</span><br><span class="line"></span><br><span class="line">install:</span><br><span class="line">  - npm install hexo-cli --save</span><br><span class="line">  - npm install</span><br><span class="line"></span><br><span class="line">deploy:</span><br><span class="line">  skip_cleanup: true</span><br><span class="line">  provider: script</span><br><span class="line">  script: sh deploy.sh</span><br><span class="line">  on:</span><br><span class="line">    branch: master</span><br></pre></td></tr></tbody></table></figure>
@@ -245,14 +259,29 @@ Hexo 的自动部署
 <p>这份配置的生成参考了以下内容<br><a target="_blank" rel="noopener" href="https://qinyuanpei.github.io/posts/1417719502/">使用 jsDelivr 为 Hexo 博客提供高效免费的 CDN 加速 - 一个人的孤落时辰</a><br><a target="_blank" rel="noopener" href="https://github.com/A1exInamin/A1exInamin.github.io/blob/hexo/deploy.sh">A1exInamin.github.io/deploy.sh at hexo · A1exInamin/A1exInamin.github.io</a></p>
 </blockquote>
 </details>
-<h2 id="Gitee-Pages-服务-一个支持Jekyll、Hugo、Hexo静态网站的服务"><a href="#Gitee-Pages-服务-一个支持Jekyll、Hugo、Hexo静态网站的服务" class="headerlink" title="Gitee Pages 服务 一个支持Jekyll、Hugo、Hexo静态网站的服务"></a><strong>Gitee Pages 服务</strong> 一个支持 Jekyll、Hugo、Hexo 静态网站的服务</h2><p>详见<a target="_blank" rel="noopener" href="https://gitee.com/help/articles/4136">码云 Pages - 码云 Gitee.com</a></p>
+<h2 id="Gitee-Pages-服务"><a href="#Gitee-Pages-服务" class="headerlink" title="Gitee Pages 服务"></a>Gitee Pages 服务</h2><div class="link-grid"><div class="link-grid-container">
+<div class="link-grid-image" style="background-image:url(https://cdn.jsdelivr.net/gh/ljcbaby/image@master/20200822193104.png)"></div>
+<p>Gitee Pages 服务</p><p>一个支持 Jekyll、Hugo、Hexo 静态网站的服务</p>
+<a target="_blank" rel="noopener" href="https://gitee.com/help/articles/4136"></a>
+</div></div>
 <p>唯一的缺点是每次更新博客要手动部署一次，只有付费的 Gitee Pages Pro 才能自动更新 Pages 。</p>
-<h2 id="Jenkins"><a href="#Jenkins" class="headerlink" title="Jenkins"></a>Jenkins</h2><p>Gitee 和 GitLab 可以使用这家 CI ，和 Travis CI 类似。</p>
-<h2 id="Netlify"><a href="#Netlify" class="headerlink" title="Netlify"></a><a target="_blank" rel="noopener" href="https://www.netlify.com/">Netlify</a></h2><p>这应该是唯一一家不写配置文件而用界面化设定的了<br>（当然想要用得好还是要写 bash 脚本）<br>英文好就不用管了，英文不好靠翻译就行</p>
+<h2 id="Jenkins"><a href="#Jenkins" class="headerlink" title="Jenkins"></a>Jenkins</h2><div class="link-grid"><div class="link-grid-container">
+<div class="link-grid-image" style="background-image:url(https://cdn.jsdelivr.net/gh/ljcbaby/image@master/1500px_Jenkins_logo.png)"></div>
+<p>Jenkins</p><p>一个开源的自动化服务器</p>
+<a target="_blank" rel="noopener" href="https://www.jenkins.io/"></a>
+</div></div>
+<p>Gitee 和 GitLab 可以使用这家 CI ，和 Travis CI 类似。</p>
+<h2 id="Netlify"><a href="#Netlify" class="headerlink" title="Netlify"></a><a target="_blank" rel="noopener" href="https://www.netlify.com/">Netlify</a></h2><div class="link-grid"><div class="link-grid-container">
+<div class="link-grid-image" style="background-image:url(https://cdn.jsdelivr.net/gh/ljcbaby/image@master/20200822193839.png)"></div>
+<p>Netlify</p><p>用于自动化现代 Web 项目的多合一平台</p>
+<a target="_blank" rel="noopener" href="https://www.netlify.com/"></a>
+</div></div>
+<p>这应该是唯一一家不写配置文件而用界面化设定的了<br>（当然想要用得好还是要写 bash 脚本）<br>英文好就不用管了，英文不好靠翻译就行</p>
 <p><img data-src="https://cdn.jsdelivr.net/gh/ljcbaby/image@master/afdian.bmp" alt="二维码"></p><center>打赏</center><p></p>
 </div>
-<div>
-<ul class="post-copyright">
+<footer class="post-footer">
+<div class="post-copyright">
+<ul>
 <li class="post-copyright-author">
 <strong>本文作者： </strong>Ljcbaby
 </li>
@@ -265,7 +294,6 @@ Hexo 的自动部署
 </li>
 </ul>
 </div>
-<footer class="post-footer">
 <div class="post-tags">
 <a href="/tags/Ljcbaby/" rel="tag"><i class="fa fa-tag"></i> Ljcbaby</a>
 <a href="/tags/Hexo/" rel="tag"><i class="fa fa-tag"></i> Hexo</a>
@@ -350,7 +378,7 @@ window.addEventListener('tabs:register', () => {
 <script src="//cdn.jsdelivr.net/npm/animejs@3.2.0/lib/anime.min.js"></script>
 <script src="//cdn.jsdelivr.net/npm/@next-theme/pjax@0.4.0/pjax.min.js"></script>
 <script src="//cdn.jsdelivr.net/npm/lozad@1.15.0/dist/lozad.min.js"></script>
-<script src="//cdn.jsdelivr.net/gh/ljcbaby/ljcbaby.github.io@v2.1.6.4cc2f38/js/utils.js"></script><script src="//cdn.jsdelivr.net/gh/ljcbaby/ljcbaby.github.io@v2.1.6.4cc2f38/js/motion.js"></script><script src="//cdn.jsdelivr.net/gh/ljcbaby/ljcbaby.github.io@v2.1.6.4cc2f38/js/next-boot.js"></script>
+<script src="//cdn.jsdelivr.net/gh/ljcbaby/ljcbaby.github.io@v2.1.7.07a00b2/js/utils.js"></script><script src="//cdn.jsdelivr.net/gh/ljcbaby/ljcbaby.github.io@v2.1.7.07a00b2/js/motion.js"></script><script src="//cdn.jsdelivr.net/gh/ljcbaby/ljcbaby.github.io@v2.1.7.07a00b2/js/next-boot.js"></script>
 <script>
 var pjax = new Pjax({
   selectors: [
@@ -385,7 +413,7 @@ document.addEventListener('pjax:success', () => {
 });
 </script>
 <script data-pjax>!function(){var t=document.createElement("script"),e=window.location.protocol.split(":")[0];t.src="https"===e?"https://zz.bdstatic.com/linksubmit/push.js":"http://push.zhanzhang.baidu.com/push.js";var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(t,s)}()</script>
-<script src="//cdn.jsdelivr.net/gh/ljcbaby/ljcbaby.github.io@v2.1.6.4cc2f38/js/local-search.js"></script>
+<script src="//cdn.jsdelivr.net/gh/ljcbaby/ljcbaby.github.io@v2.1.7.07a00b2/js/local-search.js"></script>
 <script data-pjax async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 <script data-pjax>
 (function() {

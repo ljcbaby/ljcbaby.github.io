@@ -4,19 +4,19 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 5.0.2">
+<meta name="generator" content="Hexo 5.1.0">
 <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
 <link rel="mask-icon" href="/images/logo.svg" color="#222">
 <meta http-equiv="Cache-Control" content="no-transform">
 <meta http-equiv="Cache-Control" content="no-siteapp">
-<link rel="stylesheet" href="//cdn.jsdelivr.net/gh/ljcbaby/ljcbaby.github.io@v2.1.6.4cc2f38/css/main.css">
+<link rel="stylesheet" href="//cdn.jsdelivr.net/gh/ljcbaby/ljcbaby.github.io@v2.1.7.07a00b2/css/main.css">
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14.0/css/all.min.css">
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/pace-js@1.0.2/themes/blue/pace-theme-minimal.css">
 <script src="//cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
-<script class="hexo-configurations">var NexT=window.NexT||{},CONFIG={hostname:"www.ljcbaby.top",root:"/",scheme:"Pisces",version:"8.0.0-rc.5",exturl:!1,sidebar:{position:"left",display:"post",padding:18,offset:12},copycode:!0,bookmark:{enable:!1,color:"#222",save:"auto"},fancybox:!1,mediumzoom:!1,lazyload:!0,pangu:!1,comments:{style:"tabs",active:"gitalk",storage:!0,lazyload:!0,nav:null,activeClass:"gitalk"},motion:{enable:!0,async:!0,transition:{post_block:"fadeIn",post_header:"fadeInDown",post_body:"fadeInDown",coll_header:"fadeInLeft",sidebar:"fadeInUp"}},prism:!1,path:"search.json",localsearch:{enable:!0,trigger:"auto",top_n_per_article:1,unescape:!1,preload:!1}}</script>
+<script class="hexo-configurations">var NexT=window.NexT||{},CONFIG={hostname:"www.ljcbaby.top",root:"/",scheme:"Pisces",version:"8.0.0-rc.5",exturl:!1,sidebar:{position:"left",display:"post",padding:18,offset:12},copycode:!0,bookmark:{enable:!1,color:"#222",save:"auto"},fancybox:!1,mediumzoom:!1,lazyload:!0,pangu:!1,comments:{style:"tabs",active:"gitalk",storage:!0,lazyload:!0,nav:null,activeClass:"gitalk"},motion:{enable:!0,async:!0,transition:{post_block:"fadeIn",post_header:"fadeInDown",post_body:"fadeInDown",coll_header:"fadeInLeft",sidebar:"fadeInUp"}},prism:!1,i18n:{placeholder:"搜索...",empty:"We didn't find any results for the search: ${query}",hits_time:"${hits} results found in ${time} ms",hits:"${hits} results found"},path:"search.json",localsearch:{enable:!0,trigger:"auto",top_n_per_article:1,unescape:!1,preload:!1}}</script>
 <meta name="description" content="好的开头，Yes!">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Linux 中的常用初始化操作">
@@ -110,7 +110,7 @@
 </span>
 </div>
 <div class="search-result-container">
-<div class="no-result">
+<div class="search-result-icon">
 <i class="fa fa-spinner fa-pulse fa-5x"></i>
 </div>
 </div>
@@ -168,7 +168,7 @@
 </span>
 </div>
 <div class="cc-license animated" itemprop="license">
-<a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh" class="cc-opacity" rel="noopener" target="_blank"><img src="//cdn.jsdelivr.net/gh/ljcbaby/ljcbaby.github.io@v2.1.6.4cc2f38/images/cc-by-nc-nd.svg" alt="Creative Commons"></a>
+<a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh" class="cc-opacity" rel="noopener" target="_blank"><img src="//cdn.jsdelivr.net/gh/ljcbaby/ljcbaby.github.io@v2.1.7.07a00b2/images/cc-by-nc-nd.svg" alt="Creative Commons"></a>
 </div>
 </section>
 <div class="back-to-top animated">
@@ -227,7 +227,7 @@ Linux 中的常用初始化操作
 <p>新开的服务器想要用得好，一些初始化操作就少不了。<br>对于非 root 账户登录的情况，这些命令可能需要加上 sudo<br>（这部分命令均以自用为主要目的，仅供参考</p>
 <h2 id="修改root密码"><a href="#修改root密码" class="headerlink" title="修改root密码"></a>修改 root 密码</h2><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">passwd root</span><br></pre></td></tr></tbody></table></figure>
 <p>常用命令，不多说，下一个</p>
-<h2 id="修改SSH设置（安全第一）"><a href="#修改SSH设置（安全第一）" class="headerlink" title="修改SSH设置（安全第一）"></a>修改 SSH 设置（安全第一）</h2><p>安全性参考方案：仅启用密钥登录 + 换到非 22 端口<br>请先 su 到你需要使用 SSH 的账户下再进行如下操作</p>
+<h2 id="修改SSH设置（安全第一）"><a href="#修改SSH设置（安全第一）" class="headerlink" title="修改SSH设置（安全第一）"></a>修改 SSH 设置（安全第一）</h2><p>安全性参考方案：仅启用密钥登录 + 换到非 22 端口<br>请先 <code>su</code> 到你需要使用 SSH 的账户下再进行如下操作</p>
 <h3 id="SSH密钥对"><a href="#SSH密钥对" class="headerlink" title="SSH密钥对"></a>SSH 密钥对</h3><h4 id="生成"><a href="#生成" class="headerlink" title="生成"></a>生成</h4><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~</span><br><span class="line">ssh-keygen</span><br></pre></td></tr></tbody></table></figure>
 <p>然后一路回车就好，直到得到类似提示</p>
 <figure class="highlight text"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Your identification has been saved in /root/.ssh/id_rsa.</span><br><span class="line">Your public key has been saved in /root/.ssh/id_rsa.pub.</span><br></pre></td></tr></tbody></table></figure>
@@ -286,7 +286,7 @@ Linux 中的常用初始化操作
 </div>
 <p>如果想从 disabled 切换到 enforcing 或者 permissive 的话，需要重启系统<br>enforcing 和 permissive 模式可以通过 setenforce 1|0 命令快速切换。</p>
 <h3 id="永久改变状态"><a href="#永久改变状态" class="headerlink" title="永久改变状态"></a>永久改变状态</h3><p>编辑 <code>/etc/selinux/config</code><br>把 <code>SELINUX=</code> 这一项改成你想要的状态<br>该重启就重启</p>
-<h2 id="软件源"><a href="#软件源" class="headerlink" title="软件源"></a>软件源</h2><p>这一部分真的是因人而异，不要无脑跟着操作<br>apt 用于 Ubuntu，yum/dnf 用于 CentOS7，不再额外强调</p>
+<h2 id="软件源"><a href="#软件源" class="headerlink" title="软件源"></a>软件源</h2><p>这一部分真的是因人而异，不要无脑跟着操作<br><code>apt</code> 用于 Ubuntu，<code>yum</code> 或 <code>dnf</code> 用于 CentOS，不再额外强调</p>
 <h3 id="更换国内软件源"><a href="#更换国内软件源" class="headerlink" title="更换国内软件源"></a>更换国内软件源</h3><p>部分服务商镜像提供了自有源，无需手动更换<br>推荐<a target="_blank" rel="noopener" href="https://mirrors.tuna.tsinghua.edu.cn/">清华大学 TUNA 镜像源</a>和<a target="_blank" rel="noopener" href="https://developer.aliyun.com/mirror/">阿里镜像源</a><br>官方有操作引导，不多说了</p>
 <h3 id="安装常用软件-源"><a href="#安装常用软件-源" class="headerlink" title="安装常用软件(源)"></a>安装常用软件 (源)</h3><p>Centos 的 EPEL 源以及常用软件</p>
 <figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">yum install -y epel-release</span><br><span class="line">yum install -y screen wget vim htop curl dnf lrzsz</span><br><span class="line"></span><br><span class="line">apt install -y screen wget vim htop curl lrzsz</span><br></pre></td></tr></tbody></table></figure>
@@ -295,8 +295,9 @@ Linux 中的常用初始化操作
 <figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">uname -r</span><br><span class="line"><span class="comment">#确定内核版本</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"net.core.default_qdisc=fq"</span> &gt;&gt; /etc/sysctl.conf</span><br><span class="line"><span class="built_in">echo</span> <span class="string">"net.ipv4.tcp_congestion_control=bbr"</span> &gt;&gt; /etc/sysctl.conf</span><br><span class="line">sysctl -p</span><br><span class="line"><span class="comment">#开启BBR</span></span><br><span class="line"></span><br><span class="line">sysctl net.ipv4.tcp_congestion_control</span><br><span class="line">lsmod | grep tcp_bbr</span><br><span class="line"><span class="comment">#检查开启状态</span></span><br><span class="line"><span class="comment">#有返回BBR就是开启成功</span></span><br></pre></td></tr></tbody></table></figure>
 <h2 id="End"><a href="#End" class="headerlink" title="End?"></a>End?</h2><p><img data-src="https://cdn.jsdelivr.net/gh/ljcbaby/image@master/afdian.bmp" alt="二维码"></p><center>打赏</center><p></p>
 </div>
-<div>
-<ul class="post-copyright">
+<footer class="post-footer">
+<div class="post-copyright">
+<ul>
 <li class="post-copyright-author">
 <strong>本文作者： </strong>Ljcbaby
 </li>
@@ -309,7 +310,6 @@ Linux 中的常用初始化操作
 </li>
 </ul>
 </div>
-<footer class="post-footer">
 <div class="post-tags">
 <a href="/tags/Ljcbaby/" rel="tag"><i class="fa fa-tag"></i> Ljcbaby</a>
 <a href="/tags/Linux/" rel="tag"><i class="fa fa-tag"></i> Linux</a>
@@ -388,7 +388,7 @@ window.addEventListener('tabs:register', () => {
 <script src="//cdn.jsdelivr.net/npm/animejs@3.2.0/lib/anime.min.js"></script>
 <script src="//cdn.jsdelivr.net/npm/@next-theme/pjax@0.4.0/pjax.min.js"></script>
 <script src="//cdn.jsdelivr.net/npm/lozad@1.15.0/dist/lozad.min.js"></script>
-<script src="//cdn.jsdelivr.net/gh/ljcbaby/ljcbaby.github.io@v2.1.6.4cc2f38/js/utils.js"></script><script src="//cdn.jsdelivr.net/gh/ljcbaby/ljcbaby.github.io@v2.1.6.4cc2f38/js/motion.js"></script><script src="//cdn.jsdelivr.net/gh/ljcbaby/ljcbaby.github.io@v2.1.6.4cc2f38/js/next-boot.js"></script>
+<script src="//cdn.jsdelivr.net/gh/ljcbaby/ljcbaby.github.io@v2.1.7.07a00b2/js/utils.js"></script><script src="//cdn.jsdelivr.net/gh/ljcbaby/ljcbaby.github.io@v2.1.7.07a00b2/js/motion.js"></script><script src="//cdn.jsdelivr.net/gh/ljcbaby/ljcbaby.github.io@v2.1.7.07a00b2/js/next-boot.js"></script>
 <script>
 var pjax = new Pjax({
   selectors: [
@@ -423,7 +423,7 @@ document.addEventListener('pjax:success', () => {
 });
 </script>
 <script data-pjax>!function(){var t=document.createElement("script"),e=window.location.protocol.split(":")[0];t.src="https"===e?"https://zz.bdstatic.com/linksubmit/push.js":"http://push.zhanzhang.baidu.com/push.js";var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(t,s)}()</script>
-<script src="//cdn.jsdelivr.net/gh/ljcbaby/ljcbaby.github.io@v2.1.6.4cc2f38/js/local-search.js"></script>
+<script src="//cdn.jsdelivr.net/gh/ljcbaby/ljcbaby.github.io@v2.1.7.07a00b2/js/local-search.js"></script>
 <script data-pjax async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 <script data-pjax>
 (function() {
