@@ -11,12 +11,12 @@
 <link rel="mask-icon" href="https://cdn.jsdelivr.net/gh/ljcbaby/ljcbaby.github.io@latest/images/logo.svg" color="#222">
 <meta http-equiv="Cache-Control" content="no-transform">
 <meta http-equiv="Cache-Control" content="no-siteapp">
-<link rel="stylesheet" href="//cdn.jsdelivr.net/gh/ljcbaby/ljcbaby.github.io@v2.1.10.12fa1d8/css/main.css">
+<link rel="stylesheet" href="//cdn.jsdelivr.net/gh/ljcbaby/ljcbaby.github.io@v2.1.11.7c5b3b0/css/main.css">
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.0/css/all.min.css">
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.css">
 <script src="//cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.js"></script>
-<script class="hexo-configurations">var NexT=window.NexT||{},CONFIG={hostname:"www.ljcbaby.top",root:"/",scheme:"Pisces",version:"8.0.1",exturl:!1,sidebar:{position:"left",display:"post",padding:18,offset:12},copycode:!0,bookmark:{enable:!1,color:"#222",save:"auto"},fancybox:!1,mediumzoom:!1,lazyload:!0,pangu:!1,comments:{style:"tabs",active:"gitalk",storage:!0,lazyload:!0,nav:null,activeClass:"gitalk"},motion:{enable:!0,async:!0,transition:{post_block:"fadeIn",post_header:"fadeInDown",post_body:"fadeInDown",coll_header:"fadeInLeft",sidebar:"fadeInUp"}},prism:!1,i18n:{placeholder:"搜索...",empty:"没有找到任何搜索结果：${query}",hits_time:"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）",hits:"找到 ${hits} 个搜索结果"},path:"/search.json",localsearch:{enable:!0,trigger:"auto",top_n_per_article:1,unescape:!1,preload:!1}}</script>
+<script class="hexo-configurations">var NexT=window.NexT||{},CONFIG={hostname:"www.ljcbaby.top",root:"/",scheme:"Pisces",version:"8.0.1",exturl:!1,sidebar:{position:"left",display:"post",padding:18,offset:12},copycode:!0,bookmark:{enable:!1,color:"#222",save:"auto"},fancybox:!1,mediumzoom:!1,lazyload:!0,pangu:!1,comments:{style:"tabs",active:"disqusjs",storage:!0,lazyload:!0,nav:null,activeClass:"disqusjs"},motion:{enable:!0,async:!0,transition:{post_block:"fadeIn",post_header:"fadeInDown",post_body:"fadeInDown",coll_header:"fadeInLeft",sidebar:"fadeInUp"}},prism:!1,i18n:{placeholder:"搜索...",empty:"没有找到任何搜索结果：${query}",hits_time:"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）",hits:"找到 ${hits} 个搜索结果"},path:"/search.json",localsearch:{enable:!0,trigger:"auto",top_n_per_article:1,unescape:!1,preload:!1}}</script>
 <meta name="description" content="作为一种静态博客，Hexo 的每一次更新都要在本地执行 hexo clean、hexo d -g 等命令。那么，有什么办法可以简化这些过程呢？把命令合成一个脚本或许是一个选择，但更好的方案是使用服务于 DevOps 的公共 CI&#x2F;CD 服务。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo 的自动部署">
@@ -42,6 +42,7 @@
 <noscript>
 <style>body{margin-top:2rem}.use-motion .collection-header,.use-motion .comments,.use-motion .menu-item,.use-motion .pagination,.use-motion .post-block,.use-motion .post-body,.use-motion .post-header,.use-motion .sidebar{visibility:visible}.use-motion .footer,.use-motion .header,.use-motion .site-brand-container .toggle{opacity:initial}.use-motion .custom-logo-image,.use-motion .site-subtitle,.use-motion .site-title{opacity:initial;top:initial}.use-motion .logo-line{transform:scaleX(1)}.search-pop-overlay,.sidebar-nav{display:none}.sidebar-panel{display:block}</style>
 </noscript>
+<link rel="alternate" href="/atom.xml" title="Ljcbaby 的 网络小屋" type="application/atom+xml">
 </head>
 <body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
 <div class="headband"></div>
@@ -150,7 +151,7 @@
 <nav class="site-state">
 <div class="site-state-item site-state-posts">
 <a href="/archives/">
-<span class="site-state-item-count">33</span>
+<span class="site-state-item-count">34</span>
 <span class="site-state-item-name">日志</span>
 </a>
 </div>
@@ -163,7 +164,7 @@
 </div>
 <div class="links-of-author site-overview-item animated">
 <span class="links-of-author-item">
-<a href="/atom.xml" title="RSS → &#x2F;atom.xml"><i class="fa fa-rss fa-fw"></i>RSS</a>
+<a href="https://cdn.jsdelivr.net/gh/ljcbaby/ljcbaby.github.io@latest/atom.xml" title="RSS → https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;gh&#x2F;ljcbaby&#x2F;ljcbaby.github.io@latest&#x2F;atom.xml" rel="noopener" target="_blank"><i class="fa fa-rss fa-fw"></i>RSS</a>
 </span>
 <span class="links-of-author-item">
 <a href="https://github.com/ljcbaby" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;ljcbaby" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
@@ -179,7 +180,7 @@
 </span>
 </div>
 <div class="cc-license site-overview-item animated" itemprop="license">
-<a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh" class="cc-opacity" rel="noopener" target="_blank"><img src="//cdn.jsdelivr.net/gh/ljcbaby/ljcbaby.github.io@v2.1.10.12fa1d8/images/cc-by-nc-nd.svg" alt="Creative Commons"></a>
+<a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh" class="cc-opacity" rel="noopener" target="_blank"><img src="//cdn.jsdelivr.net/gh/ljcbaby/ljcbaby.github.io@v2.1.11.7c5b3b0/images/cc-by-nc-nd.svg" alt="Creative Commons"></a>
 </div>
 </section>
 <div class="back-to-top animated">
@@ -259,12 +260,12 @@ Hexo 的自动部署
 </details>
 <h2 id="Travis-CI"><a href="#Travis-CI" class="headerlink" title="Travis CI"></a>Travis CI</h2><div class="link-grid"><div class="link-grid-container">
 <div class="link-grid-image" style="background-image:url(https://cdn.jsdelivr.net/gh/ljcbaby/image@master/TravisCI-Mascot-1.jpg)"></div>
-<p>Travis CI.org</p><p>放心地测试和部署代码</p>
-<a target="_blank" rel="noopener" href="https://travis-ci.org/"></a>
-</div><div class="link-grid-container">
-<div class="link-grid-image" style="background-image:url(https://cdn.jsdelivr.net/gh/ljcbaby/image@master/TravisCI-Mascot-1.jpg)"></div>
 <p>Travis CI.com</p><p>放心地测试和部署代码</p>
 <a target="_blank" rel="noopener" href="https://travis-ci.com/"></a>
+</div><div class="link-grid-container">
+<div class="link-grid-image" style="background-image:url(https://cdn.jsdelivr.net/gh/ljcbaby/image@master/TravisCI-Mascot-1.jpg)"></div>
+<p>Travis CI.org</p><p>放心地测试和部署代码</p>
+<a target="_blank" rel="noopener" href="https://travis-ci.org/"></a>
 </div></div>
 <p>这家比较特别，有 <a target="_blank" rel="noopener" href="https://travis-ci.org/">Travis CI.org</a> 和 <a target="_blank" rel="noopener" href="https://travis-ci.com/">Travis CI.com</a> 之分。前者免费但不支持 GitHub 的私有库，后者收费（GitHub 的学生包可以白嫖）。配置文件为 <code>git_root</code> 下的<code>.travis.yml</code>。</p>
 <blockquote>
@@ -350,7 +351,11 @@ Hexo 的自动部署
 </footer>
 </article>
 </div>
-<div class="comments" id="gitalk-container"></div>
+<div class="comments">
+<div id="disqus_thread">
+<noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+</div>
+</div>
 <script>
 window.addEventListener('tabs:register', () => {
     let { activeClass } = CONFIG.comments;
@@ -410,7 +415,7 @@ window.addEventListener('tabs:register', () => {
 <script src="//cdn.jsdelivr.net/npm/animejs@3.2.0/lib/anime.min.js"></script>
 <script src="//cdn.jsdelivr.net/npm/@next-theme/pjax@0.4.0/pjax.min.js"></script>
 <script src="//cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js"></script>
-<script src="//cdn.jsdelivr.net/gh/ljcbaby/ljcbaby.github.io@v2.1.10.12fa1d8/js/utils.js"></script><script src="//cdn.jsdelivr.net/gh/ljcbaby/ljcbaby.github.io@v2.1.10.12fa1d8/js/motion.js"></script><script src="//cdn.jsdelivr.net/gh/ljcbaby/ljcbaby.github.io@v2.1.10.12fa1d8/js/next-boot.js"></script>
+<script src="//cdn.jsdelivr.net/gh/ljcbaby/ljcbaby.github.io@v2.1.11.7c5b3b0/js/utils.js"></script><script src="//cdn.jsdelivr.net/gh/ljcbaby/ljcbaby.github.io@v2.1.11.7c5b3b0/js/motion.js"></script><script src="//cdn.jsdelivr.net/gh/ljcbaby/ljcbaby.github.io@v2.1.11.7c5b3b0/js/next-boot.js"></script>
 <script>
 var pjax = new Pjax({
   selectors: [
@@ -444,7 +449,7 @@ document.addEventListener('pjax:success', () => {
   NexT.utils.updateSidebarPosition();
 });
 </script>
-<script src="//cdn.jsdelivr.net/gh/ljcbaby/ljcbaby.github.io@v2.1.10.12fa1d8/js/local-search.js"></script>
+<script src="//cdn.jsdelivr.net/gh/ljcbaby/ljcbaby.github.io@v2.1.11.7c5b3b0/js/local-search.js"></script>
 <script>
 NProgress.configure({
       showSpinner: true
@@ -558,22 +563,19 @@ NProgress.configure({
   })();
 </script>
 <div class="pjax">
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1.6.2/dist/gitalk.css">
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/disqusjs@1.3.0/dist/disqusjs.css">
 <script>
-NexT.utils.loadComments('#gitalk-container', () => {
-  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1.6.2/dist/gitalk.min.js', () => {
-    var gitalk = new Gitalk({
-      clientID    : '2faba93073695ca2eb73',
-      clientSecret: 'aab9e65e59d231356011079e42404721ae61ceb2',
-      repo        : 'ljcbaby.github.io',
-      owner       : 'ljcbaby',
-      admin       : ['ljcbaby'],
-      id          : '3c82f8d0ff0bf4281c672e45a6a0f761',
-        language: 'zh-CN',
-      distractionFreeMode: false
+NexT.utils.loadComments('#disqus_thread', () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/disqusjs@1.3.0/dist/disqus.js', () => {
+    window.dsqjs = new DisqusJS({
+      api       : 'https://disqusjs.ljcbaby.workers.dev/' || 'https://disqus.com/api/',
+      apikey    : 'yA5aEkNep4x1a8UQFmB5m4nooBXjF3H2gFQL03iCbA05HD34Irs0QD3rQOzsT0TV',
+      shortname : 'ljcbaby',
+      url       : "https://www.ljcbaby.top/article/CICDs-in-Hexo/",
+      identifier: "article/CICDs-in-Hexo/",
+      title     : "Hexo 的自动部署",
     });
-    gitalk.render('gitalk-container');
-  }, window.Gitalk);
+  }, window.DisqusJS);
 });
 </script>
 </div>
