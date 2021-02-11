@@ -3,5 +3,5 @@
 User-agent: *
 Allow: *
 
-Sitemap: https://www.ljcbaby.top/sitemap.xml
-Sitemap: https://www.ljcbaby.top/baidusitemap.xml
+Sitemap: https://blog.ljcbaby.top/sitemap.xml
+Sitemap: https://blog.ljcbaby.top/baidusitemap.xml
