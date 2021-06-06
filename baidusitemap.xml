@@ -1,24 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://blog.ljcbaby.top/article/Site-ChangeLog/</loc>
+    <lastmod>2021-06-06</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.ljcbaby.top/article/Hexo/</loc>
+    <lastmod>2021-06-05</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.ljcbaby.top/article/legal-things/</loc>
+    <lastmod>2021-06-05</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.ljcbaby.top/article/friends/</loc>
+    <lastmod>2021-06-05</lastmod>
+  </url>
+  <url>
     <loc>https://blog.ljcbaby.top/article/facing-the-college-entrance-examination/</loc>
     <lastmod>2021-06-04</lastmod>
   </url>
   <url>
-    <loc>https://blog.ljcbaby.top/article/friends/</loc>
-    <lastmod>2021-05-31</lastmod>
-  </url>
-  <url>
     <loc>https://blog.ljcbaby.top/article/How-To-Ask-Questions-The-Smart-Way/</loc>
     <lastmod>2021-04-29</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.ljcbaby.top/article/legal-things/</loc>
-    <lastmod>2021-04-24</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.ljcbaby.top/article/Hexo/</loc>
-    <lastmod>2021-03-30</lastmod>
   </url>
   <url>
     <loc>https://blog.ljcbaby.top/article/Year-2020/</loc>
@@ -47,10 +51,6 @@
   <url>
     <loc>https://blog.ljcbaby.top/article/Picgo-by-jsDelivr/</loc>
     <lastmod>2020-11-08</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.ljcbaby.top/article/Valine-accident/</loc>
-    <lastmod>2020-10-17</lastmod>
   </url>
   <url>
     <loc>https://blog.ljcbaby.top/article/Chinese-network/</loc>

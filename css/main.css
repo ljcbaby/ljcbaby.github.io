@@ -1960,7 +1960,7 @@ pre code {
   z-index: 1500;
   width: var(--progress);
   left: 0;
-  bottom: 0;
+  top: 0;
 }
 .rtl.post-body p,
 .rtl.post-body a,
