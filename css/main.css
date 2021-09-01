@@ -1798,6 +1798,8 @@ pre code {
 }
 .beian img {
   display: inline-block;
+  margin: 0 3px;
+  vertical-align: middle;
 }
 .busuanzi-count #busuanzi_container_site_uv {
   display: none;
@@ -2184,7 +2186,8 @@ pre code {
   margin-left: 4px;
 }
 .post-body .image-caption,
-.post-body .figure .caption {
+.post-body img + figcaption,
+.post-body .fancybox + figcaption {
   color: #999;
   font-size: 0.875em;
   font-weight: bold;
