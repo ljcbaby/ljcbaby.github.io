@@ -3,19 +3,20 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width">
-<meta name="theme-color" content="#222">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)">
 <meta name="generator" content="Hexo 5.4.0">
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 <link rel="apple-touch-icon" sizes="180x180" href="https://cdn.jsdelivr.net/gh/ljcbaby/ljcbaby.github.io@latest/images/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="https://cdn.jsdelivr.net/gh/ljcbaby/ljcbaby.github.io@latest/images/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="https://cdn.jsdelivr.net/gh/ljcbaby/ljcbaby.github.io@latest/images/favicon-16x16.png">
 <link rel="mask-icon" href="https://cdn.jsdelivr.net/gh/ljcbaby/ljcbaby.github.io@latest/images/logo.svg" color="#222">
-<link rel="stylesheet" href="//cdn.jsdelivr.net/gh/ljcbaby/ljcbaby.github.io@v2.2.40.986cd0c/css/main.css">
+<link rel="stylesheet" href="//cdn.jsdelivr.net/gh/ljcbaby/ljcbaby.github.io@v2.2.41.e23ec17/css/main.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/themes/green/pace-theme-minimal.css">
 <script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
-<script class="next-config" data-name="main" type="application/json">{"hostname":"blog.ljcbaby.top","root":"/","images":"//cdn.jsdelivr.net/gh/ljcbaby/ljcbaby.github.io@v2.2.40.986cd0c/images","scheme":"Pisces","version":"8.7.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":"twikoo","storage":true,"lazyload":true,"nav":null,"activeClass":"twikoo"},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="//cdn.jsdelivr.net/gh/ljcbaby/ljcbaby.github.io@v2.2.40.986cd0c/js/config.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"blog.ljcbaby.top","root":"/","images":"//cdn.jsdelivr.net/gh/ljcbaby/ljcbaby.github.io@v2.2.41.e23ec17/images","scheme":"Pisces","darkmode":true,"version":"8.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":"twikoo","storage":true,"lazyload":true,"nav":null,"activeClass":"twikoo"},"stickytabs":false,"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="//cdn.jsdelivr.net/gh/ljcbaby/ljcbaby.github.io@v2.2.41.e23ec17/js/config.js"></script>
 <meta name="description" content="好的开头，Yes!">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Linux 中的常用初始化操作">
@@ -40,7 +41,7 @@
 <title>Linux 中的常用初始化操作 | Ljcbaby 的 网络小屋</title>
 <script>CONFIG.path="https://cdn.jsdelivr.net/gh/ljcbaby/ljcbaby.github.io@latest/search.json"</script>
 <noscript>
-<link rel="stylesheet" href="//cdn.jsdelivr.net/gh/ljcbaby/ljcbaby.github.io@v2.2.40.986cd0c/css/noscript.css">
+<link rel="stylesheet" href="//cdn.jsdelivr.net/gh/ljcbaby/ljcbaby.github.io@v2.2.41.e23ec17/css/noscript.css">
 </noscript>
 <link rel="alternate" href="/atom.xml" title="Ljcbaby 的 网络小屋" type="application/atom+xml">
 </head>
@@ -80,6 +81,7 @@
 <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li>
 <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
 <li class="menu-item menu-item-travelling"><a href="https://travellings.link/" rel="noopener" target="_blank"><i class="fa fa-subway fa-fw"></i>开往-友链接力</a></li>
+<li class="menu-item menu-item-hole"><a href="https://www.foreverblog.cn/go.html" rel="noopener" target="_blank"><i class="fab fa-first-order-alt fa-fw"></i>虫洞-十年之约</a></li>
 <li class="menu-item menu-item-dl_site"><a href="https://www.ljclove.top/" rel="noopener" target="_blank"><i class="fa fa-download fa-fw"></i>下载站</a></li>
 <li class="menu-item menu-item-search">
 <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
@@ -127,7 +129,6 @@
 <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BF%AE%E6%94%B9root%E5%AF%86%E7%A0%81"><span class="nav-number">1.</span> <span class="nav-text">修改 root 密码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BF%AE%E6%94%B9SSH%E8%AE%BE%E7%BD%AE%EF%BC%88%E5%AE%89%E5%85%A8%E7%AC%AC%E4%B8%80%EF%BC%89"><span class="nav-number">2.</span> <span class="nav-text">修改 SSH 设置（安全第一）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#SSH%E5%AF%86%E9%92%A5%E5%AF%B9"><span class="nav-number">2.1.</span> <span class="nav-text">SSH 密钥对</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%94%9F%E6%88%90"><span class="nav-number">2.1.1.</span> <span class="nav-text">生成</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%94%BE%E7%BD%AE%E3%80%81%E6%94%B9%E6%9D%83%E9%99%90"><span class="nav-number">2.1.2.</span> <span class="nav-text">放置、改权限</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SSH%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="nav-number">2.2.</span> <span class="nav-text">SSH 配置文件</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BF%AE%E6%94%B9%E4%B8%BB%E6%9C%BA%E5%90%8D"><span class="nav-number">3.</span> <span class="nav-text">修改主机名</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%94%B9%E5%8F%98%E7%B3%BB%E7%BB%9F%E8%AF%AD%E8%A8%80%E4%B8%BA%E4%B8%AD%E6%96%87"><span class="nav-number">4.</span> <span class="nav-text">改变系统语言为中文</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SELinux%E9%85%8D%E7%BD%AE"><span class="nav-number">5.</span> <span class="nav-text">SELinux 配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AFSELinux"><span class="nav-number">5.1.</span> <span class="nav-text">什么是 SELinux?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9F%A5%E7%9C%8B%E7%8A%B6%E6%80%81"><span class="nav-number">5.2.</span> <span class="nav-text">查看状态</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B0%B8%E4%B9%85%E6%94%B9%E5%8F%98%E7%8A%B6%E6%80%81"><span class="nav-number">5.3.</span> <span class="nav-text">永久改变状态</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BD%AF%E4%BB%B6%E6%BA%90"><span class="nav-number">6.</span> <span class="nav-text">软件源</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9B%B4%E6%8D%A2%E5%9B%BD%E5%86%85%E8%BD%AF%E4%BB%B6%E6%BA%90"><span class="nav-number">6.1.</span> <span class="nav-text">更换国内软件源</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E5%B8%B8%E7%94%A8%E8%BD%AF%E4%BB%B6-%E6%BA%90"><span class="nav-number">6.2.</span> <span class="nav-text">安装常用软件 (源)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9B%B4%E6%96%B0%E5%88%B0%E6%9C%80%E6%96%B0%E7%89%88"><span class="nav-number">6.3.</span> <span class="nav-text">更新到最新版</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#BBR"><span class="nav-number">7.</span> <span class="nav-text">BBR</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#End"><span class="nav-number">8.</span> <span class="nav-text">End?</span></a></li></ol></div>
 </div>
 <div class="site-overview-wrap sidebar-panel">
-<div class="site-overview">
 <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
 <img class="site-author-image" itemprop="image" alt="Ljcbaby" src="https://cdn.jsdelivr.net/gh/ljcbaby/ljcbaby.github.io@latest/images/avatar.webp">
 <p class="site-author-name" itemprop="name">Ljcbaby</p>
@@ -143,7 +144,7 @@
 </div>
 <div class="site-state-item site-state-tags">
 <a href="/tags/">
-<span class="site-state-item-count">28</span>
+<span class="site-state-item-count">30</span>
 <span class="site-state-item-name">标签</span></a>
 </div>
 </nav>
@@ -164,7 +165,6 @@
 </div>
 <div class="cc-license site-overview-item animated" itemprop="license">
 <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh" class="cc-opacity" rel="noopener" target="_blank"><img src="https://cdn.jsdelivr.net/npm/@creativecommons/vocabulary@2020.11.3/assets/license_badges/small/by_nc_nd.svg" alt="Creative Commons"></a>
-</div>
 </div>
 </div>
 </div>
@@ -395,13 +395,15 @@ Office Tool Plus 使用教程 <i class="fa fa-chevron-right"></i>
 <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/@next-theme/pjax@0.5.0/pjax.min.js" integrity="sha256-3NkoLDrmHLTYj7csHIZSr0MHAFTXth7Ua/DDt4MRUAg=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
-<script src="//cdn.jsdelivr.net/gh/ljcbaby/ljcbaby.github.io@v2.2.40.986cd0c/js/comments.js"></script><script src="//cdn.jsdelivr.net/gh/ljcbaby/ljcbaby.github.io@v2.2.40.986cd0c/js/utils.js"></script><script src="//cdn.jsdelivr.net/gh/ljcbaby/ljcbaby.github.io@v2.2.40.986cd0c/js/motion.js"></script><script src="//cdn.jsdelivr.net/gh/ljcbaby/ljcbaby.github.io@v2.2.40.986cd0c/js/next-boot.js"></script><script src="//cdn.jsdelivr.net/gh/ljcbaby/ljcbaby.github.io@v2.2.40.986cd0c/js/pjax.js"></script>
-<script src="//cdn.jsdelivr.net/gh/ljcbaby/ljcbaby.github.io@v2.2.40.986cd0c/js/third-party/search/local-search.js"></script>
+<script src="//cdn.jsdelivr.net/gh/ljcbaby/ljcbaby.github.io@v2.2.41.e23ec17/js/comments.js"></script><script src="//cdn.jsdelivr.net/gh/ljcbaby/ljcbaby.github.io@v2.2.41.e23ec17/js/utils.js"></script><script src="//cdn.jsdelivr.net/gh/ljcbaby/ljcbaby.github.io@v2.2.41.e23ec17/js/motion.js"></script><script src="//cdn.jsdelivr.net/gh/ljcbaby/ljcbaby.github.io@v2.2.41.e23ec17/js/next-boot.js"></script><script src="//cdn.jsdelivr.net/gh/ljcbaby/ljcbaby.github.io@v2.2.41.e23ec17/js/pjax.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/hexo-generator-searchdb@1.4.0/dist/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>
+<script src="//cdn.jsdelivr.net/gh/ljcbaby/ljcbaby.github.io@v2.2.41.e23ec17/js/third-party/search/local-search.js"></script>
+<script src="//cdn.jsdelivr.net/gh/ljcbaby/ljcbaby.github.io@v2.2.41.e23ec17/js/third-party/pace.js"></script>
 <script data-pjax async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 <script class="next-config" data-name="twikoo" type="application/json">{"enable":true,"visitor":false,"envId":"twikoo-6g8mk914faebe3d0","el":"#twikoo-comments"}</script>
 <script>document.addEventListener("page:loaded",()=>{NexT.utils.loadComments(CONFIG.twikoo.el).then(()=>NexT.utils.getScript("https://cdn.jsdelivr.net/npm/twikoo/dist/twikoo.all.min.js",{condition:window.twikoo})).then(()=>{twikoo.init(CONFIG.twikoo)})})</script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/disqusjs@1.3.0/dist/disqusjs.css" integrity="sha256-GxdCIOyfxQ1OBfS99qAIJDoGK1ADuBsxhMTqXG82fAY=" crossorigin="anonymous">
 <script class="next-config" data-name="disqusjs" type="application/json">{"enable":true,"api":"https://www.ljclove.top/api/","apikey":"yA5aEkNep4x1a8UQFmB5m4nooBXjF3H2gFQL03iCbA05HD34Irs0QD3rQOzsT0TV","shortname":"ljcbaby","js":{"url":"https://cdn.jsdelivr.net/npm/disqusjs@1.3.0/dist/disqus.js","integrity":"sha256-LVaMHPQ2zLqOc5rXSAfr4d1PIkEGNLyyUTDNPZmTtUw="}}</script>
-<script src="//cdn.jsdelivr.net/gh/ljcbaby/ljcbaby.github.io@v2.2.40.986cd0c/js/third-party/comments/disqusjs.js"></script>
+<script src="//cdn.jsdelivr.net/gh/ljcbaby/ljcbaby.github.io@v2.2.41.e23ec17/js/third-party/comments/disqusjs.js"></script>
 </body>
 </html>

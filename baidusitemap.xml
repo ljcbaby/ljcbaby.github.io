@@ -1,20 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://blog.ljcbaby.top/article/Site-ChangeLog/</loc>
+    <lastmod>2021-10-26</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.ljcbaby.top/article/friends/</loc>
+    <lastmod>2021-10-26</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.ljcbaby.top/article/about/</loc>
+    <lastmod>2021-10-26</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.ljcbaby.top/article/CICDs-in-Hexo/</loc>
+    <lastmod>2021-10-16</lastmod>
+  </url>
+  <url>
     <loc>https://blog.ljcbaby.top/article/facing-the-college-entrance-examination/</loc>
     <lastmod>2021-09-01</lastmod>
   </url>
   <url>
     <loc>https://blog.ljcbaby.top/article/RMAC2100/</loc>
     <lastmod>2021-09-01</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.ljcbaby.top/article/friends/</loc>
-    <lastmod>2021-08-03</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.ljcbaby.top/article/Site-ChangeLog/</loc>
-    <lastmod>2021-06-06</lastmod>
   </url>
   <url>
     <loc>https://blog.ljcbaby.top/article/legal-things/</loc>
@@ -39,10 +47,6 @@
   <url>
     <loc>https://blog.ljcbaby.top/article/the-end-of-flash/</loc>
     <lastmod>2021-02-26</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.ljcbaby.top/article/CICDs-in-Hexo/</loc>
-    <lastmod>2021-01-12</lastmod>
   </url>
   <url>
     <loc>https://blog.ljcbaby.top/article/Office-tips/</loc>
@@ -91,10 +95,6 @@
   <url>
     <loc>https://blog.ljcbaby.top/article/never-leave/</loc>
     <lastmod>2020-08-06</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.ljcbaby.top/article/about/</loc>
-    <lastmod>2020-08-05</lastmod>
   </url>
   <url>
     <loc>https://blog.ljcbaby.top/article/the-silent-city/</loc>

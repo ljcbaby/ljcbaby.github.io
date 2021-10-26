@@ -6,7 +6,7 @@
   <link href="https://blog.ljcbaby.top/atom.xml" rel="self"/>
   
   <link href="https://blog.ljcbaby.top/"/>
-  <updated>2021-09-01T19:11:00.000Z</updated>
+  <updated>2021-10-26T12:35:00.000Z</updated>
   <id>https://blog.ljcbaby.top/</id>
   
   <author>
@@ -15,6 +15,94 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>站点更新日志</title>
+    <link href="https://blog.ljcbaby.top/article/Site-ChangeLog/"/>
+    <id>https://blog.ljcbaby.top/article/Site-ChangeLog/</id>
+    <published>2021-06-06T06:37:00.000Z</published>
+    <updated>2021-10-26T12:35:00.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;记录一下这个站点的变更历史&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="Hexo" scheme="https://blog.ljcbaby.top/tags/Hexo/"/>
+    
+    <category term="站务" scheme="https://blog.ljcbaby.top/tags/%E7%AB%99%E5%8A%A1/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>邻居们和朋友们</title>
+    <link href="https://blog.ljcbaby.top/article/friends/"/>
+    <id>https://blog.ljcbaby.top/article/friends/</id>
+    <published>2020-04-08T04:03:17.000Z</published>
+    <updated>2021-10-26T12:33:00.000Z</updated>
+    
+    
+    <summary type="html">来康康我们的朋友们和邻居们吧！</summary>
+    
+    
+    
+    
+    <category term="站务" scheme="https://blog.ljcbaby.top/tags/%E7%AB%99%E5%8A%A1/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>这座小屋～</title>
+    <link href="https://blog.ljcbaby.top/article/about/"/>
+    <id>https://blog.ljcbaby.top/article/about/</id>
+    <published>2020-04-07T05:12:26.000Z</published>
+    <updated>2021-10-26T12:30:00.000Z</updated>
+    
+    
+    <summary type="html">这是Ljcbaby的个人博客呢~</summary>
+    
+    
+    
+    
+    <category term="站务" scheme="https://blog.ljcbaby.top/tags/%E7%AB%99%E5%8A%A1/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo 的自动部署</title>
+    <link href="https://blog.ljcbaby.top/article/CICDs-in-Hexo/"/>
+    <id>https://blog.ljcbaby.top/article/CICDs-in-Hexo/</id>
+    <published>2020-08-16T01:25:00.000Z</published>
+    <updated>2021-10-16T18:03:00.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;作为一种静态博客，&lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt; 的每一次更新都要在本地执行 &lt;code&gt;hexo clean&lt;/code&gt;、&lt;code&gt;hexo d -g&lt;/code&gt; 等命令。那么，有什么办法可以简化这些过程呢？&lt;br&gt;把命令合成一个脚本或许是一个选择，但更好的方案是使用服务于 DevOps 的公共 CI/CD 服务。&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="Ljcbaby" scheme="https://blog.ljcbaby.top/tags/Ljcbaby/"/>
+    
+    <category term="Hexo" scheme="https://blog.ljcbaby.top/tags/Hexo/"/>
+    
+    <category term="公共服务" scheme="https://blog.ljcbaby.top/tags/%E5%85%AC%E5%85%B1%E6%9C%8D%E5%8A%A1/"/>
+    
+    <category term="GitHub" scheme="https://blog.ljcbaby.top/tags/GitHub/"/>
+    
+    <category term="TravisCI" scheme="https://blog.ljcbaby.top/tags/TravisCI/"/>
+    
+    <category term="Gitee" scheme="https://blog.ljcbaby.top/tags/Gitee/"/>
+    
+    <category term="Jenkins" scheme="https://blog.ljcbaby.top/tags/Jenkins/"/>
+    
+    <category term="Vercel" scheme="https://blog.ljcbaby.top/tags/Vercel/"/>
+    
+    <category term="Cloudflare Pages" scheme="https://blog.ljcbaby.top/tags/Cloudflare-Pages/"/>
+    
+    <category term="Netlify" scheme="https://blog.ljcbaby.top/tags/Netlify/"/>
+    
+  </entry>
   
   <entry>
     <title>面对高考</title>
@@ -49,42 +137,6 @@
     <category term="Ljcbaby" scheme="https://blog.ljcbaby.top/tags/Ljcbaby/"/>
     
     <category term="路由器" scheme="https://blog.ljcbaby.top/tags/%E8%B7%AF%E7%94%B1%E5%99%A8/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>邻居们和朋友们</title>
-    <link href="https://blog.ljcbaby.top/article/friends/"/>
-    <id>https://blog.ljcbaby.top/article/friends/</id>
-    <published>2020-04-08T04:03:17.000Z</published>
-    <updated>2021-08-03T05:27:00.000Z</updated>
-    
-    
-    <summary type="html">来康康我们的朋友们和邻居们吧！</summary>
-    
-    
-    
-    
-    <category term="站务" scheme="https://blog.ljcbaby.top/tags/%E7%AB%99%E5%8A%A1/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>站点更新日志</title>
-    <link href="https://blog.ljcbaby.top/article/Site-ChangeLog/"/>
-    <id>https://blog.ljcbaby.top/article/Site-ChangeLog/</id>
-    <published>2021-06-06T06:37:00.000Z</published>
-    <updated>2021-06-06T07:30:00.000Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;记录一下这个站点的变更历史&lt;/p&gt;</summary>
-    
-    
-    
-    
-    <category term="Hexo" scheme="https://blog.ljcbaby.top/tags/Hexo/"/>
-    
-    <category term="站务" scheme="https://blog.ljcbaby.top/tags/%E7%AB%99%E5%8A%A1/"/>
     
   </entry>
   
@@ -193,37 +245,6 @@
     <category term="Ljcbaby" scheme="https://blog.ljcbaby.top/tags/Ljcbaby/"/>
     
     <category term="杂谈" scheme="https://blog.ljcbaby.top/tags/%E6%9D%82%E8%B0%88/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hexo 的自动部署</title>
-    <link href="https://blog.ljcbaby.top/article/CICDs-in-Hexo/"/>
-    <id>https://blog.ljcbaby.top/article/CICDs-in-Hexo/</id>
-    <published>2020-08-16T01:25:00.000Z</published>
-    <updated>2021-01-12T04:25:00.000Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;作为一种静态博客，&lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt; 的每一次更新都要在本地执行 &lt;code&gt;hexo clean&lt;/code&gt;、&lt;code&gt;hexo d -g&lt;/code&gt; 等命令。那么，有什么办法可以简化这些过程呢？&lt;br&gt;把命令合成一个脚本或许是一个选择，但更好的方案是使用服务于 DevOps 的公共 CI/CD 服务。&lt;/p&gt;</summary>
-    
-    
-    
-    
-    <category term="Ljcbaby" scheme="https://blog.ljcbaby.top/tags/Ljcbaby/"/>
-    
-    <category term="Hexo" scheme="https://blog.ljcbaby.top/tags/Hexo/"/>
-    
-    <category term="公共服务" scheme="https://blog.ljcbaby.top/tags/%E5%85%AC%E5%85%B1%E6%9C%8D%E5%8A%A1/"/>
-    
-    <category term="GitHub" scheme="https://blog.ljcbaby.top/tags/GitHub/"/>
-    
-    <category term="TravisCI" scheme="https://blog.ljcbaby.top/tags/TravisCI/"/>
-    
-    <category term="Gitee" scheme="https://blog.ljcbaby.top/tags/Gitee/"/>
-    
-    <category term="Jenkins" scheme="https://blog.ljcbaby.top/tags/Jenkins/"/>
-    
-    <category term="Netlify" scheme="https://blog.ljcbaby.top/tags/Netlify/"/>
     
   </entry>
   
@@ -397,25 +418,6 @@
     <category term="Ljcbaby" scheme="https://blog.ljcbaby.top/tags/Ljcbaby/"/>
     
     <category term="记录" scheme="https://blog.ljcbaby.top/tags/%E8%AE%B0%E5%BD%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>正版与盗版</title>
-    <link href="https://blog.ljcbaby.top/article/genuine-or-pirated/"/>
-    <id>https://blog.ljcbaby.top/article/genuine-or-pirated/</id>
-    <published>2020-05-31T02:18:14.000Z</published>
-    <updated>2020-08-16T01:48:00.000Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;正版还是盗版，我们应该如何理解？又该如何看待呢？&lt;/p&gt;</summary>
-    
-    
-    
-    
-    <category term="Ljcbaby" scheme="https://blog.ljcbaby.top/tags/Ljcbaby/"/>
-    
-    <category term="杂谈" scheme="https://blog.ljcbaby.top/tags/%E6%9D%82%E8%B0%88/"/>
     
   </entry>
   
