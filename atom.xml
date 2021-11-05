@@ -6,7 +6,7 @@
   <link href="https://blog.ljcbaby.top/atom.xml" rel="self"/>
   
   <link href="https://blog.ljcbaby.top/"/>
-  <updated>2021-11-02T12:00:00.000Z</updated>
+  <updated>2021-11-05T15:36:00.000Z</updated>
   <id>https://blog.ljcbaby.top/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Magisk 模块简化 MiUI 系统应用</title>
+    <link href="https://blog.ljcbaby.top/article/MiUILite/"/>
+    <id>https://blog.ljcbaby.top/article/MiUILite/</id>
+    <published>2021-11-05T15:36:00.000Z</published>
+    <updated>2021-11-05T15:36:00.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;暑假里入手了小米平板 5，但 &lt;code&gt;System&lt;/code&gt; 目录不可以修改就很令人难受，最终我选择了使用 Magisk 模块来间接修改。&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="Ljcbaby" scheme="https://blog.ljcbaby.top/tags/Ljcbaby/"/>
+    
+    <category term="MiUI" scheme="https://blog.ljcbaby.top/tags/MiUI/"/>
+    
+    <category term="Magisk" scheme="https://blog.ljcbaby.top/tags/Magisk/"/>
+    
+  </entry>
   
   <entry>
     <title>[转] WorkerLivesMatter/WorkingTime</title>
@@ -395,29 +416,6 @@
     <category term="X后感" scheme="https://blog.ljcbaby.top/tags/X%E5%90%8E%E6%84%9F/"/>
     
     <category term="我思" scheme="https://blog.ljcbaby.top/tags/%E6%88%91%E6%80%9D/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Linux 中的常用初始化操作</title>
-    <link href="https://blog.ljcbaby.top/article/linux-init/"/>
-    <id>https://blog.ljcbaby.top/article/linux-init/</id>
-    <published>2020-04-11T13:35:07.000Z</published>
-    <updated>2020-08-28T06:26:00.000Z</updated>
-    
-    
-    <summary type="html">好的开头，Yes!</summary>
-    
-    
-    
-    
-    <category term="Ljcbaby" scheme="https://blog.ljcbaby.top/tags/Ljcbaby/"/>
-    
-    <category term="Linux" scheme="https://blog.ljcbaby.top/tags/Linux/"/>
-    
-    <category term="CentOS" scheme="https://blog.ljcbaby.top/tags/CentOS/"/>
-    
-    <category term="Ubuntu" scheme="https://blog.ljcbaby.top/tags/Ubuntu/"/>
     
   </entry>
   
