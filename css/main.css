@@ -1382,6 +1382,7 @@ pre code {
   font-family: Lato, 'PingFang SC', 'Microsoft YaHei', sans-serif;
   font-size: 1.375em;
   font-weight: normal;
+  line-height: 1.5;
   margin: 0;
 }
 .site-subtitle {
@@ -1583,7 +1584,7 @@ pre code {
     transition: visibility 0.4s, opacity 0.4s;
     visibility: hidden;
     width: 100%;
-    z-index: 1100;
+    z-index: 10;
   }
   .sidebar-active .sidebar-dimmer {
     opacity: 0.7;
@@ -1646,7 +1647,7 @@ pre code {
   cursor: pointer;
   opacity: 0.6;
   position: fixed;
-  z-index: 1300;
+  z-index: 30;
   right: 30px;
 }
 @media (max-width: 991px) {
@@ -1948,7 +1949,7 @@ pre code {
   text-align: center;
   top: 0;
   width: 100%;
-  z-index: 1500;
+  z-index: 50;
 }
 .back-to-top {
   font-size: 12px;
@@ -1968,7 +1969,7 @@ pre code {
   background: #37c6c0;
   height: 3px;
   position: fixed;
-  z-index: 1500;
+  z-index: 50;
   width: var(--progress);
   left: 0;
   bottom: 0;
@@ -2747,6 +2748,42 @@ ul.breadcrumb li:last-child {
     color: #eee;
   }
 }
+@media (prefers-color-scheme: dark) {
+  html #dsqjs a {
+    color: var(--link-color);
+  }
+  html #dsqjs a:focus,
+  html #dsqjs a:hover {
+    color: var(--link-hover-color);
+  }
+  html #dsqjs .dsqjs-nav,
+  html #dsqjs footer {
+    border-color: var(--card-bg-color);
+  }
+  html #dsqjs .dsqjs-load-more,
+  html #dsqjs .dsqjs-load-more:hover,
+  html #dsqjs .dsqjs-nav-tab,
+  html #dsqjs .dsqjs-no-comment,
+  html #dsqjs .dsqjs-post-content {
+    color: var(--text-color);
+  }
+  html #dsqjs .dsqjs-order-label {
+    background-color: #3e4b5e;
+  }
+  html #dsqjs .dsqjs-order-radio:checked+.dsqjs-order-label {
+    background-color: var(--content-bg-color);
+  }
+  html #dsqjs .dsqjs-tab-active>span:after {
+    background-color: #2e9fff !important;
+  }
+  html #dsqjs .dsqjs-footer,
+  html #dsqjs .dsqjs-meta {
+    color: var(--text-color);
+  }
+  html #dsqjs .dsqjs-post-body blockquote {
+    border-color: var(--content-bg-color);
+  }
+}
 .search-active {
   overflow: hidden;
 }
@@ -2760,7 +2797,7 @@ ul.breadcrumb li:last-child {
   transition: visibility 0.4s, background 0.4s;
   visibility: hidden;
   width: 100%;
-  z-index: 1400;
+  z-index: 40;
 }
 .search-active .search-pop-overlay {
   background: rgba(0,0,0,0.3);
