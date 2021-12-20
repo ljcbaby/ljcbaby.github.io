@@ -6,7 +6,7 @@
   <link href="https://blog.ljcbaby.top/atom.xml" rel="self"/>
   
   <link href="https://blog.ljcbaby.top/"/>
-  <updated>2021-12-05T21:12:00.000Z</updated>
+  <updated>2021-12-20T05:44:00.000Z</updated>
   <id>https://blog.ljcbaby.top/</id>
   
   <author>
@@ -15,6 +15,46 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>[记录] jsDelivr 访问出错</title>
+    <link href="https://blog.ljcbaby.top/article/jsDelivr-accident/"/>
+    <id>https://blog.ljcbaby.top/article/jsDelivr-accident/</id>
+    <published>2021-12-20T05:44:00.000Z</published>
+    <updated>2021-12-20T05:44:00.000Z</updated>
+    
+    
+    <summary type="html">本文用于记录jsDelivr访问出错的情况</summary>
+    
+    
+    
+    
+    <category term="Ljcbaby" scheme="https://blog.ljcbaby.top/tags/Ljcbaby/"/>
+    
+    <category term="jsDelivr" scheme="https://blog.ljcbaby.top/tags/jsDelivr/"/>
+    
+    <category term="记录" scheme="https://blog.ljcbaby.top/tags/%E8%AE%B0%E5%BD%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Twikoo 的 DingTalkWebHook 推送</title>
+    <link href="https://blog.ljcbaby.top/article/Twikoo-DingTalk/"/>
+    <id>https://blog.ljcbaby.top/article/Twikoo-DingTalk/</id>
+    <published>2021-11-27T15:13:00.000Z</published>
+    <updated>2021-12-06T15:07:00.000Z</updated>
+    
+    
+    <summary type="html">给 Twikoo 赋上 钉钉通知能力</summary>
+    
+    
+    
+    
+    <category term="Ljcbaby" scheme="https://blog.ljcbaby.top/tags/Ljcbaby/"/>
+    
+    <category term="Twikoo" scheme="https://blog.ljcbaby.top/tags/Twikoo/"/>
+    
+  </entry>
   
   <entry>
     <title>小米 / 红米 AC2100 的搞机</title>
@@ -75,25 +115,6 @@
     <category term="CentOS" scheme="https://blog.ljcbaby.top/tags/CentOS/"/>
     
     <category term="Ubuntu" scheme="https://blog.ljcbaby.top/tags/Ubuntu/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Twikoo 的 DingTalkWebHook 推送</title>
-    <link href="https://blog.ljcbaby.top/article/Twikoo-DingTalk/"/>
-    <id>https://blog.ljcbaby.top/article/Twikoo-DingTalk/</id>
-    <published>2021-11-27T15:13:00.000Z</published>
-    <updated>2021-11-27T15:13:00.000Z</updated>
-    
-    
-    <summary type="html">给 Twikoo 赋上 钉钉通知能力</summary>
-    
-    
-    
-    
-    <category term="Ljcbaby" scheme="https://blog.ljcbaby.top/tags/Ljcbaby/"/>
-    
-    <category term="Twikoo" scheme="https://blog.ljcbaby.top/tags/Twikoo/"/>
     
   </entry>
   
@@ -398,29 +419,6 @@
     <category term="Ljcbaby" scheme="https://blog.ljcbaby.top/tags/Ljcbaby/"/>
     
     <category term="安全响应" scheme="https://blog.ljcbaby.top/tags/%E5%AE%89%E5%85%A8%E5%93%8D%E5%BA%94/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>升级到 Ubuntu 20.04 LTS</title>
-    <link href="https://blog.ljcbaby.top/article/update-to-20-lts/"/>
-    <id>https://blog.ljcbaby.top/article/update-to-20-lts/</id>
-    <published>2020-08-28T08:43:00.000Z</published>
-    <updated>2020-08-29T08:04:00.000Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;关注了好久的 Ubuntu 20.04 LTS，之前一直用 &lt;code&gt;do-release-upgrade&lt;/code&gt;，没能成功升级到，一直以为是还没正式发布。又翻了翻官方 wiki 的 &lt;a href=&quot;https://wiki.ubuntu.com/FocalFossa/ReleaseNotes&quot;&gt;ReleaseNotes&lt;/a&gt;，发现是没带对参数，LTS 升级到 LTS 要带参数 &lt;code&gt;-d&lt;/code&gt;。&lt;br&gt;然后就花了一个下午快乐的把三台服务器的版本都爬了上去。&lt;/p&gt;</summary>
-    
-    
-    
-    
-    <category term="Ljcbaby" scheme="https://blog.ljcbaby.top/tags/Ljcbaby/"/>
-    
-    <category term="记录" scheme="https://blog.ljcbaby.top/tags/%E8%AE%B0%E5%BD%95/"/>
-    
-    <category term="Linux" scheme="https://blog.ljcbaby.top/tags/Linux/"/>
-    
-    <category term="Ubuntu" scheme="https://blog.ljcbaby.top/tags/Ubuntu/"/>
     
   </entry>
   
