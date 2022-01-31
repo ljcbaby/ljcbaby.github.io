@@ -1,5 +1,5 @@
 :root {
-  --body-bg-color: #f5f7f9;
+  --body-bg-color: #eee;
   --content-bg-color: #fff;
   --card-bg-color: #f5f5f5;
   --text-color: #555;
@@ -679,6 +679,9 @@ figure.highlight .gutter pre {
 figure.highlight .code pre {
   padding-left: 10px;
   width: 100%;
+}
+figure.highlight .marked {
+  background: rgba(0,0,0,0.3);
 }
 pre .caption,
 pre figcaption {
@@ -2907,7 +2910,7 @@ mark.search-keyword {
 .header-inner {
   background: var(--content-bg-color);
   border-radius: initial;
-  box-shadow: initial;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.06), 0 1px 5px 0 rgba(0,0,0,0.12);
   width: 240px;
 }
 @media (max-width: 991px) {
@@ -3083,7 +3086,7 @@ mark.search-keyword {
 .sidebar-inner {
   background: var(--content-bg-color);
   border-radius: initial;
-  box-shadow: initial;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.06), 0 1px 5px 0 rgba(0,0,0,0.12), 0 -1px 0.5px 0 rgba(0,0,0,0.09);
   box-sizing: border-box;
   color: var(--text-color);
 }
@@ -3138,31 +3141,91 @@ mark.search-keyword {
 .back-to-top.back-to-top-on {
   margin-top: 16px;
 }
-.main-inner {
+.main-inner > .sub-menu,
+.main-inner > .post-block,
+.main-inner > .tabs-comment,
+.main-inner > .comments,
+.main-inner > .pagination {
   background: var(--content-bg-color);
-  box-shadow: initial;
-  padding: 40px;
+  border-radius: initial;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.06), 0 1px 5px 0 rgba(0,0,0,0.12);
 }
-@media (max-width: 991px) {
-  .main-inner {
-    padding: 20px;
+.main-inner > .sub-menu:not(:first-child):not(.sub-menu),
+.main-inner > .post-block:not(:first-child):not(.sub-menu),
+.main-inner > .tabs-comment:not(:first-child):not(.sub-menu),
+.main-inner > .comments:not(:first-child):not(.sub-menu),
+.main-inner > .pagination:not(:first-child):not(.sub-menu) {
+  border-radius: initial;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.06), 0 1px 5px 0 rgba(0,0,0,0.12), 0 -1px 0.5px 0 rgba(0,0,0,0.09);
+  margin-top: 12px;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .main-inner > .sub-menu:not(:first-child):not(.sub-menu),
+  .main-inner > .post-block:not(:first-child):not(.sub-menu),
+  .main-inner > .tabs-comment:not(:first-child):not(.sub-menu),
+  .main-inner > .comments:not(:first-child):not(.sub-menu),
+  .main-inner > .pagination:not(:first-child):not(.sub-menu) {
+    margin-top: 10px;
   }
 }
-.sub-menu {
-  border-bottom: 1px solid #ddd;
+@media (max-width: 767px) {
+  .main-inner > .sub-menu:not(:first-child):not(.sub-menu),
+  .main-inner > .post-block:not(:first-child):not(.sub-menu),
+  .main-inner > .tabs-comment:not(:first-child):not(.sub-menu),
+  .main-inner > .comments:not(:first-child):not(.sub-menu),
+  .main-inner > .pagination:not(:first-child):not(.sub-menu) {
+    margin-top: 8px;
+  }
 }
-.post-block:first-of-type {
-  padding-top: 40px;
+.post-block,
+.comments {
+  padding: 40px;
+}
+.post-eof {
+  display: none;
+}
+.pagination {
+  border-top: initial;
+  padding: 10px 0;
+}
+.post-body h1,
+.post-body h2 {
+  border-bottom: 1px solid #eee;
+}
+.post-body h3 {
+  border-bottom: 1px dotted #eee;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .main-inner {
+    padding: 10px;
+  }
+  .posts-expand .post-button {
+    margin-top: 20px;
+  }
+  .post-block {
+    padding: 20px;
+  }
+  .comments {
+    padding: 10px 20px;
+  }
 }
 @media (max-width: 767px) {
-  .pagination {
-    margin-bottom: 10px;
+  .main-inner {
+    padding: 8px;
+  }
+  .posts-expand .post-button {
+    margin: 12px 0;
+  }
+  .post-block {
+    padding: 12px;
+  }
+  .comments {
+    padding: 10px 12px;
   }
 }
 @font-face {
   font-family: "iconfont";
-  src: url("iconfont.eot?t=1585832822220"); /* IE9 */
-  src: url("iconfont.eot?t=1585832822220#iefix") format('embedded-opentype'), url("data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAAM8AAsAAAAABvgAAALwAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCCcAqBfIFzATYCJAMICwYABCAFhG0HNxsgBsi+QRxjO4JUIRVShaOn293eZtbzHhOyuTX1IX9hSIkgoHE1i9NLyGADM9zYzMhq1M/MUGhw0tGcXtox2BvJshsgyMB99g1/buRqh44lCzc1IadXVaXHA8/NfhMsgcQDDKNJCeSbD+xeIidwG3T1wILDhQQIAEkIgPokqnnPClTWfFDsbTY9TFTJ8uVegP//czm9FVAg8wPlMsfko16A8dZAxxoUYGAFFAA3jN1E8AAPQwArfmKIYn51F+poYJQAYpC2DnUFP007KTPB2LAwRuwkzOGo/AVM8++Lj3x1IBkiQEVhP2fB5D+YoUr/VBRBsJwVcJaBAjFAQ5SN8XxJwqEqVvEqQThWqcBz/6kRcdQ/D5ECim0A+Oj8ZxJg4aMWSwBa7y4D1E16M9A529b2+9Fls/H69D3C63W3v/s+5ceB2w+nhY2VJde9+6zx0f3gcSqzu1r1SJTWQr2vwzv5sl4xfkbPY+tC692wzcVaHFuedzdLeP3ZkH/mooBJbeboaEbrQRxm1GYKE/PN2VH4Pp5vapodukyd1S/457vHXZeenwxPSH9TXbnIK71heZrKDnLZ9uXV5+6K64BJIKgO1fqff8MBHzN6nRqA2/Up12rDnGC+G4fAXxUMrNKxCKjk4/ENh1SW8yKhc10X/4DbyeNUtesrpAUz1xdxmvhmoJiFoJoSAwbWUsDILA2sRMtbbs1ZiyQRW4AogxoIDnZAsnMCioNLVFMewMDNExg5lAQr5UHnhtbCkg0zinQmC40LlGbgC2TiBlG6TfaJq6u8iNP2ScUyhLm4hHJqgXxSS0yJT+08s0ChAg/ntePIdQMMVVAkk9PHzOFwJr6u6UVpM/CgQRaF6BixoCoXUCNTwCdofdZQ+fw2Yjvh0qkO0oh9H1FisneUKE7CAHRB7g8iPcozrU7Z8towAdVRAh6Uq/UjLlcANTX3KyImltYwIRoaFg9r1Q2Vp7dXen+3AbACNDKAuQrbWroSa1KC2FwA") format('woff2'), url("iconfont.woff?t=1585832822220") format('woff'), url("iconfont.ttf?t=1585832822220") format('truetype'), url("iconfont.svg?t=1585832822220#iconfont") format('svg'); /* iOS 4.1- */
+  src: url("data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAAM8AAsAAAAABvgAAALwAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCCcAqBfIFzATYCJAMICwYABCAFhG0HNxsgBsi+QRxjO4JUIRVShaOn293eZtbzHhOyuTX1IX9hSIkgoHE1i9NLyGADM9zYzMhq1M/MUGhw0tGcXtox2BvJshsgyMB99g1/buRqh44lCzc1IadXVaXHA8/NfhMsgcQDDKNJCeSbD+xeIidwG3T1wILDhQQIAEkIgPokqnnPClTWfFDsbTY9TFTJ8uVegP//czm9FVAg8wPlMsfko16A8dZAxxoUYGAFFAA3jN1E8AAPQwArfmKIYn51F+poYJQAYpC2DnUFP007KTPB2LAwRuwkzOGo/AVM8++Lj3x1IBkiQEVhP2fB5D+YoUr/VBRBsJwVcJaBAjFAQ5SN8XxJwqEqVvEqQThWqcBz/6kRcdQ/D5ECim0A+Oj8ZxJg4aMWSwBa7y4D1E16M9A529b2+9Fls/H69D3C63W3v/s+5ceB2w+nhY2VJde9+6zx0f3gcSqzu1r1SJTWQr2vwzv5sl4xfkbPY+tC692wzcVaHFuedzdLeP3ZkH/mooBJbeboaEbrQRxm1GYKE/PN2VH4Pp5vapodukyd1S/457vHXZeenwxPSH9TXbnIK71heZrKDnLZ9uXV5+6K64BJIKgO1fqff8MBHzN6nRqA2/Up12rDnGC+G4fAXxUMrNKxCKjk4/ENh1SW8yKhc10X/4DbyeNUtesrpAUz1xdxmvhmoJiFoJoSAwbWUsDILA2sRMtbbs1ZiyQRW4AogxoIDnZAsnMCioNLVFMewMDNExg5lAQr5UHnhtbCkg0zinQmC40LlGbgC2TiBlG6TfaJq6u8iNP2ScUyhLm4hHJqgXxSS0yJT+08s0ChAg/ntePIdQMMVVAkk9PHzOFwJr6u6UVpM/CgQRaF6BixoCoXUCNTwCdofdZQ+fw2Yjvh0qkO0oh9H1FisneUKE7CAHRB7g8iPcozrU7Z8towAdVRAh6Uq/UjLlcANTX3KyImltYwIRoaFg9r1Q2Vp7dXen+3AbACNDKAuQrbWroSa1KC2FwA") format('woff2'), url("iconfont.woff?t=1585832822220") format('woff'), url("iconfont.ttf?t=1585832822220") format('truetype'); /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
 }
 .fa-custom {
   font-family: "iconfont" !important;
@@ -3179,7 +3242,7 @@ mark.search-keyword {
 }
 /* background */
 body {
-  background-image: url("https://cdn.jsdelivr.net/npm/ljcbaby@0.0.5/background.webp");
+  background-image: url("https://cdn.ljcbaby.top/pic/background.webp");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;

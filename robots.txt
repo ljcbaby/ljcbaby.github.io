@@ -1,7 +1,4 @@
-
-# hexo robots.txt
 User-agent: *
 Allow: *
 
 Sitemap: https://blog.ljcbaby.top/sitemap.xml
-Sitemap: https://blog.ljcbaby.top/baidusitemap.xml
