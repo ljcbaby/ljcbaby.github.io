@@ -6,7 +6,7 @@
   <link href="https://blog.ljcbaby.top/atom.xml" rel="self"/>
   
   <link href="https://blog.ljcbaby.top/"/>
-  <updated>2022-03-19T19:44:00.000Z</updated>
+  <updated>2022-04-06T15:59:00.000Z</updated>
   <id>https://blog.ljcbaby.top/</id>
   
   <author>
@@ -15,6 +15,46 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>清明的碎碎念</title>
+    <link href="https://blog.ljcbaby.top/article/Mind-in-March/"/>
+    <id>https://blog.ljcbaby.top/article/Mind-in-March/</id>
+    <published>2022-04-06T15:59:00.000Z</published>
+    <updated>2022-04-06T15:59:00.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;最近一段时间的一些想法，单独成文的话怕不是都太短了，有水文章的嫌疑，干脆就写在一起吧。&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="Ljcbaby" scheme="https://blog.ljcbaby.top/tags/Ljcbaby/"/>
+    
+    <category term="我思" scheme="https://blog.ljcbaby.top/tags/%E6%88%91%E6%80%9D/"/>
+    
+    <category term="杂谈" scheme="https://blog.ljcbaby.top/tags/%E6%9D%82%E8%B0%88/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>技术信息</title>
+    <link href="https://blog.ljcbaby.top/article/Hexo/"/>
+    <id>https://blog.ljcbaby.top/article/Hexo/</id>
+    <published>2020-04-08T04:00:37.000Z</published>
+    <updated>2022-03-25T05:48:00.000Z</updated>
+    
+    
+    <summary type="html">如果需要站点和服务器的一些技术信息，请看这里。</summary>
+    
+    
+    
+    
+    <category term="Hexo" scheme="https://blog.ljcbaby.top/tags/Hexo/"/>
+    
+    <category term="站务" scheme="https://blog.ljcbaby.top/tags/%E7%AB%99%E5%8A%A1/"/>
+    
+  </entry>
   
   <entry>
     <title>2021, 这一年</title>
@@ -90,25 +130,6 @@
     <category term="jsDelivr" scheme="https://blog.ljcbaby.top/tags/jsDelivr/"/>
     
     <category term="记录" scheme="https://blog.ljcbaby.top/tags/%E8%AE%B0%E5%BD%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>技术信息</title>
-    <link href="https://blog.ljcbaby.top/article/Hexo/"/>
-    <id>https://blog.ljcbaby.top/article/Hexo/</id>
-    <published>2020-04-08T04:00:37.000Z</published>
-    <updated>2022-01-30T14:02:00.000Z</updated>
-    
-    
-    <summary type="html">如果需要站点和服务器的一些技术信息，请看这里。</summary>
-    
-    
-    
-    
-    <category term="Hexo" scheme="https://blog.ljcbaby.top/tags/Hexo/"/>
-    
-    <category term="站务" scheme="https://blog.ljcbaby.top/tags/%E7%AB%99%E5%8A%A1/"/>
     
   </entry>
   
@@ -405,25 +426,6 @@
     <category term="好工具" scheme="https://blog.ljcbaby.top/tags/%E5%A5%BD%E5%B7%A5%E5%85%B7/"/>
     
     <category term="deprecated" scheme="https://blog.ljcbaby.top/tags/deprecated/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>江湖派别，满口道理。</title>
-    <link href="https://blog.ljcbaby.top/article/Chinese-network/"/>
-    <id>https://blog.ljcbaby.top/article/Chinese-network/</id>
-    <published>2020-10-11T03:50:00.000Z</published>
-    <updated>2020-10-11T03:50:00.000Z</updated>
-    
-    
-    <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;十多年间，中文互联网从广场变成废墟；当所有公共领域被取消，有效的讨论不复存在，不再有 “作为私人的个体来到一起，形成公众”，而是 “作为私人的个体更加遥远地分开了彼此”。同时信息污染与不对称的问题愈加严重，时至今日再也难以扭转。能做的或许可以保存记忆，借此影响些许年青人。“兼听则明，偏信则暗。” 只要我们不是机器人，那迟早有一次会站在主流观点之外。然而世界正在下沉，数字极权铁幕已经袭来，我们只是时代洪流里的泥沙，丝毫无力挽回那么多值得珍惜的人和事物。&lt;/p&gt;
-&lt;/blockquote&gt;</summary>
-    
-    
-    
-    
-    <category term="转载" scheme="https://blog.ljcbaby.top/tags/%E8%BD%AC%E8%BD%BD/"/>
     
   </entry>
   

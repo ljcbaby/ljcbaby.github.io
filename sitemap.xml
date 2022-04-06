@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://blog.ljcbaby.top/article/Mind-in-March/</loc>
+    <lastmod>2022-04-06</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.ljcbaby.top/article/Hexo/</loc>
+    <lastmod>2022-03-25</lastmod>
+  </url>
+  <url>
     <loc>https://blog.ljcbaby.top/article/Year-2021/</loc>
     <lastmod>2022-03-19</lastmod>
   </url>
@@ -14,10 +22,6 @@
   </url>
   <url>
     <loc>https://blog.ljcbaby.top/article/jsDelivr-accident/</loc>
-    <lastmod>2022-01-30</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.ljcbaby.top/article/Hexo/</loc>
     <lastmod>2022-01-30</lastmod>
   </url>
   <url>
