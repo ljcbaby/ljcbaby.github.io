@@ -5,18 +5,18 @@
 <meta name="viewport" content="width=device-width">
 <meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)">
-<link rel="preconnect" href="cdn.ljcbaby.top" crossorigin>
-<link rel="preconnect" href="npm.elemecdn.com" crossorigin>
+<link rel="preconnect" href="https://cdn.ljcbaby.top" crossorigin>
+<link rel="preconnect" href="https://npm.elemecdn.com" crossorigin>
 <link rel="apple-touch-icon" sizes="180x180" href="https://cdn.ljcbaby.top/images/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="https://cdn.ljcbaby.top/images/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="https://cdn.ljcbaby.top/images/favicon-16x16.png">
 <link rel="mask-icon" href="https://cdn.ljcbaby.top/images/logo.svg" color="#222">
 <link rel="stylesheet" href="https://cdn.ljcbaby.top/css/main.css">
-<link rel="stylesheet" href="https://npm.elemecdn.com/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" integrity="sha256-DfWjNxDkM94fVBWx1H5BMMp0Zq7luBlV8QRcSES7s+0=" crossorigin="anonymous">
+<link rel="stylesheet" href="https://npm.elemecdn.com/@fortawesome/fontawesome-free@6.2.0/css/all.min.css" integrity="sha256-AbA177XfpSnFEvgpYu1jMygiLabzPCJCRIBtR5jGc0k=" crossorigin="anonymous">
 <link rel="stylesheet" href="https://npm.elemecdn.com/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 <link rel="stylesheet" href="https://npm.elemecdn.com/pace-js@1.2.4/themes/green/pace-theme-minimal.css">
 <script src="https://npm.elemecdn.com/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
-<script class="next-config" data-name="main" type="application/json">{"hostname":"blog.ljcbaby.top","root":"/","images":"https://cdn.ljcbaby.top/images","scheme":"Gemini","darkmode":true,"version":"8.11.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":"twikoo","storage":true,"lazyload":true,"nav":null,"activeClass":"twikoo"},"stickytabs":false,"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="https://cdn.ljcbaby.top/js/config.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"blog.ljcbaby.top","root":"/","images":"https://cdn.ljcbaby.top/images","scheme":"Gemini","darkmode":true,"version":"8.13.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"flat"},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":"twikoo","storage":true,"lazyload":true,"nav":null,"activeClass":"twikoo"},"stickytabs":false,"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="https://cdn.ljcbaby.top/js/config.js"></script>
 <meta name="description" content="作为一种静态博客，Hexo 的每一次更新都要在本地执行 hexo clean、hexo d -g 等命令。那么，有什么办法可以简化这些过程呢？把命令合成一个脚本或许是一个选择，但更好的方案是使用服务于 DevOps 的公共 CI&#x2F;CD 服务。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo 的自动部署">
@@ -75,7 +75,7 @@
 </div>
 </div>
 <nav class="site-nav">
-<ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/article/about/" rel="section"><i class="fa fa-user fa-fw"></i>这座小屋～</a></li><li class="menu-item menu-item-commonweal"><a href="/article/friends/" rel="section"><i class="fa fa-heartbeat fa-fw"></i>邻居们和朋友们</a></li><li class="menu-item menu-item-info"><a href="/article/Hexo/" rel="section"><i class="fa fa-info-circle fa-fw"></i>技术信息</a></li><li class="menu-item menu-item-legal"><a href="/article/legal-things/" rel="section"><i class="fa fa-balance-scale-right fa-fw"></i>法律文本</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li><li class="menu-item menu-item-travelling"><a href="https://travellings.link/" rel="noopener" target="_blank"><i class="fa fa-subway fa-fw"></i>开往-友链接力</a></li><li class="menu-item menu-item-hole"><a href="https://www.foreverblog.cn/go.html" rel="noopener" target="_blank"><i class="fab fa-first-order-alt fa-fw"></i>虫洞-十年之约</a></li><li class="menu-item menu-item-dl_site"><a href="https://www.ljclove.top/" rel="noopener" target="_blank"><i class="fa fa-download fa-fw"></i>下载站</a></li>
+<ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/article/about/" rel="section"><i class="fa fa-user fa-fw"></i>这座小屋～</a></li><li class="menu-item menu-item-commonweal"><a href="/article/friends/" rel="section"><i class="fa fa-heartbeat fa-fw"></i>邻居们和朋友们</a></li><li class="menu-item menu-item-info"><a href="/article/Hexo/" rel="section"><i class="fa fa-info-circle fa-fw"></i>技术信息</a></li><li class="menu-item menu-item-legal"><a href="/article/legal-things/" rel="section"><i class="fa fa-balance-scale-right fa-fw"></i>法律文本</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li><li class="menu-item menu-item-travelling"><a href="https://travellings.link/" rel="noopener" target="_blank"><i class="fa fa-subway fa-fw"></i>开往｜友链接力</a></li><li class="menu-item menu-item-hole"><a href="https://www.foreverblog.cn/go.html" rel="noopener" target="_blank"><i class="fab fa-first-order-alt fa-fw"></i>虫洞｜十年之约</a></li><li class="menu-item menu-item-dl_site"><a href="https://www.ljclove.top/" rel="noopener" target="_blank"><i class="fa fa-download fa-fw"></i>下载站</a></li>
 <li class="menu-item menu-item-search">
 <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
 </a>
@@ -356,7 +356,7 @@ Hexo 的自动部署
 <div class="comments"><div id="twikoo-comments"></div></div>
 </div>
 <div class="tab-pane disqusjs" id="comment-disqusjs">
-<div class="comments" id="disqus_thread">
+<div class="comments disqusjs">
 <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
 </div>
 </div>
@@ -419,8 +419,8 @@ document.addEventListener('page:loaded', () => {
 });
 </script>
 <style>.comments,.post-block{overflow:visible}.tk-owo-emotion{display:inline-block}</style>
-<link rel="stylesheet" href="https://npm.elemecdn.com/disqusjs@1.3.0/dist/disqusjs.css" integrity="sha256-GxdCIOyfxQ1OBfS99qAIJDoGK1ADuBsxhMTqXG82fAY=" crossorigin="anonymous">
-<script class="next-config" data-name="disqusjs" type="application/json">{"enable":true,"api":"https://www.ljclove.top/api/","apikey":"yA5aEkNep4x1a8UQFmB5m4nooBXjF3H2gFQL03iCbA05HD34Irs0QD3rQOzsT0TV","shortname":"ljcbaby","js":{"url":"https://npm.elemecdn.com/disqusjs@1.3.0/dist/disqus.js","integrity":"sha256-LVaMHPQ2zLqOc5rXSAfr4d1PIkEGNLyyUTDNPZmTtUw="}}</script>
+<link rel="stylesheet" href="https://npm.elemecdn.com/disqusjs@3.0.2/dist/browser/styles/disqusjs.css" integrity="sha256-71XarXwNr1Td27HmZI9zjY+rMzRdush6/glo6VFXp7o=" crossorigin="anonymous">
+<script class="next-config" data-name="disqusjs" type="application/json">{"enable":true,"api":"https://www.ljclove.top/api/","apikey":"yA5aEkNep4x1a8UQFmB5m4nooBXjF3H2gFQL03iCbA05HD34Irs0QD3rQOzsT0TV","shortname":"ljcbaby","js":{"url":"https://npm.elemecdn.com/disqusjs@3.0.2/dist/browser/disqusjs.es2015.umd.min.js","integrity":"sha256-okP99ZQKVpIy7+NogAMpGlIQzJa9XKXhIJcFgdju5bU="}}</script>
 <script src="https://cdn.ljcbaby.top/js/third-party/comments/disqusjs.js"></script>
 </body>
 </html>
