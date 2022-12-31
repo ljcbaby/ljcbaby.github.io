@@ -6,7 +6,7 @@
   <link href="https://blog.ljcbaby.top/atom.xml" rel="self"/>
   
   <link href="https://blog.ljcbaby.top/"/>
-  <updated>2022-10-07T20:33:00.000Z</updated>
+  <updated>2022-12-31T11:58:00.000Z</updated>
   <id>https://blog.ljcbaby.top/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>新冠日记</title>
+    <link href="https://blog.ljcbaby.top/article/omicron/"/>
+    <id>https://blog.ljcbaby.top/article/omicron/</id>
+    <published>2022-12-31T11:58:00.000Z</published>
+    <updated>2022-12-31T11:58:00.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;终究还是没苟过这一年，等稍微好点了来记录一下。（诈尸刷更新）&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="Ljcbaby" scheme="https://blog.ljcbaby.top/tags/Ljcbaby/"/>
+    
+    <category term="疫情" scheme="https://blog.ljcbaby.top/tags/%E7%96%AB%E6%83%85/"/>
+    
+  </entry>
   
   <entry>
     <title>邻居们和朋友们</title>
@@ -392,40 +411,6 @@
     <category term="Ljcbaby" scheme="https://blog.ljcbaby.top/tags/Ljcbaby/"/>
     
     <category term="技巧" scheme="https://blog.ljcbaby.top/tags/%E6%8A%80%E5%B7%A7/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>实现自己的图床，加速 Markdown</title>
-    <link href="https://blog.ljcbaby.top/article/Picgo-by-jsDelivr/"/>
-    <id>https://blog.ljcbaby.top/article/Picgo-by-jsDelivr/</id>
-    <published>2020-07-29T13:36:00.000Z</published>
-    <updated>2020-11-08T03:10:00.000Z</updated>
-    
-    
-    <summary type="html">&lt;div class=&quot;note warning&quot;&gt;&lt;p&gt;由于某些原因，本文已经失效！&lt;/p&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;note warning&quot;&gt;&lt;p&gt;考虑到 jsDelivr 的 &lt;a href=&quot;https://www.jsdelivr.com/terms/acceptable-use-policy-jsdelivr-net&quot;&gt;Acceptable Use Policy&lt;/a&gt;，纯图片仓库可能会被封禁，已经不推荐采用此方案。&lt;br&gt;请等待新的图床和公共 CDN 的文章。（挖坑）&lt;/p&gt;
-&lt;/div&gt;
-
-&lt;p&gt;&lt;img data-src=&quot;https://cdn.ljcbaby.top/pic/20200729205121.png&quot; alt=&quot;Fly！&quot;&gt;&lt;/p&gt;
-&lt;p&gt;搭建博客的时候，图片加载源总是一个需要考虑的问题。和博客页面放一起的话不是加载速度慢就是消耗 CDN 流量，放在第三方图床又要担心图床跑路、防盗链等问题。此时，利用 GitHub 和 jsDelivr 实现属于自己的私人图床就是一个不错的选择了。&lt;/p&gt;</summary>
-    
-    
-    
-    
-    <category term="Ljcbaby" scheme="https://blog.ljcbaby.top/tags/Ljcbaby/"/>
-    
-    <category term="Hexo" scheme="https://blog.ljcbaby.top/tags/Hexo/"/>
-    
-    <category term="GitHub" scheme="https://blog.ljcbaby.top/tags/GitHub/"/>
-    
-    <category term="jsDelivr" scheme="https://blog.ljcbaby.top/tags/jsDelivr/"/>
-    
-    <category term="好工具" scheme="https://blog.ljcbaby.top/tags/%E5%A5%BD%E5%B7%A5%E5%85%B7/"/>
-    
-    <category term="deprecated" scheme="https://blog.ljcbaby.top/tags/deprecated/"/>
     
   </entry>
   
