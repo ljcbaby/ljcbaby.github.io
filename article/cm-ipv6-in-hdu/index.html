@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)">
+<link rel="preconnect" href="https://cdn.ljcbaby.top" crossorigin>
+<link rel="preconnect" href="https://npm.elemecdn.com" crossorigin>
+<link rel="apple-touch-icon" sizes="180x180" href="https://cdn.ljcbaby.top/images/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://cdn.ljcbaby.top/images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://cdn.ljcbaby.top/images/favicon-16x16.png">
+<link rel="mask-icon" href="https://cdn.ljcbaby.top/images/logo.svg" color="#222">
+<link rel="stylesheet" href="https://cdn.ljcbaby.top/css/main.css">
+<link rel="stylesheet" href="https://npm.elemecdn.com/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" integrity="sha256-HtsXJanqjKTc8vVQjO4YMhiqFoXkfBsjBWcX91T1jr8=" crossorigin="anonymous">
+<link rel="stylesheet" href="https://npm.elemecdn.com/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+<link rel="stylesheet" href="https://npm.elemecdn.com/pace-js@1.2.4/themes/green/pace-theme-minimal.css">
+<script src="https://npm.elemecdn.com/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"blog.ljcbaby.top","root":"/","images":"https://cdn.ljcbaby.top/images","scheme":"Gemini","darkmode":true,"version":"8.17.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"flat"},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":"twikoo","storage":true,"lazyload":true,"nav":null,"activeClass":"twikoo"},"stickytabs":false,"motion":{"enable":true,"async":true,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="https://cdn.ljcbaby.top/js/config.js"></script>
+<meta name="description" content="开文记录一下今年 9 月与 杭州移动 就 IPv6 和 链路聚合 的问题沟通。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="关于中国移动在杭州电子科技大学的 IPv6 的客服沟通记录">
+<meta property="og:url" content="https://blog.ljcbaby.top/article/cm-ipv6-in-hdu/">
+<meta property="og:site_name" content="Ljcbaby 的 网络小屋">
+<meta property="og:description" content="开文记录一下今年 9 月与 杭州移动 就 IPv6 和 链路聚合 的问题沟通。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-10-05T13:25:00.000Z">
+<meta property="article:modified_time" content="2023-07-20T12:14:00.000Z">
+<meta property="article:author" content="Ljcbaby">
+<meta property="article:tag" content="Ljcbaby">
+<meta property="article:tag" content="HDU">
+<meta property="article:tag" content="运营商">
+<meta property="article:tag" content="中国移动">
+<meta property="article:tag" content="IPv6">
+<meta property="article:tag" content="网络">
+<meta name="twitter:card" content="summary">
+<link rel="canonical" href="https://blog.ljcbaby.top/article/cm-ipv6-in-hdu/">
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://blog.ljcbaby.top/article/cm-ipv6-in-hdu/","path":"article/cm-ipv6-in-hdu/","title":"关于中国移动在杭州电子科技大学的 IPv6 的客服沟通记录"}</script>
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>关于中国移动在杭州电子科技大学的 IPv6 的客服沟通记录 | Ljcbaby 的 网络小屋</title>
+<script>CONFIG.path="https://cdn.jsdelivr.net/gh/ljcbaby/ljcbaby.github.io@latest/search.json"</script>
+<noscript>
+<link rel="stylesheet" href="https://cdn.ljcbaby.top/css/noscript.css">
+</noscript>
+<link rel="alternate" href="/atom.xml" title="Ljcbaby 的 网络小屋" type="application/atom+xml">
+</head>
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+<div class="headband"></div>
+<main class="main">
+<div class="column">
+<header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+<div class="site-nav-toggle">
+<div class="toggle" aria-label="切换导航栏" role="button">
+<span class="toggle-line"></span>
+<span class="toggle-line"></span>
+<span class="toggle-line"></span>
+</div>
+</div>
+<div class="site-meta">
+<a href="/" class="brand" rel="start">
+<i class="logo-line"></i>
+<p class="site-title">Ljcbaby 的 网络小屋</p>
+<i class="logo-line"></i>
+</a>
+<p class="site-subtitle" itemprop="description">宁静的栖身之地</p>
+</div>
+<div class="site-nav-right">
+<div class="toggle popup-trigger" aria-label="搜索" role="button">
+<i class="fa fa-search fa-fw fa-lg"></i>
+</div>
+</div>
+</div>
+<nav class="site-nav">
+<ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/article/about/" rel="section"><i class="fa fa-user fa-fw"></i>这座小屋～</a></li><li class="menu-item menu-item-commonweal"><a href="/article/friends/" rel="section"><i class="fa fa-heartbeat fa-fw"></i>邻居们和朋友们</a></li><li class="menu-item menu-item-info"><a href="/article/Hexo/" rel="section"><i class="fa fa-info-circle fa-fw"></i>技术信息</a></li><li class="menu-item menu-item-legal"><a href="/article/legal-things/" rel="section"><i class="fa fa-balance-scale-right fa-fw"></i>法律文本</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li><li class="menu-item menu-item-travelling"><a href="https://www.travellings.cn/go.html" rel="section" target="_blank"><i class="fa fa-subway fa-fw"></i>开往｜友链接力</a></li><li class="menu-item menu-item-hole"><a href="https://www.foreverblog.cn/go.html" rel="section" target="_blank"><i class="fab fa-first-order-alt fa-fw"></i>虫洞｜十年之约</a></li><li class="menu-item menu-item-dl_site"><a href="https://www.ljclove.top/" rel="section" target="_blank"><i class="fa fa-download fa-fw"></i>下载站</a></li>
+<li class="menu-item menu-item-search">
+<a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+</a>
+</li>
+</ul>
+</nav>
+<div class="search-pop-overlay">
+<div class="popup search-popup"><div class="search-header">
+<span class="search-icon">
+<i class="fa fa-search"></i>
+</span>
+<div class="search-input-container">
+<input autocomplete="off" autocapitalize="off" maxlength="80" placeholder="搜索..." spellcheck="false" type="search" class="search-input">
+</div>
+<span class="popup-btn-close" role="button">
+<i class="fa fa-times-circle"></i>
+</span>
+</div>
+<div class="search-result-container no-result">
+<div class="search-result-icon">
+<i class="fa fa-spinner fa-pulse fa-5x"></i>
+</div>
+</div>
+</div>
+</div>
+</header>
+<aside class="sidebar">
+<div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+<ul class="sidebar-nav">
+<li class="sidebar-nav-toc">
+文章目录
+</li>
+<li class="sidebar-nav-overview">
+站点概览
+</li>
+</ul>
+<div class="sidebar-panel-container">
+<div class="post-toc-wrap sidebar-panel">
+<div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#09-17-10086-%E5%91%BC%E5%87%BA"><span class="nav-number">1.</span> <span class="nav-text">09.17 10086 呼出</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#09-26-%E6%B5%99%E6%B1%9F%E7%A7%BB%E5%8A%A8APP%E5%9C%A8%E7%BA%BF%E5%AE%A2%E6%9C%8D-%E4%B8%BB%E5%8A%A8%E8%AF%A2%E9%97%AE"><span class="nav-number">2.</span> <span class="nav-text">09.26 浙江移动 APP 在线客服 主动询问</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#09-27-0571-10086-%E5%91%BC%E5%85%A5"><span class="nav-number">3.</span> <span class="nav-text">09.27 0571-10086 呼入</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#09-27-%E7%BD%91%E7%BB%9C%E9%83%A8-17858613771-%E5%91%BC%E5%85%A5"><span class="nav-number">4.</span> <span class="nav-text">09.27 网络部 17858613771 呼入</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#09-28-%E7%BD%91%E7%BB%9C%E9%83%A8-13735550255-%E5%91%BC%E5%85%A5-%E5%91%BC%E5%87%BA"><span class="nav-number">5.</span> <span class="nav-text">09.28 网络部 13735550255 呼入 &#x2F; 呼出</span></a></li></ol></div>
+</div>
+<div class="site-overview-wrap sidebar-panel">
+<div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+<img class="site-author-image" itemprop="image" alt="Ljcbaby" src="https://sdn.geekzu.org/avatar/e7033b1012a3e7c07044b31686c57523">
+<p class="site-author-name" itemprop="name">Ljcbaby</p>
+<div class="site-description" itemprop="description">记录自己的成长足迹</div>
+</div>
+<div class="site-state-wrap animated">
+<nav class="site-state">
+<div class="site-state-item site-state-posts">
+<a href="/archives/">
+<span class="site-state-item-count">40</span>
+<span class="site-state-item-name">日志</span>
+</a>
+</div>
+<div class="site-state-item site-state-tags">
+<a href="/tags/">
+<span class="site-state-item-count">40</span>
+<span class="site-state-item-name">标签</span></a>
+</div>
+</nav>
+</div>
+<div class="links-of-author animated">
+<span class="links-of-author-item">
+<a href="https://cdn.jsdelivr.net/gh/ljcbaby/ljcbaby.github.io@latest/atom.xml" title="RSS → https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;gh&#x2F;ljcbaby&#x2F;ljcbaby.github.io@latest&#x2F;atom.xml" rel="noopener me" target="_blank"><i class="fa fa-rss fa-fw"></i>RSS</a>
+</span>
+<span class="links-of-author-item">
+<a href="https://github.com/ljcbaby" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;ljcbaby" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+</span>
+<span class="links-of-author-item">
+<a href="https://space.bilibili.com/64220747" title="Bilibili → https:&#x2F;&#x2F;space.bilibili.com&#x2F;64220747" rel="noopener me" target="_blank"><i class="fa-custom bilibili fa-fw"></i>Bilibili</a>
+</span>
+<span class="links-of-author-item">
+<a href="https://twitter.com/ljcbabylove" title="Twitter → https:&#x2F;&#x2F;twitter.com&#x2F;ljcbabylove" rel="noopener me" target="_blank"><i class="fab fa-twitter fa-fw"></i>Twitter</a>
+</span>
+</div>
+<div class="cc-license animated" itemprop="license">
+<a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh" class="cc-opacity" rel="noopener" target="_blank"><img src="https://npm.elemecdn.com/@creativecommons/vocabulary@2020.11.3/assets/license_badges/small/by_nc_nd.svg" alt="Creative Commons"></a>
+</div>
+</div>
+</div>
+<div class="back-to-top animated" role="button" aria-label="返回顶部">
+<i class="fa fa-arrow-up"></i>
+<span>0%</span>
+</div>
+</div>
+</aside>
+</div>
+<div class="main-inner post posts-expand">
+<div class="post-block">
+<article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+<link itemprop="mainEntityOfPage" href="https://blog.ljcbaby.top/article/cm-ipv6-in-hdu/">
+<span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+<meta itemprop="image" content="https://sdn.geekzu.org/avatar/e7033b1012a3e7c07044b31686c57523">
+<meta itemprop="name" content="Ljcbaby">
+</span>
+<span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+<meta itemprop="name" content="Ljcbaby 的 网络小屋">
+<meta itemprop="description" content="记录自己的成长足迹">
+</span>
+<span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+<meta itemprop="name" content="关于中国移动在杭州电子科技大学的 IPv6 的客服沟通记录 | Ljcbaby 的 网络小屋">
+<meta itemprop="description" content="">
+</span>
+<header class="post-header">
+<h1 class="post-title" itemprop="name headline">
+关于中国移动在杭州电子科技大学的 IPv6 的客服沟通记录
+</h1>
+<div class="post-meta-container">
+<div class="post-meta">
+<span class="post-meta-item">
+<span class="post-meta-item-icon">
+<i class="far fa-calendar"></i>
+</span>
+<span class="post-meta-item-text">发表于</span>
+<time title="创建时间：2022-10-05 21:25" itemprop="dateCreated datePublished" datetime="2022-10-05T21:25:00+08:00">2022-10-05</time>
+</span>
+<span class="post-meta-item">
+<span class="post-meta-item-icon">
+<i class="far fa-calendar-check"></i>
+</span>
+<span class="post-meta-item-text">更新于</span>
+<time title="修改时间：2023-07-20 20:14" itemprop="dateModified" datetime="2023-07-20T20:14:00+08:00">2023-07-20</time>
+</span>
+<span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+<span class="post-meta-item-icon">
+<i class="far fa-eye"></i>
+</span>
+<span class="post-meta-item-text">阅读次数：</span>
+<span id="busuanzi_value_page_pv"></span>
+</span>
+</div>
+</div>
+</header>
+<div class="post-body" itemprop="articleBody"><p>开文记录一下今年 9 月与 杭州移动 就 IPv6 和 链路聚合 的问题沟通。</p>
+<span id="more"></span>
+<p>原始录音文件链接：</p>
+<ul>
+<li>阿里网盘 (无法分享音频文件)</li>
+<li><a target="_blank" rel="noopener" href="https://share.weiyun.com/UGDYdmLP">微云</a></li>
+<li><a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1XbXgdQP9MwVFHz6SpmTV5w?pwd=sc6j">百度网盘 提取码: sc6j</a></li>
+<li><a target="_blank" rel="noopener" href="https://1drv.ms/f/s!AuWneZ-j5Y_wi1EraCpAgQRkRfxr?e=gbhUFw">OneDrive</a></li>
+</ul>
+<h2 id="09-17-10086-呼出"><a href="#09-17-10086-呼出" class="headerlink" title="09.17 10086 呼出"></a>09.17 10086 呼出</h2><p>文件名: <code>10086(10086)_20220917155230_35880535848404032.mp3</code></p>
+<blockquote>
+<p>直接等待超时了，我也不知道为啥会连人工坐席都排不到的<br>内容没有任何有效信息，我也懒得转文字了</p>
+</blockquote>
+<h2 id="09-26-浙江移动APP在线客服-主动询问"><a href="#09-26-浙江移动APP在线客服-主动询问" class="headerlink" title="09.26 浙江移动APP在线客服 主动询问"></a>09.26 浙江移动 APP 在线客服 主动询问</h2><blockquote>
+<p>忘记截图了 [捂脸]</p>
+</blockquote>
+<h2 id="09-27-0571-10086-呼入"><a href="#09-27-0571-10086-呼入" class="headerlink" title="09.27 0571-10086 呼入"></a>09.27 0571-10086 呼入</h2><p>文件名: <code>057110086(057110086)_20220927141520_35436014702577152.mp3</code></p>
+<blockquote>
+<p>基本是按话术回复的，没有压到问题的点</p>
+</blockquote>
+<details class="note primary"><summary><p>以下为转文字</p>
+</summary>
+<p>Y 为 移动客服，L 为我，无关的通话背景音不做整理</p>
+<p>Y: 哎您好，这边杭州投处理的，先生这边是有反馈有公网 IP 的问题是吗？<br>L: 有<br>Y: 这个公网 IP 的话呢，因为移动家庭宽带和政企宽带是提供拨号接入服务，采用 IP 地址是动态分配机制，每次拨号后 IP 地址是随机获取的，不提供外网访问服务<br>L: 不是，不是不提供外网服务，是你们拿到的 IPv6 地址是不通的，就不管是外面访问进来还是里面访问出去都是不通的<br>Y: 这个是随机获取的<br>L: 我知道，这个和随机获取没有关系啊。你随机获取之后也得能用才可以啊。<br>Y: 那你现在是网络这边用不了吗？<br>L: 对， IPv6 单栈的情况下是完全不通。<br>（可跳至 01:33 ）<br>Y: 那您这边要不给您安排师傅这边去看一下<br>L: 上次师傅来看过了，这个这个和师傅没有关系。要问网络部。<br>Y: 那我们这边找网络部门核实，那钱塘那边分公司核实确实实际上公网问题，然后因为校园的话是没有这个公网的。没有办法这个处理。<br>L: 那你们的套餐图和宣传图全部说的是 IPv6 公网，但结果是不仅没有公网你们连 IPv6 都不可用。<br>Y: 这个 IPv6 也不是这个公网地址的问题啊。<br>L: 但你但你们的宣传里就是明确写出 IPv6 公网这种词的。<br>Y: 这个不是公网的话我们确实没有办法解决。不是公网问题我们确实没有办法解决，确实抱歉。<br>L: 也就是说你们的套餐图与你们实际提供的服务不一致，我是不是可以这么理解。<br>Y: 您是说这边公网的话，这个没有办法解决，这个刚刚也和您说过了。<br>L: 那么另外一个问题呢？<br>Y: 另外一个什么？<br>L: 你们宽带的链路聚合参数<br>Y: 什么链路聚合参数，这边都不明白你说的<br>L: 链路聚合参数，如果你不明白请去重新查我原始的投诉单<br>（可跳至 05:24 ）<br>Y: 那您这个的话，我们再去核一下，看看有没有结果。那不耽误你的时间，祝你生活愉快，再见</p>
+</details>
+<h2 id="09-27-网络部-17858613771-呼入"><a href="#09-27-网络部-17858613771-呼入" class="headerlink" title="09.27 网络部 17858613771 呼入"></a>09.27 网络部 17858613771 呼入</h2><p>文件名: <code>17858613771(17858613771)_20220927220548_35880539001209728.mp3</code></p>
+<blockquote>
+<p>有获得一些有效信息，但问题未解决</p>
+</blockquote>
+<details class="note primary"><summary><p>以下为转文字</p>
+</summary>
+<p>W 为 网络部，L 为我</p>
+<p>W: 喂，欸你好同学，你们休息了吗<br>L: 嗯，我还没<br>W: 还没是吧，那个嗯我是下午接你电话的那个人啊，我不是给你登记了一下一个你那个链路聚合还有一个那个 IPv6 的问题嘛。我刚刚大致了解了一下，一个你那个网站我也点进去看到了，他应该是你们大学里面那个那个杭电学校里面一个 BBS 网站是吧。<br>L: 嗯，不是。而且我不特指任意网站因为纯 IPv6 网站是很多的，包括现在淘宝和百度也都启用了纯 IPv6 。<br>W: 不不不，你听我讲完，你上面写的那些东西。你上面那个网站里面的那些内容，包括你跟我说的第三条<br>L: 就我给你的那个域名是吧<br>W: 对对对<br>L: 那个是你们的学生团队做的，如果你觉得这个上面有什么东西不对，你先联系一下你学校的客户经理。因为这个就是你们学生团队做出来的，他们是肯定看过的。<br>W: 这样，一个，这个学生团队啊，我这边是维护的，他可能他们那边是市场的对吧，我们两个部门。一个我这边会让我们网络部的人去找他们市场部的人，到底这个东西是谁写的对吧。然后它上面到底是什么意思，我看了一下啊，他没写明，一个他就写了一个 IPv6 公网对吧<br>L: 我觉得这两个词是没有写不写明的意思，因为 IPv6 公网也好，或者链路聚合也好，基本上都已经是专有名词级别的<br>W: 是这样吗？<br>L: 对<br>W: 那我告诉你，我刚刚了解的情况是这样的。你 IPv6 公网，因为你们学校要经过 NAT ，所以说他是不可能实现的。<br>L: IPv6 经过 NAT? 是 NAT46 还是 NAT66?<br>W: 这个我不太懂。可是我刚刚就是问之前专门管那个校园的人啊，嗯如果如果你有疑问的话明天我可以让他给你打个电话<br>L: 嗯打电话反正全部尽量联系那个我报给你那个 189 那个号码，因为这个手机呢我是丢旁边而且基本上是开静音的，如果看不到的话可能经常就接不到的<br>W: 因为是这样的因为你那个投诉下的是用这个号码嘛所以说我回过来就直接用这个号码回来嗯<br>L: 呃，但是有些大部分情况下应该是接不到这个号码的。今天是已经做完作业再玩了，所以可能刚好注意到手机亮了。<br>W: 行，那我大致先跟你讲一下吧好吧。我了解的情况啊。一个那个东西，像你说的，有可能是我们移动的什么学生团队写的对吧？然后是通过我们客户经理给他写的。你是这个意思啊<br>L: 嗯反正就是那个文章也好，那个还是那个宣传图也好呢，都是一直就是你们移动的团队都是拿那个推广的。<br>W: 他们没有单独的宣传单页吗？<br>L: 那个就是线上推广时候使用的宣传单页<br>W: 那这个推广是学生在推广吧。<br>L: 嗯对，就是招募的学生团队用的。<br>W: 那这里面我们先搞清楚一点啊，这个是学生在推广，对吧？然后他包括上面有个 QQ 群，我好像看到是吧，你有没有联系过他们，他们是怎么解释的<br>L: 联系过，他们表示所有有问题直接打 10086 。<br>W: 那就是说他光写不负责任，对吧？<br>L: 呃，这个反正是你们内部协调，原则上我不太管。<br>W: 不不不，这一个的话，一个市场，一个我们网络。那现在我先跟你讲清楚这一点啊，我们这边是网络做维护的对吧？市场写了这么个东西，结果他说他解释不了。那我们这边来解释，那我这边给你的解释口径是这样一个 IPv6 公网，我们 IPv6 公网的 IP 地址只有政企宽带一年要万把块钱的这种才有。<br>L: 不是，公网指的只是说没有经过 NAT ，就是它是一个全网可达地址，不一定是固定。一般政企宽带给的是固定<br>W: 对，我们现在是私网移动，私网内自动获取一个它不固定。有的时候获取到这个，可能你一会儿不用的时候，它会获取到另外一个。这个这个理解没问题，对吧？然后另外一个问题就是你说的那个全链路聚合。因为你刚刚那个 IPv6 的话，我问我那个同事跟我说的是，因为校园经过 NAT ，它是基本上就是一个 NAT，里面只有几个公网地址，然后它是自动获取的，就不一定能用。我理解啊，他跟我讲，我理解是这个样子。然后另外一个全链路聚合。这个的话是这样的，我们上联做了全链路集合。本来原先是单链路是 20 个 G 的上联，现在是 40 个 G 。<br>L: 我全链路聚合那个学生团队给的意思就是多条宽带叠加。但是我之前跟那个客服也聊过这个事情，就是链路聚合。我觉得他写出来指的就是我可以通过多条链路去聚合，就指的是客户侧。<br>W: 你这一个的话我也问过，问过我那个同事，他跟我讲，我不太明白啊，他跟我说是一个要有虚拟网卡。还要还要怎么说来着？我大致就是你这个就是物理这边要做链路聚合。<br>L: 对，物理这边我我的路由器上是对应的内核模块以及对应的网口数。我是留好了的。就是因为之前移动呢出现过一次墙内线莫名其妙断开的问题。所以我现在考虑的就是你们如果有链路聚合的话，不管你们是什么模式，我可以先拿来，就不管是 balance-rr 或者 LACP 或者是那个 balance-backup ，我都可以先拿来，就是做备用也好，提升可靠性嘛。<br>W: 那这个的话呃，具体要怎么弄，我不太懂，明天我让我那个同事给你打吧。<br>L: 行，反正后续联系尽量还是打那个<br>W: 可以的。我明天让他打那个号码，可以的。然后最主要还有一个问题就是。我这边给的官方的口径就是这个东西是谁写给你的？因为我们的单页宣传单页里面没有这个东西。<br>L: 这个我给了就是学生团队的，就是他暑假里推销，也学生团队也用的都是这一个。<br>W: 对，那你说的说来说去都是你杭电里面的学生团队在做这个事情，对不对？然后有问题了，他跟你说打 10086 对吧。 10086 到我这了，我们这边从来没有给过这种东西。这是一个问题，对吧。那包括我们的宣传单页，我不知道你有没有看到过啊。今年的杭电宣传单页。上面绝对没有这些内容是吧，他只是教你怎么样使用这个移动的宽带。而且你我看到那个网站上有点扯，上面什么业务都有。对吧<br>L: 怎么说呢？两家其实都很扯，但是我关注的就是最核心这些技术点。因为特别是你如果说是那个宽带聚合啊，我还能睁一只眼闭一只眼。因为你如果说是链路聚合的话，我一般情况下就会认为他是确认过的。因为这是一个很严谨的专有名词。<br>W: 那那那这个那这个问题的话就更好解决。我这边就是了解到的链路聚合是我们上面的链路聚合。然后他告诉你是我们那个多条宽带可以做聚合，对吧？<br>L: 对，那然后我理解的呢是多条链路，就是你移动，不是相当于是你们是那个交换机还是什么下来<br>W: 我们上联下来是那个中网波分下来的，是双链路。就是单链路的话是 20 个 G，学校里面我开的比较高，你那边应该是万兆的 OLT。然后双链路能达到 40 个 G。<br>L: 就是说是哪里到哪里链路聚合<br>W: 就是我们城域网波分到我们那个你们杭电<br>L: 到学校的总接入是两条链路， 40 个 G ，对吧？<br>W: 对。那我这边我了解到的情况。因为你说的那个学生团队给你的可不是这个样子，对吧？那包括今天我也问了我那个同事，我那个同事原先他管学校的，可是现在不管这个了啊，所以说他稍微会懂一点。然后我问了他，他跟我说，你如果说是要就是用户侧这一端要做那个物理聚合。他说好像是可以，可是好像要什么几个条件，我也没就是也没听明白啊。<br>L: 几个条件我应该是大概知道的。我主要就是问一下，因为我用户侧要做的话，肯定还是要和你们的设备上预设好的那个参数要对应起来嘛。<br>W: 然后他告诉我的意思是，我们杭电这边的上联带宽绝对是够的。然后包括你们的呃带宽应该是两百兆吧，对吧？<br>L: 三百兆宣传的是<br>W: 我不知道你你你的是几百兆，就是我们学校里面开的最高也就只有三百兆。然后我们的单链路出来的那个 PON 口是能达到千兆的。<br>L: 你们的你们应该我看到楼道里的设备是一台交换上一个光。一个光进来是 GPON 吧，应该<br>W: 嗯对，一个 GPON<br>L: GPON 的话应该是 2.5Gbps 下联，1.25Gbps 上联吧。然后他一台设备是二十四个口，单口支持千兆。<br>W: 对，单口千兆<br>L: 但是这样的话相当于你一台的那个交换，我我就把它当交换了。我现在先。相当于你一台的交换上，我如果是所有人同时跑满两百兆的话，实际上就已经 4.8Gbps 了，已经超过这个 PON 的容载限了。<br>W: 据我了解，你那边上联最高是开到了万兆呀，万兆的 OLT 啊<br>L: 有 10G-GPON 或者 XGPON 是吗？<br>W: 对， XGPON 。<br>L: 有 XGPON 的话，实际局部的带宽是肯定够的，就看就看那个整体接入了。<br>W: 我那个同事他跟我说，是你你那个你末端用户这一端做链路聚合完全没有必要。<br>L: 我做链路聚合，主要是以 backup 为目的，就是之前墙线有一次莫名其妙断开过。然后虽然说重新插拔就好了，但是当时没发现的时候，还是对内网产生了一点小波动的。如果说就是我在考虑，就是会不会有两条线连接的时候，即使它掉了一条线也没关系。<br>W: 有没有可能当时你那个架子，你们整台那个设备出来都掉了。<br>L: 所以这种情况可能还要做那个跨设备链路聚合。<br>W: 你那这个我就更不懂了，<br>L: 不过跨设备链路接口好像现在只有几个同厂商在做。<br>W: 因为是这样的，你那边如果出现闪断，对吧？基本上有可能就是设备那个那个掉电了，要么就是那个光不行了。整台断的。你单独一条宽带，它闪断几率很小。<br>L: 确实，这个反正整体上还是遇到过，也是知道这些原理的，我还是<br>W: 你这边如果说有需要的话，我明天让我同事再给你打个电话，好吧。<br>L: 可以吧，反正要打电话，到时候就一起问一下吧。<br>W: 行，可以的。好的，那我那我这边就先不打扰你了啊。<br>L: 嗯行，麻烦你了。<br>W: 嗯，没事，好，就这样啊。</p>
+</details>
+<h2 id="09-28-网络部-13735550255-呼入-呼出"><a href="#09-28-网络部-13735550255-呼入-呼出" class="headerlink" title="09.28 网络部 13735550255 呼入/呼出"></a>09.28 网络部 13735550255 呼入 / 呼出</h2><p>文件名: <code>13735550255(13735550255)_20220928161419_35446690046034112.mp3</code></p>
+<blockquote>
+<p>在上课不方便接听</p>
+</blockquote>
+<p>文件名: <code>13735550255(13735550255)_20220928170846_35464351017091328.mp3</code></p>
+<blockquote>
+<p>有更多信息，明确不能链路聚合</p>
+</blockquote>
+<details class="note primary"><summary><p>以下为转文字</p>
+</summary>
+<p>W 为 网络部，L 为我</p>
+<p>L: 我就是你前面那个。接近一个小时前，那个你电话打过来，刚好在上课那个。<br>W: 你那个宽带之前有什么问题啊？<br>L: 我自己是有那客户侧这边想做链路聚合。<br>W: 你自己电脑端。<br>L: 我这边路由器接入。就是有点因为之前强内线有莫名其妙闪断和降速的情况，所以。在考虑要要不要增加一条做 backup 这样。不过还是看你们的参数为准，毕竟链路聚合，聚合要两端参数一致嘛。<br>W: 我们 ONU 侧链路聚合，我们不会给你聚的。<br>L: 就不会提供这个服务的，是吧？<br>W: 对。你因为每个寝室里面是一个端口，对不对？一个端口是独立的。你如果说认为这个端口会有闪断或者是经常掉线，这种情况可以让师傅去看一下，帮你检测的这个网线是不是好的。或者是 ONU 侧更换端口。但是你说一个 ONU 上面有两个端口给你用，这是不可能的。<br>L: 也行吧。然后另外一个是我朋友的，他的那个 v6 就是完全不通。<br>W: IPv6 的地址获取到之后然后不通？<br>L: 对，获取到，然后一点都不通的。<br>W: 你的不通指的是什么意思？<br>L: 不管是外面 ICMP Ping 还是 TCP Ping，还是里面向外 ICMP Ping 还是 TCP Ping 都是不通的。而且有些情况下它会直接报 Address unreachable 。<br>W: 这个本来就不通啊，这个 IPv6 跟你 v4 是一样的。你整一个每一个学校里面都统一 NAT 过的呀，这个本来就不通的呀。<br>L: 你 IPv6 是，你们是用 NAT66 吗？还是什么？<br>W: 也转过的。<br>L: 但我看他那个地址的识别标识是 inet ，也就是公网。<br>W: 反正你们杭电那边，我知道的，是所有的都是经过 NAT 转。<br>L: 就是确定他是转过的，那我现在能想到能想到 IPv6 ，然后还能到公网的，就只有 NAT66 这个技术了，其他的应该都是要求转到私网地址的。<br>W: 反正下沙其他地区我不敢保证。下沙这边反正是所有学校都是 NAT 。所以，就比如说你同学电脑上获取到这个 IPv6 地址，你也知道他的地址。然后你用外网干嘛 Ping 到这个地址，就不通。<br>L: 不是，是他自己直接在电脑上去 Ping 其他的 IPv6 站点。比如说那个阿里云的 DNS 啊，或者说是清华大学的那个镜像站，有 IPv6 分站的嘛，都是不通的。<br>W: 本来就不通啊。<br>L: 不是，那这样的话，相当于这个地址分配是无效的呀，这样不通的话。我现在是说我我现现在首先不是考虑入站，是考虑出站啊。<br>W: 那你是你现在是想想咋？想要的 IPv6 通，然后你想访问别的还是什么意思？<br>L: IPv6 通访问别的。<br>W: 你通过 v4 过不去吗？<br>L: 基本上都是报那个地址不可达，有少数会报超时。然后防火墙那边是检查了的，把整个 v6 防火墙都给关掉了。<br>W: 那你也要给几个网站，我们这边测试也才知道。<br>L: 我一般情况下测试用的是阿里 DNS ，它是有 IPv6 的，然后。清华那个清华大学镜像站，它也是有那个 IPv6 分站的。<br>W: 那我是不是可以理解为就是你在寝室里面你获取到的 IPv6 地址。然后你要 Ping 阿里云的那个 v6 地址，是这意思吧？<br>L: 啊对，可以。<br>W: 我是不是可以这么理解。<br>L: 可以。<br>W: 据我所知。阿里的那个是多少来着？<br>L: 阿里那个我现查的，我一般都是，我看一下啊。2400:3200::1 ，或者 2400:3200:baba::1 。（按位重复一遍）<br>W: 其实，我可以很简单的告诉你，学校的网络基本上就是为了满足你上一些呃经常上的网。比如说你要做测试，干嘛这种，在学校里面是基本上很难实现。<br>L: 别的不说了，反正如果真玩那个 DN42 之类的，也不可能选择中国大陆内的节点的。因为大家都不会拿中国大陆的节点去做 peer 的。只不过说，如果是 IPv6 对于部分部分那个已经优化部署 IPv6 的服务商来说，他的 IPv6 资源实际上是已经比 IPv4 好了的。<br>W: 就是这个。你这个东西我估计我估计如果要实现的话，。算了，我反正给你确认一下吧。我帮你我帮你问一下我们科长吧。我估计是要确定的话，要改整个组织，要改整个网络架构。<br>L: 主要是很奇怪，就是也有人说他那边 IPv6 是全部正常的。<br>W: 就你们杭电里面的。<br>L: 对。<br>W: 然后就那你可以顺便如果说你了解到有有他们会通的，对不对？你可以问一下你同学获取到 IPv6 的地址是多少，然后我这边可以让他们后台看一下。<br>L: 我感觉现在最参考性的现象就是获取 IPv6 的地址的时候，会直接获取到一个 /64 ，还是能够获取到一个 PD，再转成分配为 /64 。正常的呢，他们那个都是能看到两步获取的，就是第一步是先获取到 PD ，然后在 PD 完成内网的那个取用和分配。然后我朋友那个不行，就是在 WAN 口上是看不到那个 IPv6 PD 的，直接是在 LAN 口上有一个 /64 。<br>W: 你是经过路由器是吧？<br>L: 肯定经过路由器了呀。<br>W: 你们平时不是，比如说你们做测试的，不是应该直连吗？<br>L: 你直连的话， Windows 防火墙更复杂呀， Linux 你还能说把防火墙全扬了， Windows 你哪里有藏一个防火墙，你都找不到，有些时候。<br>W: 心吧，你大致的问题我这边也了解了，我到时候问一下我们技术。如果如果那个的话，到时候我给你打电话啊。<br>L: 啊好，麻烦了。<br>W: 反正你说的大致我也懂了。行，那我这边先确认一下，确认完之后，然后跟你说的啊。<br>L: 行，辛苦了啊。<br>W: 嗯，好，拜拜。</p>
+</details>
+<blockquote>
+<p>然后并没有说好的回电 emm。</p>
+</blockquote>
+</div>
+<footer class="post-footer">
+<div class="reward-container">
+<div></div>
+<button>
+我很可爱，请给我钱！
+</button>
+<div class="post-reward">
+<div>
+<img src="https://cdn.ljcbaby.top/pic/afdian.bmp" alt="Ljcbaby 爱发电">
+<span>爱发电</span>
+</div>
+</div>
+</div>
+<div class="post-copyright">
+<ul>
+<li class="post-copyright-author">
+<strong>本文作者： </strong>Ljcbaby
+</li>
+<li class="post-copyright-link">
+<strong>本文链接：</strong>
+<a href="https://blog.ljcbaby.top/article/cm-ipv6-in-hdu/" title="关于中国移动在杭州电子科技大学的 IPv6 的客服沟通记录">https://blog.ljcbaby.top/article/cm-ipv6-in-hdu/</a>
+</li>
+<li class="post-copyright-license">
+<strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-ND</a> 许可协议。转载请注明出处！
+</li>
+</ul>
+</div>
+<div class="post-tags">
+<a href="/tags/Ljcbaby/" rel="tag"><i class="fa fa-tag"></i> Ljcbaby</a>
+<a href="/tags/HDU/" rel="tag"><i class="fa fa-tag"></i> HDU</a>
+<a href="/tags/%E8%BF%90%E8%90%A5%E5%95%86/" rel="tag"><i class="fa fa-tag"></i> 运营商</a>
+<a href="/tags/%E4%B8%AD%E5%9B%BD%E7%A7%BB%E5%8A%A8/" rel="tag"><i class="fa fa-tag"></i> 中国移动</a>
+<a href="/tags/IPv6/" rel="tag"><i class="fa fa-tag"></i> IPv6</a>
+<a href="/tags/%E7%BD%91%E7%BB%9C/" rel="tag"><i class="fa fa-tag"></i> 网络</a>
+</div>
+<div class="post-nav">
+<div class="post-nav-item">
+<a href="/article/Mind-in-March/" rel="prev" title="清明的碎碎念">
+<i class="fa fa-chevron-left"></i> 清明的碎碎念
+</a>
+</div>
+<div class="post-nav-item">
+<a href="/article/omicron/" rel="next" title="新冠日记">
+新冠日记 <i class="fa fa-chevron-right"></i>
+</a>
+</div>
+</div>
+</footer>
+</article>
+</div>
+<div class="tabs tabs-comment">
+<ul class="nav-tabs">
+<li class="tab"><a href="#comment-twikoo">twikoo</a></li>
+<li class="tab"><a href="#comment-disqusjs">disqusjs</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane twikoo" id="comment-twikoo">
+<div class="comments"><div id="twikoo-comments"></div></div>
+</div>
+<div class="tab-pane disqusjs" id="comment-disqusjs">
+<div class="comments disqusjs-container">
+<noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<footer class="footer">
+<div class="footer-inner">
+<div class="beian"><a href="https://beian.miit.gov.cn/" rel="noopener" target="_blank">浙ICP备20008309号-1 </a>
+<img src="https://cdn.ljcbaby.top/pic/beian.png" alt=""><a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=33072302100189" rel="noopener" target="_blank">浙公网安备 33072302100189号 </a>
+</div>
+<div class="copyright">
+&copy; 2019 –
+<span itemprop="copyrightYear">2023</span>
+<span class="with-love">
+<i class="fa fa-heart"></i>
+</span>
+<span class="author" itemprop="copyrightHolder">Ljcbaby</span>
+</div>
+<div class="busuanzi-count">
+<span class="post-meta-item" id="busuanzi_container_site_uv">
+<span class="post-meta-item-icon">
+<i class="fa fa-user"></i>
+</span>
+<span class="site-uv" title="总访客量">
+<span id="busuanzi_value_site_uv"></span>
+</span>
+</span>
+<span class="post-meta-item" id="busuanzi_container_site_pv">
+<span class="post-meta-item-icon">
+<i class="fa fa-eye"></i>
+</span>
+<span class="site-pv" title="总访问量">
+<span id="busuanzi_value_site_pv"></span>
+</span>
+</span>
+</div>
+</div>
+</footer>
+<div class="reading-progress-bar"></div>
+<noscript>
+<div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+<script src="https://npm.elemecdn.com/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="https://npm.elemecdn.com/@next-theme/pjax@0.6.0/pjax.min.js" integrity="sha256-vxLn1tSKWD4dqbMRyv940UYw4sXgMtYcK6reefzZrao=" crossorigin="anonymous"></script>
+<script src="https://npm.elemecdn.com/lozad@1.16.0/dist/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
+<script src="https://cdn.ljcbaby.top/js/comments.js"></script><script src="https://cdn.ljcbaby.top/js/utils.js"></script><script src="https://cdn.ljcbaby.top/js/motion.js"></script><script src="https://cdn.ljcbaby.top/js/next-boot.js"></script><script src="https://cdn.ljcbaby.top/js/pjax.js"></script>
+<script src="https://npm.elemecdn.com/hexo-generator-searchdb@1.4.1/dist/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="https://cdn.ljcbaby.top/js/third-party/search/local-search.js"></script>
+<script src="https://cdn.ljcbaby.top/js/third-party/pace.js"></script>
+<script data-pjax async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script class="next-config" data-name="twikoo" type="application/json">{"enable":true,"visitor":false,"envId":"twikoo-6g8mk914faebe3d0","region":"ap-shanghai","jsUrl":"https://npm.elemecdn.com/twikoo@1.6.16/dist/twikoo.all.min.js","el":"#twikoo-comments"}</script>
+<script>
+document.addEventListener('page:loaded', () => {
+  NexT.utils.loadComments(CONFIG.twikoo.el)
+    .then(() => NexT.utils.getScript(
+      CONFIG.twikoo.jsUrl || 'https://cdn.jsdelivr.net/npm/twikoo/dist/twikoo.all.min.js',
+      { condition: window.twikoo }
+    ))
+    .then(() => {
+      twikoo.init(CONFIG.twikoo);
+    });
+});
+</script>
+<style>.comments,.post-block{overflow:visible}.tk-owo-emotion{display:inline-block}</style>
+<link rel="stylesheet" href="https://npm.elemecdn.com/disqusjs@3.0.2/dist/browser/styles/disqusjs.css" integrity="sha256-71XarXwNr1Td27HmZI9zjY+rMzRdush6/glo6VFXp7o=" crossorigin="anonymous">
+<script class="next-config" data-name="disqusjs" type="application/json">{"enable":true,"api":"https://www.ljclove.top/api/","apikey":"yA5aEkNep4x1a8UQFmB5m4nooBXjF3H2gFQL03iCbA05HD34Irs0QD3rQOzsT0TV","shortname":"ljcbaby","js":{"url":"https://npm.elemecdn.com/disqusjs@3.0.2/dist/browser/disqusjs.es2015.umd.min.js","integrity":"sha256-okP99ZQKVpIy7+NogAMpGlIQzJa9XKXhIJcFgdju5bU="}}</script>
+<script src="https://cdn.ljcbaby.top/js/third-party/comments/disqusjs.js"></script>
+</body>
+</html>

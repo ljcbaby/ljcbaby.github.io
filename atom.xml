@@ -6,7 +6,7 @@
   <link href="https://blog.ljcbaby.top/atom.xml" rel="self"/>
   
   <link href="https://blog.ljcbaby.top/"/>
-  <updated>2023-06-30T13:58:00.000Z</updated>
+  <updated>2023-07-20T12:14:00.000Z</updated>
   <id>https://blog.ljcbaby.top/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>关于中国移动在杭州电子科技大学的 IPv6 的客服沟通记录</title>
+    <link href="https://blog.ljcbaby.top/article/cm-ipv6-in-hdu/"/>
+    <id>https://blog.ljcbaby.top/article/cm-ipv6-in-hdu/</id>
+    <published>2022-10-05T13:25:00.000Z</published>
+    <updated>2023-07-20T12:14:00.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;开文记录一下今年 9 月与 杭州移动 就 IPv6 和 链路聚合 的问题沟通。&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="Ljcbaby" scheme="https://blog.ljcbaby.top/tags/Ljcbaby/"/>
+    
+    <category term="HDU" scheme="https://blog.ljcbaby.top/tags/HDU/"/>
+    
+    <category term="运营商" scheme="https://blog.ljcbaby.top/tags/%E8%BF%90%E8%90%A5%E5%95%86/"/>
+    
+    <category term="中国移动" scheme="https://blog.ljcbaby.top/tags/%E4%B8%AD%E5%9B%BD%E7%A7%BB%E5%8A%A8/"/>
+    
+    <category term="IPv6" scheme="https://blog.ljcbaby.top/tags/IPv6/"/>
+    
+    <category term="网络" scheme="https://blog.ljcbaby.top/tags/%E7%BD%91%E7%BB%9C/"/>
+    
+  </entry>
   
   <entry>
     <title>新冠日记</title>
@@ -395,25 +422,6 @@
     <category term="Ljcbaby" scheme="https://blog.ljcbaby.top/tags/Ljcbaby/"/>
     
     <category term="杂谈" scheme="https://blog.ljcbaby.top/tags/%E6%9D%82%E8%B0%88/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Office 使用的一些小技巧</title>
-    <link href="https://blog.ljcbaby.top/article/Office-tips/"/>
-    <id>https://blog.ljcbaby.top/article/Office-tips/</id>
-    <published>2020-08-16T07:50:00.000Z</published>
-    <updated>2021-01-09T04:21:00.000Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;本文记录一些自己总结的 MS Office 三大件里的使用小技巧。（随缘更新）&lt;/p&gt;</summary>
-    
-    
-    
-    
-    <category term="Ljcbaby" scheme="https://blog.ljcbaby.top/tags/Ljcbaby/"/>
-    
-    <category term="技巧" scheme="https://blog.ljcbaby.top/tags/%E6%8A%80%E5%B7%A7/"/>
     
   </entry>
   
