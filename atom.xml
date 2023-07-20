@@ -6,7 +6,7 @@
   <link href="https://blog.ljcbaby.top/atom.xml" rel="self"/>
   
   <link href="https://blog.ljcbaby.top/"/>
-  <updated>2023-07-20T12:14:00.000Z</updated>
+  <updated>2023-07-20T13:23:00.000Z</updated>
   <id>https://blog.ljcbaby.top/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>杭电基站测速记录 23.07.07</title>
+    <link href="https://blog.ljcbaby.top/article/cell-test-230707/"/>
+    <id>https://blog.ljcbaby.top/article/cell-test-230707/</id>
+    <published>2023-07-09T12:25:00.000Z</published>
+    <updated>2023-07-20T13:23:00.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;记录一下 2023 年 7 月 7 日在校内各点对电信 / 移动的 4G/5G 基站测速情况。&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="Ljcbaby" scheme="https://blog.ljcbaby.top/tags/Ljcbaby/"/>
+    
+    <category term="HDU" scheme="https://blog.ljcbaby.top/tags/HDU/"/>
+    
+    <category term="运营商" scheme="https://blog.ljcbaby.top/tags/%E8%BF%90%E8%90%A5%E5%95%86/"/>
+    
+    <category term="测试" scheme="https://blog.ljcbaby.top/tags/%E6%B5%8B%E8%AF%95/"/>
+    
+  </entry>
   
   <entry>
     <title>关于中国移动在杭州电子科技大学的 IPv6 的客服沟通记录</title>
@@ -403,25 +426,6 @@
     <category term="Ljcbaby" scheme="https://blog.ljcbaby.top/tags/Ljcbaby/"/>
     
     <category term="年记" scheme="https://blog.ljcbaby.top/tags/%E5%B9%B4%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>一个时代的结束 - 致 Flash</title>
-    <link href="https://blog.ljcbaby.top/article/the-end-of-flash/"/>
-    <id>https://blog.ljcbaby.top/article/the-end-of-flash/</id>
-    <published>2020-08-16T06:06:00.000Z</published>
-    <updated>2021-02-26T04:26:00.000Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;一个伟大的时代，迎来了他的落幕之时。&lt;/p&gt;</summary>
-    
-    
-    
-    
-    <category term="Ljcbaby" scheme="https://blog.ljcbaby.top/tags/Ljcbaby/"/>
-    
-    <category term="杂谈" scheme="https://blog.ljcbaby.top/tags/%E6%9D%82%E8%B0%88/"/>
     
   </entry>
   
