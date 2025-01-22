@@ -5,18 +5,17 @@
 <meta name="viewport" content="width=device-width">
 <meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)">
-<link rel="preconnect" href="https://cdn.ljcbaby.top" crossorigin>
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-<link rel="apple-touch-icon" sizes="180x180" href="https://cdn.ljcbaby.top/images/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://cdn.ljcbaby.top/images/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="https://cdn.ljcbaby.top/images/favicon-16x16.png">
-<link rel="mask-icon" href="https://cdn.ljcbaby.top/images/logo.svg" color="#222">
-<link rel="stylesheet" href="https://cdn.ljcbaby.top/css/main.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.2/css/all.min.css" integrity="sha256-XOqroi11tY4EFQMR9ZYwZWKj5ZXiftSx36RRuC3anlA=" crossorigin="anonymous">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+<link rel="mask-icon" href="/images/logo.svg" color="#222">
+<link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css" integrity="sha256-dABdfBfUoC8vJUBOwGVdm8L9qlMWaHTIfXt+7GnZCIo=" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/themes/green/pace-theme-minimal.css">
 <script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
-<script class="next-config" data-name="main" type="application/json">{"hostname":"blog.ljcbaby.top","root":"/","images":"https://cdn.ljcbaby.top/images","scheme":"Gemini","darkmode":true,"version":"8.20.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":true,"style":"flat"},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":"twikoo","storage":true,"lazyload":true,"nav":null,"activeClass":"twikoo"},"stickytabs":false,"motion":{"enable":true,"async":true,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="https://cdn.ljcbaby.top/js/config.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"blog.ljcbaby.top","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.22.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":true,"style":"flat"},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":"twikoo","storage":true,"lazyload":true,"nav":null,"activeClass":"twikoo"},"stickytabs":false,"motion":{"enable":true,"async":true,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.22.0/source/js/config.min.js"></script>
 <meta name="description" content="作为一种静态博客，Hexo 的每一次更新都要在本地执行 hexo clean、hexo d -g 等命令。那么，有什么办法可以简化这些过程呢？把命令合成一个脚本或许是一个选择，但更好的方案是使用服务于 DevOps 的公共 CI&#x2F;CD 服务。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo 的自动部署">
@@ -44,7 +43,7 @@
 <title>Hexo 的自动部署 | Ljcbaby 的 网络小屋</title>
 <script>CONFIG.path="https://cdn.jsdelivr.net/gh/ljcbaby/ljcbaby.github.io@latest/search.json"</script>
 <noscript>
-<link rel="stylesheet" href="https://cdn.ljcbaby.top/css/noscript.css">
+<link rel="stylesheet" href="/css/noscript.css">
 </noscript>
 <link rel="alternate" href="/atom.xml" title="Ljcbaby 的 网络小屋" type="application/atom+xml">
 </head>
@@ -127,13 +126,13 @@
 <nav class="site-state">
 <div class="site-state-item site-state-posts">
 <a href="/archives/">
-<span class="site-state-item-count">41</span>
+<span class="site-state-item-count">40</span>
 <span class="site-state-item-name">日志</span>
 </a>
 </div>
 <div class="site-state-item site-state-tags">
 <a href="/tags/">
-<span class="site-state-item-count">42</span>
+<span class="site-state-item-count">40</span>
 <span class="site-state-item-name">标签</span></a>
 </div>
 </nav>
@@ -221,7 +220,7 @@ Hexo 的自动部署
 <p>对于不同的需求，配置文件也不完全相同。我的需求是通过 Hexo 本身的 deploy 部署到 GitHub 仓库，在通过手动追加 tag 实现 jsDelivr 的全站加速。<br>我使用的是 NexT 主题，配置文件中关于静态资源的设定如下，会在生成过程中通过 <code>sed</code> 替换为具体的版本（<code>XX_TAG</code> 变量）。</p>
 <figure class="highlight yaml"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Assets</span></span><br><span class="line"><span class="attr">css:</span> <span class="string">//cdn.jsdelivr.net/gh/ljcbaby/ljcbaby.github.io@master/css</span></span><br><span class="line"><span class="attr">js:</span> <span class="string">//cdn.jsdelivr.net/gh/ljcbaby/ljcbaby.github.io@master/js</span></span><br><span class="line"><span class="attr">images:</span> <span class="string">//cdn.jsdelivr.net/gh/ljcbaby/ljcbaby.github.io@master/images</span></span><br></pre></td></tr></tbody></table></figure>
 <h2 id="GitHub-Actions"><a href="#GitHub-Actions" class="headerlink" title="GitHub Actions"></a>GitHub Actions</h2><div class="link-grid"><div class="link-grid-container">
-<object class="link-grid-image" data="https://cdn.ljcbaby.top/pic/44036562.png"></object>
+<object class="link-grid-image" data="/pic/44036562.png"></object>
 <p>GitHub Actions</p><p>自动化您的工作流程，从构思到生产</p>
 <a target="_blank" rel="noopener" href="https://github.com/features/actions"></a>
 </div></div>
@@ -231,11 +230,11 @@ Hexo 的自动部署
 <figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line">name: deploy # Actions 名字</span><br><span class="line"></span><br><span class="line">on: # 触发条件</span><br><span class="line">  push:</span><br><span class="line">    branches: [ master ] # 仅向 master 分支 push 时触发，该分支存放博客源文件</span><br><span class="line"></span><br><span class="line">jobs:</span><br><span class="line">  build: # job id</span><br><span class="line">    name: Build and publish # job 名，不写默认使用 job id</span><br><span class="line">    runs-on: ubuntu-latest # 运行环境，可选 ubuntu-latest, ubuntu-18.04, ubuntu-16.04, windows-latest, windows-2019, windows-2016, macOS-latest, macOS-10.14</span><br><span class="line"></span><br><span class="line">    steps:</span><br><span class="line">      - uses: actions/checkout@v1  # 拉取博客最新源文件</span><br><span class="line">        with:</span><br><span class="line">          submodules: true </span><br><span class="line"></span><br><span class="line">      - name: Install Node.js # 指定 Node.js 版本</span><br><span class="line">        uses: actions/setup-node@v2</span><br><span class="line">        with:</span><br><span class="line">          node-version: '14'</span><br><span class="line"></span><br><span class="line">      - name: Setup Hexo env # 初始化 Hexo 环境</span><br><span class="line">        run: |</span><br><span class="line">          npm install hexo-cli -g</span><br><span class="line">          npm install</span><br><span class="line"></span><br><span class="line">      - name: Pre-Generate # 初始化 其他 环境</span><br><span class="line">        env:</span><br><span class="line">          GH_TOKEN: $</span><br><span class="line">        run: |</span><br><span class="line">          export TZ='Asia/Shanghai'</span><br><span class="line">          export ACTION_TAG=v2.1.$.$(git log --format=%h -1)</span><br><span class="line">          git config --global push.default matching</span><br><span class="line">          git config --global user.name "github-actions[bot]"</span><br><span class="line">          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"</span><br><span class="line">          sed -i "s~git@github.com:ljcbaby/ljcbaby.github.io.git~https://${GH_TOKEN}@github.com/ljcbaby/ljcbaby.github.io.git~" _config.yml</span><br><span class="line">          sed -i "s/ljcbaby.github.io@master/ljcbaby.github.io@${ACTION_TAG}/g" _config.next.yml</span><br><span class="line"></span><br><span class="line">      - name: Generate public files # 生成博客预发布文件</span><br><span class="line">        run: |</span><br><span class="line">          hexo clean</span><br><span class="line">          hexo g  </span><br><span class="line"></span><br><span class="line">      - name: Deploy # 发布 这段我按照自己的多点发布做了调整</span><br><span class="line">        env:</span><br><span class="line">          GH_REF: github.com/ljcbaby/ljcbaby.github.io.git # GitHub 仓库 SSH 地址</span><br><span class="line">        run: |</span><br><span class="line">          export TZ='Asia/Shanghai'</span><br><span class="line">          export ACTION_TAG=v2.1.$.$(git log --format=%h -1)</span><br><span class="line">          git clone --depth 1 https://${GH_REF} .deploy_git</span><br><span class="line">          hexo d</span><br><span class="line">          cd .deploy_git</span><br><span class="line">          git tag $ACTION_TAG</span><br><span class="line">          git push --tags</span><br><span class="line">          cd ..</span><br><span class="line">          rm -f _config.yml</span><br><span class="line">          mv _config2.yml _config.yml</span><br><span class="line">          hexo d</span><br></pre></td></tr></tbody></table></figure>
 </details>
 <h2 id="Travis-CI"><a href="#Travis-CI" class="headerlink" title="Travis CI"></a>Travis CI</h2><div class="link-grid"><div class="link-grid-container">
-<object class="link-grid-image" data="https://cdn.ljcbaby.top/pic/TravisCI-Mascot-1.jpg"></object>
+<object class="link-grid-image" data="/pic/TravisCI-Mascot-1.jpg"></object>
 <p>Travis CI.com</p><p>测试和部署你的项目的最简单方法</p>
 <a target="_blank" rel="noopener" href="https://travis-ci.com/"></a>
 </div><div class="link-grid-container">
-<object class="link-grid-image" data="https://cdn.ljcbaby.top/pic/TravisCI-Mascot-1.jpg"></object>
+<object class="link-grid-image" data="/pic/TravisCI-Mascot-1.jpg"></object>
 <p>Travis CI.org</p><p>放心地测试和部署代码</p>
 <a target="_blank" rel="noopener" href="https://travis-ci.org/"></a>
 </div></div>
@@ -253,7 +252,7 @@ Hexo 的自动部署
 </blockquote>
 </details>
 <h2 id="Gitee-Pages-服务"><a href="#Gitee-Pages-服务" class="headerlink" title="Gitee Pages 服务"></a>Gitee Pages 服务</h2><div class="link-grid"><div class="link-grid-container">
-<object class="link-grid-image" data="https://cdn.ljcbaby.top/pic/20200822193104.png"></object>
+<object class="link-grid-image" data="/pic/20200822193104.png"></object>
 <p>Gitee Pages 服务</p><p>一个支持 Jekyll、Hugo、Hexo 静态网站的服务</p>
 <a target="_blank" rel="noopener" href="https://gitee.com/help/articles/4136"></a>
 </div></div>
@@ -262,21 +261,21 @@ Hexo 的自动部署
 <p>然而付费的 Gitee Pages Pro 似乎已经买不到了。</p>
 </blockquote>
 <h2 id="Jenkins"><a href="#Jenkins" class="headerlink" title="Jenkins"></a>Jenkins</h2><div class="link-grid"><div class="link-grid-container">
-<object class="link-grid-image" data="https://cdn.ljcbaby.top/pic/1500px_Jenkins_logo.png"></object>
+<object class="link-grid-image" data="/pic/1500px_Jenkins_logo.png"></object>
 <p>Jenkins</p><p>一个开源的自动化服务器</p>
 <a target="_blank" rel="noopener" href="https://www.jenkins.io/"></a>
 </div></div>
 <p>Gitee 和 GitLab 可以使用这家 CI ，和 Travis CI 类似。</p>
 <h2 id="低代码托管平台"><a href="#低代码托管平台" class="headerlink" title="低代码托管平台"></a>低代码托管平台</h2><div class="link-grid"><div class="link-grid-container">
-<object class="link-grid-image" data="https://cdn.ljcbaby.top/pic/202308120454061.png"></object>
+<object class="link-grid-image" data="/pic/202308120454061.png"></object>
 <p>Vercel</p><p>Vercel 将最佳的开发者体验与对终端用户性能的痴迷关注相结合。 我们的平台使前端团队能够做他们最好的工作。</p>
 <a target="_blank" rel="noopener" href="https://vercel.com/"></a>
 </div><div class="link-grid-container">
-<object class="link-grid-image" data="https://cdn.ljcbaby.top/pic/202308120454599.png"></object>
+<object class="link-grid-image" data="/pic/202308120454599.png"></object>
 <p>Cloudflare Pages</p><p>在创纪录的时间内快速建立网站</p>
 <a target="_blank" rel="noopener" href="https://pages.cloudflare.com/"></a>
 </div><div class="link-grid-container">
-<object class="link-grid-image" data="https://cdn.ljcbaby.top/pic/20200822193839.png"></object>
+<object class="link-grid-image" data="/pic/20200822193839.png"></object>
 <p>Netlify</p><p>用于自动化现代 Web 项目的多合一平台</p>
 <a target="_blank" rel="noopener" href="https://www.netlify.com/"></a>
 </div></div>
@@ -290,7 +289,7 @@ Hexo 的自动部署
 </button>
 <div class="post-reward">
 <div>
-<img src="https://cdn.ljcbaby.top/pic/afdian.bmp" alt="Ljcbaby 爱发电">
+<img src="/pic/afdian.bmp" alt="Ljcbaby 爱发电">
 <span>爱发电</span>
 </div>
 </div>
@@ -342,11 +341,11 @@ Hexo 的自动部署
 <footer class="footer">
 <div class="footer-inner">
 <div class="beian"><a href="https://beian.miit.gov.cn/" rel="noopener" target="_blank">浙ICP备20008309号-1 </a>
-<img src="https://cdn.ljcbaby.top/pic/beian.png" alt=""><a href="https://beian.mps.gov.cn/#/query/webSearch?code=33072302100189" rel="noopener" target="_blank">浙公网安备 33072302100189号 </a>
+<img src="/pic/beian.png" alt=""><a href="https://beian.mps.gov.cn/#/query/webSearch?code=33072302100189" rel="noopener" target="_blank">浙公网安备 33072302100189号 </a>
 </div>
 <div class="copyright">
 &copy; 2019 –
-<span itemprop="copyrightYear">2024</span>
+<span itemprop="copyrightYear">2025</span>
 <span class="with-love">
 <i class="fa fa-heart"></i>
 </span>
@@ -367,11 +366,11 @@ Hexo 的自动部署
 <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/@next-theme/pjax@0.6.0/pjax.min.js" integrity="sha256-vxLn1tSKWD4dqbMRyv940UYw4sXgMtYcK6reefzZrao=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
-<script src="https://cdn.ljcbaby.top/js/comments.js"></script><script src="https://cdn.ljcbaby.top/js/utils.js"></script><script src="https://cdn.ljcbaby.top/js/motion.js"></script><script src="https://cdn.ljcbaby.top/js/sidebar.js"></script><script src="https://cdn.ljcbaby.top/js/next-boot.js"></script><script src="https://cdn.ljcbaby.top/js/pjax.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.22.0/source/js/comments.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.22.0/source/js/utils.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.22.0/source/js/motion.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.22.0/source/js/sidebar.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.22.0/source/js/next-boot.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.22.0/source/js/pjax.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/hexo-generator-searchdb@1.4.1/dist/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
-<script src="https://cdn.ljcbaby.top/js/third-party/search/local-search.js"></script>
-<script src="https://cdn.ljcbaby.top/js/third-party/pace.js"></script>
-<script class="next-config" data-name="twikoo" type="application/json">{"enable":true,"visitor":true,"envId":"https://tk.ljcbaby.top","jsUrl":"https://cdn.jsdelivr.net/npm/twikoo@1.6.32/dist/twikoo.all.min.js","el":"#twikoo-comments"}</script>
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.22.0/source/js/third-party/search/local-search.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.22.0/source/js/third-party/pace.min.js"></script>
+<script class="next-config" data-name="twikoo" type="application/json">{"enable":true,"visitor":true,"envId":"https://tk.ljcbaby.top","jsUrl":"https://cdn.jsdelivr.net/npm/twikoo@1.6.41/dist/twikoo.all.min.js","el":"#twikoo-comments"}</script>
 <script>
 document.addEventListener('page:loaded', () => {
   NexT.utils.loadComments(CONFIG.twikoo.el)

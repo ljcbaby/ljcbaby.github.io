@@ -40,23 +40,21 @@
   </entry>
   
   <entry>
-    <title>新冠日记</title>
-    <link href="https://blog.ljcbaby.top/article/omicron/"/>
-    <id>https://blog.ljcbaby.top/article/omicron/</id>
-    <published>2022-12-31T11:58:00.000Z</published>
-    <updated>2024-01-01T23:43:00.000Z</updated>
+    <title>站点更新日志</title>
+    <link href="https://blog.ljcbaby.top/article/Site-ChangeLog/"/>
+    <id>https://blog.ljcbaby.top/article/Site-ChangeLog/</id>
+    <published>2021-06-06T06:37:00.000Z</published>
+    <updated>2024-01-22T04:01:00.000Z</updated>
     
     
-    <summary type="html">&lt;p&gt;终究还是没苟过这一年，等稍微好点了来记录一下。（诈尸刷更新）&lt;/p&gt;</summary>
+    <summary type="html">&lt;p&gt;记录一下这个站点的变更历史&lt;/p&gt;</summary>
     
     
     
     
-    <category term="Ljcbaby" scheme="https://blog.ljcbaby.top/tags/Ljcbaby/"/>
+    <category term="Hexo" scheme="https://blog.ljcbaby.top/tags/Hexo/"/>
     
-    <category term="疫情" scheme="https://blog.ljcbaby.top/tags/%E7%96%AB%E6%83%85/"/>
-    
-    <category term="弃坑" scheme="https://blog.ljcbaby.top/tags/%E5%BC%83%E5%9D%91/"/>
+    <category term="站务" scheme="https://blog.ljcbaby.top/tags/%E7%AB%99%E5%8A%A1/"/>
     
   </entry>
   
@@ -188,25 +186,6 @@
   </entry>
   
   <entry>
-    <title>站点更新日志</title>
-    <link href="https://blog.ljcbaby.top/article/Site-ChangeLog/"/>
-    <id>https://blog.ljcbaby.top/article/Site-ChangeLog/</id>
-    <published>2021-06-06T06:37:00.000Z</published>
-    <updated>2022-02-22T12:29:00.000Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;记录一下这个站点的变更历史&lt;/p&gt;</summary>
-    
-    
-    
-    
-    <category term="Hexo" scheme="https://blog.ljcbaby.top/tags/Hexo/"/>
-    
-    <category term="站务" scheme="https://blog.ljcbaby.top/tags/%E7%AB%99%E5%8A%A1/"/>
-    
-  </entry>
-  
-  <entry>
     <title>[记录] jsDelivr 访问出错</title>
     <link href="https://blog.ljcbaby.top/article/jsDelivr-accident/"/>
     <id>https://blog.ljcbaby.top/article/jsDelivr-accident/</id>
@@ -252,7 +231,7 @@
     <updated>2022-01-27T04:11:00.000Z</updated>
     
     
-    <summary type="html">&lt;h2 id=&quot;你真的准备好了吗？&quot;&gt;&lt;a href=&quot;#你真的准备好了吗？&quot; class=&quot;headerlink&quot; title=&quot;你真的准备好了吗？&quot;&gt;&lt;/a&gt;你真的准备好了吗？&lt;/h2&gt;&lt;p&gt;&lt;img data-src=&quot;https://cdn.ljcbaby.top/pic/you-are-not-prepared.png&quot; alt=&quot;you-are-not-prepared.png&quot;&gt;&lt;/p&gt;</summary>
+    <summary type="html">&lt;h2 id=&quot;你真的准备好了吗？&quot;&gt;&lt;a href=&quot;#你真的准备好了吗？&quot; class=&quot;headerlink&quot; title=&quot;你真的准备好了吗？&quot;&gt;&lt;/a&gt;你真的准备好了吗？&lt;/h2&gt;&lt;p&gt;&lt;img data-src=&quot;/pic/you-are-not-prepared.png&quot; alt=&quot;you-are-not-prepared.png&quot;&gt;&lt;/p&gt;</summary>
     
     
     
@@ -425,6 +404,25 @@
     <category term="Ljcbaby" scheme="https://blog.ljcbaby.top/tags/Ljcbaby/"/>
     
     <category term="年记" scheme="https://blog.ljcbaby.top/tags/%E5%B9%B4%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>一个时代的结束 - 致 Flash</title>
+    <link href="https://blog.ljcbaby.top/article/the-end-of-flash/"/>
+    <id>https://blog.ljcbaby.top/article/the-end-of-flash/</id>
+    <published>2020-08-16T06:06:00.000Z</published>
+    <updated>2021-02-26T04:26:00.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;一个伟大的时代，迎来了他的落幕之时。&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="Ljcbaby" scheme="https://blog.ljcbaby.top/tags/Ljcbaby/"/>
+    
+    <category term="杂谈" scheme="https://blog.ljcbaby.top/tags/%E6%9D%82%E8%B0%88/"/>
     
   </entry>
   
