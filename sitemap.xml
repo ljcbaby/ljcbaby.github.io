@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://blog.ljcbaby.top/article/linux-init/</loc>
-    <lastmod>2024-07-21</lastmod>
+    <loc>https://blog.ljcbaby.top/article/friends/</loc>
+    <lastmod>2025-01-23</lastmod>
   </url>
   <url>
     <loc>https://blog.ljcbaby.top/article/Site-ChangeLog/</loc>
-    <lastmod>2024-01-22</lastmod>
+    <lastmod>2025-01-22</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.ljcbaby.top/article/linux-init/</loc>
+    <lastmod>2024-07-21</lastmod>
   </url>
   <url>
     <loc>https://blog.ljcbaby.top/article/cell-test-230707/</loc>
@@ -15,10 +19,6 @@
   <url>
     <loc>https://blog.ljcbaby.top/article/cm-ipv6-in-hdu/</loc>
     <lastmod>2023-07-20</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.ljcbaby.top/article/friends/</loc>
-    <lastmod>2022-10-07</lastmod>
   </url>
   <url>
     <loc>https://blog.ljcbaby.top/article/Mind-in-March/</loc>
