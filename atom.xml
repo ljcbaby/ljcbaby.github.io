@@ -6,7 +6,7 @@
   <link href="https://blog.ljcbaby.top/atom.xml" rel="self"/>
   
   <link href="https://blog.ljcbaby.top/"/>
-  <updated>2025-01-23T13:30:00.000Z</updated>
+  <updated>2025-02-10T08:36:00.000Z</updated>
   <id>https://blog.ljcbaby.top/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>TrueNAS 调优小计</title>
+    <link href="https://blog.ljcbaby.top/article/truenas-perf/"/>
+    <id>https://blog.ljcbaby.top/article/truenas-perf/</id>
+    <published>2025-02-10T08:36:00.000Z</published>
+    <updated>2025-02-10T08:36:00.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;开篇文章存一下 TrueNAS 调优的参数和选项，省的挂了又得重新调一遍。&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="Ljcbaby" scheme="https://blog.ljcbaby.top/tags/Ljcbaby/"/>
+    
+    <category term="TrueNAS" scheme="https://blog.ljcbaby.top/tags/TrueNAS/"/>
+    
+    <category term="HomeLab" scheme="https://blog.ljcbaby.top/tags/HomeLab/"/>
+    
+  </entry>
   
   <entry>
     <title>邻居们和朋友们</title>
@@ -404,25 +425,6 @@
     <category term="Ljcbaby" scheme="https://blog.ljcbaby.top/tags/Ljcbaby/"/>
     
     <category term="年记" scheme="https://blog.ljcbaby.top/tags/%E5%B9%B4%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>一个时代的结束 - 致 Flash</title>
-    <link href="https://blog.ljcbaby.top/article/the-end-of-flash/"/>
-    <id>https://blog.ljcbaby.top/article/the-end-of-flash/</id>
-    <published>2020-08-16T06:06:00.000Z</published>
-    <updated>2021-02-26T04:26:00.000Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;一个伟大的时代，迎来了他的落幕之时。&lt;/p&gt;</summary>
-    
-    
-    
-    
-    <category term="Ljcbaby" scheme="https://blog.ljcbaby.top/tags/Ljcbaby/"/>
-    
-    <category term="杂谈" scheme="https://blog.ljcbaby.top/tags/%E6%9D%82%E8%B0%88/"/>
     
   </entry>
   
