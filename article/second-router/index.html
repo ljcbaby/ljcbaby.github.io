@@ -16,20 +16,28 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/themes/green/pace-theme-minimal.css">
 <script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
 <script class="next-config" data-name="main" type="application/json">{"hostname":"blog.ljcbaby.top","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.22.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":true,"style":"flat"},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":"twikoo","storage":true,"lazyload":true,"nav":null,"activeClass":"twikoo"},"stickytabs":false,"motion":{"enable":true,"async":true,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.22.0/source/js/config.min.js"></script>
+<meta name="description" content="根据 DN11 的相关实践，总结一下双路由方案配置的一些经验。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="second-router">
+<meta property="og:title" content="双路由方案">
 <meta property="og:url" content="https://blog.ljcbaby.top/article/second-router/">
 <meta property="og:site_name" content="Ljcbaby 的 网络小屋">
+<meta property="og:description" content="根据 DN11 的相关实践，总结一下双路由方案配置的一些经验。">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2025-02-10T12:00:00.000Z">
-<meta property="article:modified_time" content="2025-02-10T12:00:00.000Z">
+<meta property="article:published_time" content="2025-02-10T14:42:00.000Z">
+<meta property="article:modified_time" content="2025-02-10T14:42:00.000Z">
 <meta property="article:author" content="Ljcbaby">
 <meta property="article:tag" content="Ljcbaby">
+<meta property="article:tag" content="路由器">
+<meta property="article:tag" content="HDU">
+<meta property="article:tag" content="DN11">
+<meta property="article:tag" content="OpenWrt">
+<meta property="article:tag" content="iKuai">
+<meta property="article:tag" content="HomeLab">
 <meta name="twitter:card" content="summary">
 <link rel="canonical" href="https://blog.ljcbaby.top/article/second-router/">
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://blog.ljcbaby.top/article/second-router/","path":"article/second-router/","title":"second-router"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://blog.ljcbaby.top/article/second-router/","path":"article/second-router/","title":"双路由方案"}</script>
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>second-router | Ljcbaby 的 网络小屋</title>
+<title>双路由方案 | Ljcbaby 的 网络小屋</title>
 <script>CONFIG.path="https://cdn.jsdelivr.net/gh/ljcbaby/ljcbaby.github.io@latest/search.json"</script>
 <noscript>
 <link rel="stylesheet" href="/css/noscript.css">
@@ -92,7 +100,7 @@
 </div>
 </header>
 <aside class="sidebar">
-<div class="sidebar-inner sidebar-overview-active">
+<div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
 <ul class="sidebar-nav">
 <li class="sidebar-nav-toc">
 文章目录
@@ -103,6 +111,7 @@
 </ul>
 <div class="sidebar-panel-container">
 <div class="post-toc-wrap sidebar-panel">
+<div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%94%B9%E9%80%A0%E5%89%8D"><span class="nav-number">1.</span> <span class="nav-text">改造前</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%8C%E8%B7%AF%E7%94%B1%E6%96%B9%E6%A1%88"><span class="nav-number">2.</span> <span class="nav-text">双路由方案</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E6%80%9D%E8%B7%AF"><span class="nav-number">2.1.</span> <span class="nav-text">基本思路</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A0%B8%E5%BF%83%EF%BC%9A%E5%88%86%E6%B5%81"><span class="nav-number">2.2.</span> <span class="nav-text">核心：分流</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#IP-%E5%88%86%E6%B5%81"><span class="nav-number">2.2.1.</span> <span class="nav-text">IP 分流</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9F%9F%E5%90%8D%E5%88%86%E6%B5%81"><span class="nav-number">2.2.2.</span> <span class="nav-text">域名分流</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%98%E4%BD%93"><span class="nav-number">3.</span> <span class="nav-text">变体</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%8B%E5%8F%91%E8%B7%AF%E7%94%B1"><span class="nav-number">3.1.</span> <span class="nav-text">下发路由</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%AA%E5%B8%8C%E6%9C%9B%E6%8C%87%E5%AE%9A%E8%AE%BE%E5%A4%87%E8%B5%B0%E4%B8%9A%E5%8A%A1%E8%B7%AF%E7%94%B1"><span class="nav-number">3.2.</span> <span class="nav-text">只希望指定设备走业务路由</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%BB%E8%B7%AF%E7%94%B1%E9%9C%80%E8%A6%81%E7%A7%81%E7%BD%91%E6%AE%B5%E5%87%BA%E7%BD%91"><span class="nav-number">3.3.</span> <span class="nav-text">主路由需要私网段出网</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%8D%E6%83%B3%E7%94%A8-FakeDNS"><span class="nav-number">3.4.</span> <span class="nav-text">不想用 FakeDNS</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9B%B4%E5%A4%9A"><span class="nav-number">4.</span> <span class="nav-text">更多</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%99%E4%B8%9A%E5%8A%A1%E8%B7%AF%E7%94%B1%E5%8A%A0%E7%9B%B4%E8%BF%9E%E7%BA%BF%E8%B7%AF"><span class="nav-number">4.1.</span> <span class="nav-text">给业务路由加直连线路</span></a></li></ol></li></ol></div>
 </div>
 <div class="site-overview-wrap sidebar-panel">
 <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -120,7 +129,7 @@
 </div>
 <div class="site-state-item site-state-tags">
 <a href="/tags/">
-<span class="site-state-item-count">45</span>
+<span class="site-state-item-count">46</span>
 <span class="site-state-item-name">标签</span></a>
 </div>
 </nav>
@@ -164,12 +173,12 @@
 <meta itemprop="description" content="记录自己的成长足迹">
 </span>
 <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-<meta itemprop="name" content="second-router | Ljcbaby 的 网络小屋">
+<meta itemprop="name" content="双路由方案 | Ljcbaby 的 网络小屋">
 <meta itemprop="description" content="">
 </span>
 <header class="post-header">
 <h1 class="post-title" itemprop="name headline">
-second-router
+双路由方案
 </h1>
 <div class="post-meta-container">
 <div class="post-meta">
@@ -178,9 +187,9 @@ second-router
 <i class="far fa-calendar"></i>
 </span>
 <span class="post-meta-item-text">发表于</span>
-<time title="创建时间：2025-02-10 20:00" itemprop="dateCreated datePublished" datetime="2025-02-10T20:00:00+08:00">2025-02-10</time>
+<time title="创建时间：2025-02-10 22:42" itemprop="dateCreated datePublished" datetime="2025-02-10T22:42:00+08:00">2025-02-10</time>
 </span>
-<span id="/article/second-router/" class="post-meta-item twikoo_visitors" data-flag-title="second-router" title="阅读次数">
+<span id="/article/second-router/" class="post-meta-item twikoo_visitors" data-flag-title="双路由方案" title="阅读次数">
 <span class="post-meta-item-icon">
 <i class="far fa-eye"></i>
 </span>
@@ -190,7 +199,53 @@ second-router
 </div>
 </div>
 </header>
-<div class="post-body" itemprop="articleBody"><span id="more"></span>
+<div class="post-body" itemprop="articleBody"><p>根据 DN11 的相关实践，总结一下双路由方案配置的一些经验。</p>
+<span id="more"></span>
+<p>提醒：请结合自己<strong>实际</strong>做方案实施。</p>
+<h2 id="改造前"><a href="#改造前" class="headerlink" title="改造前"></a>改造前</h2><p>寝室是单 <code>OpenWrt</code> 路由器，如果整活崩了会影响到所有人。也有被别人劫持路由的风险。</p>
+<p>家里是单 <code>iKuai</code> 路由器，功能单一没法整活。</p>
+<h2 id="双路由方案"><a href="#双路由方案" class="headerlink" title="双路由方案"></a>双路由方案</h2><p>结合 <code>iKuai</code> 和 <code>OpenWrt</code> 的优势，实现双路由方案。</p>
+<h3 id="基本思路"><a href="#基本思路" class="headerlink" title="基本思路"></a>基本思路</h3><ul>
+<li>主路由（<code>iKuai</code>）：负责基本的网络访问能力，包括 <code>DHCP</code>，无线部署方案也围绕主路由展开。</li>
+<li>业务路由（<code>OpenWrt</code>）：负责特定的网络访问能力，比如 <code>DN11</code>，<code>EasyConnect</code>，<code>aTrust</code> 等。</li>
+</ul>
+<p>路由器的配置就不再重复，按照一般情况配置好上网即可。</p>
+<p>业务路由只保留一个 <code>LAN</code> 口，连接到主路由的 <code>LAN</code> 口，并配置同网段的 <code>IP</code> 地址。</p>
+<h3 id="核心：分流"><a href="#核心：分流" class="headerlink" title="核心：分流"></a>核心：<strong>分流</strong></h3><p>有哪些流量是需要经过业务路由的呢？</p>
+<ul>
+<li>DN11 网内流量：IP</li>
+<li>VPN 网络流量：IP / 域名</li>
+</ul>
+<h4 id="IP-分流"><a href="#IP-分流" class="headerlink" title="IP 分流"></a>IP 分流</h4><p>这个问题显然简单，直接配置 <code>静态路由</code> 即可。</p>
+<p>考虑到正常情况下也不会有 <code>RFC1918</code> 和 <code>RFC6589</code> 的未路由网段需要出网，直接配置四条静态路由即可。</p>
+<p>附加的，可以在 <code>OpenWrt</code> 上配置 <code>unreachable</code> 路由，防止这些网段的流量在两台路由器之间来回转圈。</p>
+<p>对于 VPN 的 IP 流量，去客户端上把应用的 IP 段加进来就行。</p>
+<h4 id="域名分流"><a href="#域名分流" class="headerlink" title="域名分流"></a>域名分流</h4><p>有些应用是直接写明了域名后的 IP ，那也按照 IP 分流的方式配置即可。</p>
+<p>没写明或经常变化的情况下，可以使用 <code>FakeDNS</code> 插件，将域名解析到业务路由的 <code>IP</code> 上，转换为 IP 分流。</p>
+<blockquote>
+<p>可以使用现成的 <code>FakeDNS</code> + <code>tproxy</code> 等方案。域名少的话，也可以直接在 <code>主路由</code> 上配置域名解析。</p>
+</blockquote>
+<h2 id="变体"><a href="#变体" class="headerlink" title="变体"></a>变体</h2><h3 id="下发路由"><a href="#下发路由" class="headerlink" title="下发路由"></a>下发路由</h3><p>DHCP 配置 <code>Option 121</code>，下发需要分流的路由表，可以省一跳。</p>
+<h3 id="只希望指定设备走业务路由"><a href="#只希望指定设备走业务路由" class="headerlink" title="只希望指定设备走业务路由"></a>只希望指定设备走业务路由</h3><p>DHCP 分别配置不同的 <code>DNS</code> 和 <code>Gateway</code>。</p>
+<h3 id="主路由需要私网段出网"><a href="#主路由需要私网段出网" class="headerlink" title="主路由需要私网段出网"></a>主路由需要私网段出网</h3><p>调整静态路由细粒度。</p>
+<blockquote>
+<p>对应场景：HDU 两网合一改造后<br>可用 <a target="_blank" rel="noopener" href="https://github.com/dn-11/scripts">dn-11/scripts</a> 里的新 ROA 脚本来给 iKuai 加 DN11 路由。</p>
+</blockquote>
+<h3 id="不想用-FakeDNS"><a href="#不想用-FakeDNS" class="headerlink" title="不想用 FakeDNS"></a>不想用 FakeDNS</h3><p>业务路由上使用 <code>gost</code> 等 <code>sniproxy</code> 方案做转发。</p>
+<h2 id="更多"><a href="#更多" class="headerlink" title="更多"></a>更多</h2><h3 id="给业务路由加直连线路"><a href="#给业务路由加直连线路" class="headerlink" title="给业务路由加直连线路"></a>给业务路由加直连线路</h3><p>核心：<strong>分表</strong></p>
+<blockquote>
+<p>对应场景：HDU 两网合一改造后，给 OpenWrt 加上没绑定宽带的直连线路。</p>
+</blockquote>
+<ul>
+<li>编辑 <code>/etc/iproute2/rt_tables</code>，往后添加一张表，序号要比 <code>main</code> 大。</li>
+<li>OpenWrt 上接入单线后，配置这个 接口 的 <code>覆盖 IPv4 路由表</code> 为刚才添加的表。</li>
+<li>路由 - IPv4 规则，添加规则，指定一个 <code>fwmark</code> 走这个表。</li>
+</ul>
+<p>剩下的就是让应用程序使用指定 <code>fwmark</code> 即可。</p>
+<blockquote>
+<p>类似的还有 <code>netns</code> 方案，会隔离的更彻底。</p>
+</blockquote>
+<p>注意：不要忘记防火墙配置。</p>
 </div>
 <footer class="post-footer">
 <div class="reward-container">
@@ -212,7 +267,7 @@ second-router
 </li>
 <li class="post-copyright-link">
 <strong>本文链接：</strong>
-<a href="https://blog.ljcbaby.top/article/second-router/" title="second-router">https://blog.ljcbaby.top/article/second-router/</a>
+<a href="https://blog.ljcbaby.top/article/second-router/" title="双路由方案">https://blog.ljcbaby.top/article/second-router/</a>
 </li>
 <li class="post-copyright-license">
 <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-ND</a> 许可协议。转载请注明出处！
@@ -221,17 +276,20 @@ second-router
 </div>
 <div class="post-tags">
 <a href="/tags/Ljcbaby/" rel="tag"><i class="fa fa-tag"></i> Ljcbaby</a>
+<a href="/tags/%E8%B7%AF%E7%94%B1%E5%99%A8/" rel="tag"><i class="fa fa-tag"></i> 路由器</a>
+<a href="/tags/HDU/" rel="tag"><i class="fa fa-tag"></i> HDU</a>
+<a href="/tags/DN11/" rel="tag"><i class="fa fa-tag"></i> DN11</a>
+<a href="/tags/OpenWrt/" rel="tag"><i class="fa fa-tag"></i> OpenWrt</a>
+<a href="/tags/iKuai/" rel="tag"><i class="fa fa-tag"></i> iKuai</a>
+<a href="/tags/HomeLab/" rel="tag"><i class="fa fa-tag"></i> HomeLab</a>
 </div>
 <div class="post-nav">
 <div class="post-nav-item">
-<a href="/article/truenas-perf/" rel="prev" title="TrueNAS 调优小计">
-<i class="fa fa-angle-left"></i> TrueNAS 调优小计
+<a href="/article/dn11-config/" rel="prev" title="DN11 配置文件汇总 2024">
+<i class="fa fa-angle-left"></i> DN11 配置文件汇总 2024
 </a>
 </div>
 <div class="post-nav-item">
-<a href="/article/dn11-config/" rel="next" title="DN11 配置文件汇总 2024">
-DN11 配置文件汇总 2024 <i class="fa fa-angle-right"></i>
-</a>
 </div>
 </div>
 </footer>
