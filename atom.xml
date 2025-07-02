@@ -6,7 +6,7 @@
   <link href="https://blog.ljcbaby.top/atom.xml" rel="self"/>
   
   <link href="https://blog.ljcbaby.top/"/>
-  <updated>2025-03-07T11:45:00.000Z</updated>
+  <updated>2025-07-02T02:00:00.000Z</updated>
   <id>https://blog.ljcbaby.top/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Linux 中的常用初始化操作</title>
+    <link href="https://blog.ljcbaby.top/article/linux-init/"/>
+    <id>https://blog.ljcbaby.top/article/linux-init/</id>
+    <published>2020-04-11T13:35:07.000Z</published>
+    <updated>2025-07-02T02:00:00.000Z</updated>
+    
+    
+    <summary type="html">好的开头，Yes!</summary>
+    
+    
+    
+    
+    <category term="Ljcbaby" scheme="https://blog.ljcbaby.top/tags/Ljcbaby/"/>
+    
+    <category term="Linux" scheme="https://blog.ljcbaby.top/tags/Linux/"/>
+    
+    <category term="CentOS" scheme="https://blog.ljcbaby.top/tags/CentOS/"/>
+    
+    <category term="Ubuntu" scheme="https://blog.ljcbaby.top/tags/Ubuntu/"/>
+    
+  </entry>
   
   <entry>
     <title>03.04 异常断网调查</title>
@@ -149,29 +172,6 @@
   </entry>
   
   <entry>
-    <title>Linux 中的常用初始化操作</title>
-    <link href="https://blog.ljcbaby.top/article/linux-init/"/>
-    <id>https://blog.ljcbaby.top/article/linux-init/</id>
-    <published>2020-04-11T13:35:07.000Z</published>
-    <updated>2024-07-21T14:20:00.000Z</updated>
-    
-    
-    <summary type="html">好的开头，Yes!</summary>
-    
-    
-    
-    
-    <category term="Ljcbaby" scheme="https://blog.ljcbaby.top/tags/Ljcbaby/"/>
-    
-    <category term="Linux" scheme="https://blog.ljcbaby.top/tags/Linux/"/>
-    
-    <category term="CentOS" scheme="https://blog.ljcbaby.top/tags/CentOS/"/>
-    
-    <category term="Ubuntu" scheme="https://blog.ljcbaby.top/tags/Ubuntu/"/>
-    
-  </entry>
-  
-  <entry>
     <title>杭电基站测速记录 23.07.07</title>
     <link href="https://blog.ljcbaby.top/article/cell-test-230707/"/>
     <id>https://blog.ljcbaby.top/article/cell-test-230707/</id>
@@ -179,7 +179,7 @@
     <updated>2023-07-20T14:13:00.000Z</updated>
     
     
-    <summary type="html">&lt;p&gt;记录一下 2023 年 7 月 7 日在校内各点对电信 / 移动的 4G/5G 基站测速情况。&lt;/p&gt;</summary>
+    <summary type="html">&lt;p&gt;记录一下 2023 年 7 月 7 日在校内各点对电信/移动的 4G/5G 基站测速情况。&lt;/p&gt;</summary>
     
     
     
@@ -385,7 +385,7 @@
     <updated>2021-11-05T15:36:00.000Z</updated>
     
     
-    <summary type="html">&lt;p&gt;暑假里入手了小米平板 5，但 &lt;code&gt;System&lt;/code&gt; 目录不可以修改就很令人难受，最终我选择了使用 Magisk 模块来间接修改。&lt;/p&gt;</summary>
+    <summary type="html">&lt;p&gt;暑假里入手了小米平板 5，但&lt;code&gt;System&lt;/code&gt;目录不可以修改就很令人难受，最终我选择了使用 Magisk 模块来间接修改。&lt;/p&gt;</summary>
     
     
     
@@ -423,7 +423,7 @@
     <updated>2021-10-16T18:03:00.000Z</updated>
     
     
-    <summary type="html">&lt;p&gt;作为一种静态博客，&lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt; 的每一次更新都要在本地执行 &lt;code&gt;hexo clean&lt;/code&gt;、&lt;code&gt;hexo d -g&lt;/code&gt; 等命令。那么，有什么办法可以简化这些过程呢？&lt;br&gt;把命令合成一个脚本或许是一个选择，但更好的方案是使用服务于 DevOps 的公共 CI/CD 服务。&lt;/p&gt;</summary>
+    <summary type="html">&lt;p&gt;作为一种静态博客，&lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt; 的每一次更新都要在本地执行&lt;code&gt;hexo clean&lt;/code&gt;、&lt;code&gt;hexo d -g&lt;/code&gt;等命令。那么，有什么办法可以简化这些过程呢？&lt;br&gt;把命令合成一个脚本或许是一个选择，但更好的方案是使用服务于 DevOps 的公共 CI / CD 服务。&lt;/p&gt;</summary>
     
     
     
