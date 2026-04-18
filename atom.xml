@@ -10,7 +10,7 @@
   <rights>All rights reserved 2026, Ljcbaby</rights>
   <subtitle>宁静的栖身之地</subtitle>
   <title>Ljcbaby 的 网络小屋</title>
-  <updated>2025-10-22T12:33:00.000Z</updated>
+  <updated>2026-04-18T06:32:00.000Z</updated>
   <entry>
     <author>
       <name>Ljcbaby</name>
@@ -25,7 +25,7 @@
     <published>2020-04-11T13:35:07.000Z</published>
     <summary>好的开头，Yes!</summary>
     <title>Linux 中的常用初始化操作</title>
-    <updated>2025-10-22T12:33:00.000Z</updated>
+    <updated>2026-04-18T06:32:00.000Z</updated>
   </entry>
   <entry>
     <author>
@@ -91,12 +91,12 @@
       <name>Ljcbaby</name>
     </author>
     <category term="Ljcbaby" scheme="https://blog.ljcbaby.top/tags/Ljcbaby/"/>
-    <category term="DN11" scheme="https://blog.ljcbaby.top/tags/DN11/"/>
     <category term="路由器" scheme="https://blog.ljcbaby.top/tags/%E8%B7%AF%E7%94%B1%E5%99%A8/"/>
+    <category term="DN11" scheme="https://blog.ljcbaby.top/tags/DN11/"/>
     <category term="HDU" scheme="https://blog.ljcbaby.top/tags/HDU/"/>
     <category term="OpenWrt" scheme="https://blog.ljcbaby.top/tags/OpenWrt/"/>
-    <category term="iKuai" scheme="https://blog.ljcbaby.top/tags/iKuai/"/>
     <category term="HomeLab" scheme="https://blog.ljcbaby.top/tags/HomeLab/"/>
+    <category term="iKuai" scheme="https://blog.ljcbaby.top/tags/iKuai/"/>
     <id>https://blog.ljcbaby.top/article/second-router/</id>
     <link href="https://blog.ljcbaby.top/article/second-router/"/>
     <published>2025-02-10T14:42:00.000Z</published>
@@ -111,8 +111,8 @@
       <name>Ljcbaby</name>
     </author>
     <category term="Ljcbaby" scheme="https://blog.ljcbaby.top/tags/Ljcbaby/"/>
-    <category term="HomeLab" scheme="https://blog.ljcbaby.top/tags/HomeLab/"/>
     <category term="TrueNAS" scheme="https://blog.ljcbaby.top/tags/TrueNAS/"/>
+    <category term="HomeLab" scheme="https://blog.ljcbaby.top/tags/HomeLab/"/>
     <id>https://blog.ljcbaby.top/article/truenas-perf/</id>
     <link href="https://blog.ljcbaby.top/article/truenas-perf/"/>
     <published>2025-02-10T08:36:00.000Z</published>
@@ -126,8 +126,8 @@
     <author>
       <name>Ljcbaby</name>
     </author>
-    <category term="Hexo" scheme="https://blog.ljcbaby.top/tags/Hexo/"/>
     <category term="站务" scheme="https://blog.ljcbaby.top/tags/%E7%AB%99%E5%8A%A1/"/>
+    <category term="Hexo" scheme="https://blog.ljcbaby.top/tags/Hexo/"/>
     <id>https://blog.ljcbaby.top/article/Site-ChangeLog/</id>
     <link href="https://blog.ljcbaby.top/article/Site-ChangeLog/"/>
     <published>2021-06-06T06:37:00.000Z</published>
@@ -193,8 +193,8 @@
     <author>
       <name>Ljcbaby</name>
     </author>
-    <category term="Hexo" scheme="https://blog.ljcbaby.top/tags/Hexo/"/>
     <category term="站务" scheme="https://blog.ljcbaby.top/tags/%E7%AB%99%E5%8A%A1/"/>
+    <category term="Hexo" scheme="https://blog.ljcbaby.top/tags/Hexo/"/>
     <id>https://blog.ljcbaby.top/article/Hexo/</id>
     <link href="https://blog.ljcbaby.top/article/Hexo/"/>
     <published>2020-04-08T04:00:37.000Z</published>
@@ -237,18 +237,6 @@
       <name>Ljcbaby</name>
     </author>
     <category term="转载" scheme="https://blog.ljcbaby.top/tags/%E8%BD%AC%E8%BD%BD/"/>
-    <id>https://blog.ljcbaby.top/article/How-To-Ask-Questions-The-Smart-Way/</id>
-    <link href="https://blog.ljcbaby.top/article/How-To-Ask-Questions-The-Smart-Way/"/>
-    <published>2020-06-14T02:20:01.000Z</published>
-    <summary>在提出技术类问题之前，不妨先看看这个</summary>
-    <title>提问的智慧</title>
-    <updated>2022-01-27T04:11:00.000Z</updated>
-  </entry>
-  <entry>
-    <author>
-      <name>Ljcbaby</name>
-    </author>
-    <category term="转载" scheme="https://blog.ljcbaby.top/tags/%E8%BD%AC%E8%BD%BD/"/>
     <id>https://blog.ljcbaby.top/article/Stop-Ask-Questions-The-Stupid-Ways/</id>
     <link href="https://blog.ljcbaby.top/article/Stop-Ask-Questions-The-Stupid-Ways/"/>
     <published>2021-02-26T07:15:00.000Z</published>
@@ -256,6 +244,18 @@
       <![CDATA[<h2 id="你真的准备好了吗？"><a href="#你真的准备好了吗？" class="headerlink" title="你真的准备好了吗？"></a>你真的准备好了吗？</h2><p><img data-src="/pic/you-are-not-prepared.png" alt="you-are-not-prepared.png"></p>]]>
     </summary>
     <title>别像弱智一样提问</title>
+    <updated>2022-01-27T04:11:00.000Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>Ljcbaby</name>
+    </author>
+    <category term="转载" scheme="https://blog.ljcbaby.top/tags/%E8%BD%AC%E8%BD%BD/"/>
+    <id>https://blog.ljcbaby.top/article/How-To-Ask-Questions-The-Smart-Way/</id>
+    <link href="https://blog.ljcbaby.top/article/How-To-Ask-Questions-The-Smart-Way/"/>
+    <published>2020-06-14T02:20:01.000Z</published>
+    <summary>在提出技术类问题之前，不妨先看看这个</summary>
+    <title>提问的智慧</title>
     <updated>2022-01-27T04:11:00.000Z</updated>
   </entry>
   <entry>
